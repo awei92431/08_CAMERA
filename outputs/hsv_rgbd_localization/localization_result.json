@@ -1,0 +1,938 @@
+{
+  "config": {
+    "object": {
+      "xml_rgba": [
+        0.9,
+        0.15,
+        0.1,
+        1.0
+      ],
+      "side_length_m": 0.03,
+      "placement_assumption": "upright axis-aligned cube resting on a horizontal support"
+    },
+    "hsv_segmentation": {
+      "ranges_opencv_hsv": [
+        {
+          "lower": [
+            0,
+            120,
+            80
+          ],
+          "upper": [
+            12,
+            255,
+            255
+          ]
+        },
+        {
+          "lower": [
+            170,
+            120,
+            80
+          ],
+          "upper": [
+            179,
+            255,
+            255
+          ]
+        }
+      ],
+      "open_kernel": 3,
+      "open_iterations": 1,
+      "close_kernel": 5,
+      "close_iterations": 1,
+      "min_contour_area_px": 40.0,
+      "max_contour_area_px": 50000.0,
+      "min_rectangularity": 0.45,
+      "aspect_ratio_min": 0.45,
+      "aspect_ratio_max": 2.2,
+      "erode_kernel": 3,
+      "erode_iterations": 1
+    },
+    "depth_filter": {
+      "min_z_m": 0.02,
+      "max_z_m": 1.5,
+      "minimum_points": 8,
+      "mad_scale": 3.5,
+      "minimum_mad_m": 0.0005,
+      "lower_quantile": 0.05,
+      "upper_quantile": 0.95
+    }
+  },
+  "representative": {
+    "valid": true,
+    "failure_reason": null,
+    "hsv_detected": true,
+    "contour_area_px": 21903.5,
+    "mask_pixel_count": 22199,
+    "eroded_mask_pixel_count": 21610,
+    "projected_depth_point_count": 113473,
+    "mask_depth_point_count": 11039,
+    "filtered_depth_point_count": 9935,
+    "valid_point_ratio": 0.8999909412084428,
+    "depth_median_m": 0.09353446960449208,
+    "depth_mad_m": 0.00015168637037277222,
+    "bbox_xywh": [
+      216,
+      152,
+      149,
+      150
+    ],
+    "pixel_center_uv": [
+      289.99498558069104,
+      226.00507529238095
+    ],
+    "visible_surface_point_color": [
+      -0.005330715035857048,
+      0.009909904115639794,
+      0.09353446960449208
+    ],
+    "estimated_object_center_color": [
+      -0.005626549383386127,
+      0.009790165869102996,
+      0.10853107404653622
+    ],
+    "sample_index": 0,
+    "truth_object_center_color_test_only": [
+      -0.006253499443334467,
+      0.00931651817667639,
+      0.10852120605304388
+    ],
+    "center_error_m_test_only": 0.0007858154309415417
+  },
+  "summary": {
+    "samples": 20,
+    "hsv_detection_successes": 20,
+    "hsv_detection_success_rate": 1.0,
+    "localization_successes": 20,
+    "localization_success_rate": 1.0,
+    "center_error_m": {
+      "mean": 0.0002766570911634779,
+      "median": 0.00017475747455543964,
+      "max": 0.0008948572811043113
+    },
+    "failure_reason_counts": {}
+  },
+  "samples": [
+    {
+      "valid": true,
+      "failure_reason": null,
+      "hsv_detected": true,
+      "contour_area_px": 21903.5,
+      "mask_pixel_count": 22199,
+      "eroded_mask_pixel_count": 21610,
+      "projected_depth_point_count": 113473,
+      "mask_depth_point_count": 11039,
+      "filtered_depth_point_count": 9935,
+      "valid_point_ratio": 0.8999909412084428,
+      "depth_median_m": 0.09353446960449208,
+      "depth_mad_m": 0.00015168637037277222,
+      "bbox_xywh": [
+        216,
+        152,
+        149,
+        150
+      ],
+      "pixel_center_uv": [
+        289.99498558069104,
+        226.00507529238095
+      ],
+      "visible_surface_point_color": [
+        -0.005330715035857048,
+        0.009909904115639794,
+        0.09353446960449208
+      ],
+      "estimated_object_center_color": [
+        -0.005626549383386127,
+        0.009790165869102996,
+        0.10853107404653622
+      ],
+      "sample_index": 0,
+      "truth_object_center_color_test_only": [
+        -0.006253499443334467,
+        0.00931651817667639,
+        0.10852120605304388
+      ],
+      "center_error_m_test_only": 0.0007858154309415417
+    },
+    {
+      "valid": true,
+      "failure_reason": null,
+      "hsv_detected": true,
+      "contour_area_px": 22303.0,
+      "mask_pixel_count": 22602,
+      "eroded_mask_pixel_count": 22006,
+      "projected_depth_point_count": 113473,
+      "mask_depth_point_count": 10805,
+      "filtered_depth_point_count": 9723,
+      "valid_point_ratio": 0.8998611753817677,
+      "depth_median_m": 0.0929528921842574,
+      "depth_mad_m": 0.00014663487672805786,
+      "bbox_xywh": [
+        103,
+        69,
+        152,
+        151
+      ],
+      "pixel_center_uv": [
+        178.1715165373866,
+        144.35847195444558
+      ],
+      "visible_surface_point_color": [
+        -0.028336335693168943,
+        -0.00701718541665751,
+        0.0929528921842574
+      ],
+      "estimated_object_center_color": [
+        -0.028632170040698023,
+        -0.007136923663194308,
+        0.10794949662630154
+      ],
+      "sample_index": 1,
+      "truth_object_center_color_test_only": [
+        -0.028624157301697192,
+        -0.007188705569773551,
+        0.10794812195559796
+      ],
+      "center_error_m_test_only": 5.24162146174272e-05
+    },
+    {
+      "valid": true,
+      "failure_reason": null,
+      "hsv_detected": true,
+      "contour_area_px": 22160.5,
+      "mask_pixel_count": 22457,
+      "eroded_mask_pixel_count": 21866,
+      "projected_depth_point_count": 113473,
+      "mask_depth_point_count": 10849,
+      "filtered_depth_point_count": 9763,
+      "valid_point_ratio": 0.8998986081666513,
+      "depth_median_m": 0.0932599827647208,
+      "depth_mad_m": 0.00014678388833999634,
+      "bbox_xywh": [
+        164,
+        113,
+        150,
+        150
+      ],
+      "pixel_center_uv": [
+        238.40401465069226,
+        187.37145672104268
+      ],
+      "visible_surface_point_color": [
+        -0.01618821319192055,
+        0.0018627727527120502,
+        0.0932599827647208
+      ],
+      "estimated_object_center_color": [
+        -0.01648404753944963,
+        0.001743034506175252,
+        0.10825658720676495
+      ],
+      "sample_index": 2,
+      "truth_object_center_color_test_only": [
+        -0.016608184791011938,
+        0.0014713770493307047,
+        0.10825430329905116
+      ],
+      "center_error_m_test_only": 0.00029868553249050447
+    },
+    {
+      "valid": true,
+      "failure_reason": null,
+      "hsv_detected": true,
+      "contour_area_px": 22007.0,
+      "mask_pixel_count": 22303,
+      "eroded_mask_pixel_count": 21713,
+      "projected_depth_point_count": 113473,
+      "mask_depth_point_count": 11110,
+      "filtered_depth_point_count": 9998,
+      "valid_point_ratio": 0.8999099909991,
+      "depth_median_m": 0.09353286027908314,
+      "depth_mad_m": 0.0001527145504951477,
+      "bbox_xywh": [
+        218,
+        143,
+        150,
+        149
+      ],
+      "pixel_center_uv": [
+        292.6109646930522,
+        217.0861998455037
+      ],
+      "visible_surface_point_color": [
+        -0.004745935381162256,
+        0.008217233593649738,
+        0.09353286027908314
+      ],
+      "estimated_object_center_color": [
+        -0.005041769728691335,
+        0.00809749534711294,
+        0.10852946472112729
+      ],
+      "sample_index": 3,
+      "truth_object_center_color_test_only": [
+        -0.0056986538347947036,
+        0.007489933601324748,
+        0.10851756725295197
+      ],
+      "center_error_m_test_only": 0.0008948572811043113
+    },
+    {
+      "valid": true,
+      "failure_reason": null,
+      "hsv_detected": true,
+      "contour_area_px": 22311.0,
+      "mask_pixel_count": 22609,
+      "eroded_mask_pixel_count": 22015,
+      "projected_depth_point_count": 113473,
+      "mask_depth_point_count": 10879,
+      "filtered_depth_point_count": 9791,
+      "valid_point_ratio": 0.8999908079786745,
+      "depth_median_m": 0.0929221212863921,
+      "depth_mad_m": 0.00014638900756835938,
+      "bbox_xywh": [
+        77,
+        115,
+        153,
+        151
+      ],
+      "pixel_center_uv": [
+        152.44259931573362,
+        190.0467258303079
+      ],
+      "visible_surface_point_color": [
+        -0.03355198159696745,
+        0.0021509602329852265,
+        0.0929221212863921
+      ],
+      "estimated_object_center_color": [
+        -0.033847815944496526,
+        0.0020312219864484283,
+        0.10791872572843625
+      ],
+      "sample_index": 4,
+      "truth_object_center_color_test_only": [
+        -0.03379104926149443,
+        0.001991282537895515,
+        0.10791949224584611
+      ],
+      "center_error_m_test_only": 6.941327970000577e-05
+    },
+    {
+      "valid": true,
+      "failure_reason": null,
+      "hsv_detected": true,
+      "contour_area_px": 22109.5,
+      "mask_pixel_count": 22406,
+      "eroded_mask_pixel_count": 21815,
+      "projected_depth_point_count": 113473,
+      "mask_depth_point_count": 10794,
+      "filtered_depth_point_count": 9714,
+      "valid_point_ratio": 0.8999444135630906,
+      "depth_median_m": 0.09315450116991986,
+      "depth_mad_m": 0.0001469254493713379,
+      "bbox_xywh": [
+        140,
+        105,
+        152,
+        150
+      ],
+      "pixel_center_uv": [
+        215.3333861009973,
+        178.9618489789457
+      ],
+      "visible_surface_point_color": [
+        -0.020759386989873833,
+        -0.00014331322460283096,
+        0.09315450116991986
+      ],
+      "estimated_object_center_color": [
+        -0.021055221337402914,
+        -0.0002630514711396291,
+        0.108151105611964
+      ],
+      "sample_index": 5,
+      "truth_object_center_color_test_only": [
+        -0.021265084119154044,
+        -0.00021329338822388623,
+        0.10814898677459801
+      ],
+      "center_error_m_test_only": 0.00021569131519733517
+    },
+    {
+      "valid": true,
+      "failure_reason": null,
+      "hsv_detected": true,
+      "contour_area_px": 21902.0,
+      "mask_pixel_count": 22197,
+      "eroded_mask_pixel_count": 21609,
+      "projected_depth_point_count": 113473,
+      "mask_depth_point_count": 11046,
+      "filtered_depth_point_count": 9940,
+      "valid_point_ratio": 0.899873257287706,
+      "depth_median_m": 0.0935070440173148,
+      "depth_mad_m": 0.00015171244740486145,
+      "bbox_xywh": [
+        213,
+        143,
+        149,
+        149
+      ],
+      "pixel_center_uv": [
+        287.0,
+        217.0
+      ],
+      "visible_surface_point_color": [
+        -0.006158005977096015,
+        0.008185982181419903,
+        0.0935070440173148
+      ],
+      "estimated_object_center_color": [
+        -0.006453840324625094,
+        0.008066243934883106,
+        0.10850364845935895
+      ],
+      "sample_index": 6,
+      "truth_object_center_color_test_only": [
+        -0.0067966134423272425,
+        0.0074407257938455314,
+        0.10849551517963303
+      ],
+      "center_error_m_test_only": 0.0007133249646728016
+    },
+    {
+      "valid": true,
+      "failure_reason": null,
+      "hsv_detected": true,
+      "contour_area_px": 22140.0,
+      "mask_pixel_count": 22437,
+      "eroded_mask_pixel_count": 21845,
+      "projected_depth_point_count": 113473,
+      "mask_depth_point_count": 10849,
+      "filtered_depth_point_count": 9763,
+      "valid_point_ratio": 0.8998986081666513,
+      "depth_median_m": 0.09326642751693714,
+      "depth_mad_m": 0.00014828145503997803,
+      "bbox_xywh": [
+        152,
+        147,
+        151,
+        150
+      ],
+      "pixel_center_uv": [
+        226.40761818729297,
+        221.28350647395362
+      ],
+      "visible_surface_point_color": [
+        -0.01872310668312438,
+        0.008481354146773853,
+        0.09326642751693714
+      ],
+      "estimated_object_center_color": [
+        -0.01901894103065346,
+        0.008361615900237056,
+        0.10826303195898129
+      ],
+      "sample_index": 7,
+      "truth_object_center_color_test_only": [
+        -0.018923717731561023,
+        0.008314361559517546,
+        0.10826326217972299
+      ],
+      "center_error_m_test_only": 0.00010630382123175587
+    },
+    {
+      "valid": true,
+      "failure_reason": null,
+      "hsv_detected": true,
+      "contour_area_px": 22235.5,
+      "mask_pixel_count": 22533,
+      "eroded_mask_pixel_count": 21940,
+      "projected_depth_point_count": 113473,
+      "mask_depth_point_count": 10958,
+      "filtered_depth_point_count": 9863,
+      "valid_point_ratio": 0.9000730060229969,
+      "depth_median_m": 0.09309063106775273,
+      "depth_mad_m": 0.00014773383736610413,
+      "bbox_xywh": [
+        105,
+        153,
+        152,
+        150
+      ],
+      "pixel_center_uv": [
+        179.92021766994222,
+        227.86433106219033
+      ],
+      "visible_surface_point_color": [
+        -0.028123181697923237,
+        0.009870575810527924,
+        0.09309063106775273
+      ],
+      "estimated_object_center_color": [
+        -0.028419016045452317,
+        0.009750837563991126,
+        0.10808723550979688
+      ],
+      "sample_index": 8,
+      "truth_object_center_color_test_only": [
+        -0.028342832710418195,
+        0.009594094795561791,
+        0.10808767144979946
+      ],
+      "center_error_m_test_only": 0.00017427675127652418
+    },
+    {
+      "valid": true,
+      "failure_reason": null,
+      "hsv_detected": true,
+      "contour_area_px": 22096.5,
+      "mask_pixel_count": 22393,
+      "eroded_mask_pixel_count": 21802,
+      "projected_depth_point_count": 113473,
+      "mask_depth_point_count": 10903,
+      "filtered_depth_point_count": 9811,
+      "valid_point_ratio": 0.8998440796111162,
+      "depth_median_m": 0.0932837277650832,
+      "depth_mad_m": 0.00014881789684295654,
+      "bbox_xywh": [
+        176,
+        98,
+        150,
+        150
+      ],
+      "pixel_center_uv": [
+        250.42677196237713,
+        172.84325571923156
+      ],
+      "visible_surface_point_color": [
+        -0.01385458672997912,
+        -0.0010078850610000607,
+        0.0932837277650832
+      ],
+      "estimated_object_center_color": [
+        -0.014150421077508198,
+        -0.001127623307536859,
+        0.10828033220712735
+      ],
+      "sample_index": 9,
+      "truth_object_center_color_test_only": [
+        -0.014170665288776887,
+        -0.0014661793037996041,
+        0.10827893315083752
+      ],
+      "center_error_m_test_only": 0.00033916360072073386
+    },
+    {
+      "valid": true,
+      "failure_reason": null,
+      "hsv_detected": true,
+      "contour_area_px": 22254.0,
+      "mask_pixel_count": 22551,
+      "eroded_mask_pixel_count": 21959,
+      "projected_depth_point_count": 113473,
+      "mask_depth_point_count": 10865,
+      "filtered_depth_point_count": 9777,
+      "valid_point_ratio": 0.8998619420156466,
+      "depth_median_m": 0.0932081565260886,
+      "depth_mad_m": 0.00014831125736236572,
+      "bbox_xywh": [
+        170,
+        63,
+        151,
+        150
+      ],
+      "pixel_center_uv": [
+        245.2591968485066,
+        137.57486294598723
+      ],
+      "visible_surface_point_color": [
+        -0.01472215365628428,
+        -0.008197082213278807,
+        0.0932081565260886
+      ],
+      "estimated_object_center_color": [
+        -0.015017988003813359,
+        -0.008316820459815605,
+        0.10820476096813275
+      ],
+      "sample_index": 10,
+      "truth_object_center_color_test_only": [
+        -0.015254613639210244,
+        -0.00854454993021057,
+        0.10820103412745097
+      ],
+      "center_error_m_test_only": 0.00032843004179705984
+    },
+    {
+      "valid": true,
+      "failure_reason": null,
+      "hsv_detected": true,
+      "contour_area_px": 22062.5,
+      "mask_pixel_count": 22359,
+      "eroded_mask_pixel_count": 21768,
+      "projected_depth_point_count": 113473,
+      "mask_depth_point_count": 10968,
+      "filtered_depth_point_count": 9870,
+      "valid_point_ratio": 0.899890590809628,
+      "depth_median_m": 0.09345560148358334,
+      "depth_mad_m": 0.00015040859580039978,
+      "bbox_xywh": [
+        202,
+        138,
+        150,
+        150
+      ],
+      "pixel_center_uv": [
+        276.4613333333333,
+        212.04218319169024
+      ],
+      "visible_surface_point_color": [
+        -0.00818764818774475,
+        0.006772731723484137,
+        0.09345560148358334
+      ],
+      "estimated_object_center_color": [
+        -0.00848348253527383,
+        0.006652993476947339,
+        0.10845220592562749
+      ],
+      "sample_index": 11,
+      "truth_object_center_color_test_only": [
+        -0.00895874017302509,
+        0.006483609450899889,
+        0.1084452214757348
+      ],
+      "center_error_m_test_only": 0.0005045884987405636
+    },
+    {
+      "valid": true,
+      "failure_reason": null,
+      "hsv_detected": true,
+      "contour_area_px": 22315.0,
+      "mask_pixel_count": 22613,
+      "eroded_mask_pixel_count": 22019,
+      "projected_depth_point_count": 113473,
+      "mask_depth_point_count": 10905,
+      "filtered_depth_point_count": 9813,
+      "valid_point_ratio": 0.8998624484181568,
+      "depth_median_m": 0.0930296480655669,
+      "depth_mad_m": 0.00014691799879074097,
+      "bbox_xywh": [
+        122,
+        73,
+        152,
+        151
+      ],
+      "pixel_center_uv": [
+        196.80283068190303,
+        148.10044812906116
+      ],
+      "visible_surface_point_color": [
+        -0.024681550348360837,
+        -0.006428413478897359,
+        0.0930296480655669
+      ],
+      "estimated_object_center_color": [
+        -0.024977384695889917,
+        -0.0065481517254341575,
+        0.10802625250761105
+      ],
+      "sample_index": 12,
+      "truth_object_center_color_test_only": [
+        -0.024938973006066366,
+        -0.006440180350393252,
+        0.1080267951774889
+      ],
+      "center_error_m_test_only": 0.00011460178983733584
+    },
+    {
+      "valid": true,
+      "failure_reason": null,
+      "hsv_detected": true,
+      "contour_area_px": 22196.5,
+      "mask_pixel_count": 22493,
+      "eroded_mask_pixel_count": 21902,
+      "projected_depth_point_count": 113473,
+      "mask_depth_point_count": 10867,
+      "filtered_depth_point_count": 9779,
+      "valid_point_ratio": 0.8998803717677372,
+      "depth_median_m": 0.09313218295574177,
+      "depth_mad_m": 0.00014666467905044556,
+      "bbox_xywh": [
+        136,
+        104,
+        151,
+        150
+      ],
+      "pixel_center_uv": [
+        210.492097102396,
+        178.48497135434263
+      ],
+      "visible_surface_point_color": [
+        -0.021878208751421414,
+        -0.00014363772192981997,
+        0.09313218295574177
+      ],
+      "estimated_object_center_color": [
+        -0.022174043098950495,
+        -0.0002633759684666181,
+        0.10812878739778592
+      ],
+      "sample_index": 13,
+      "truth_object_center_color_test_only": [
+        -0.022188631598101784,
+        -0.0003483668121022777,
+        0.10812968970492508
+      ],
+      "center_error_m_test_only": 8.623851788824807e-05
+    },
+    {
+      "valid": true,
+      "failure_reason": null,
+      "hsv_detected": true,
+      "contour_area_px": 22320.0,
+      "mask_pixel_count": 22618,
+      "eroded_mask_pixel_count": 22024,
+      "projected_depth_point_count": 113473,
+      "mask_depth_point_count": 10910,
+      "filtered_depth_point_count": 9818,
+      "valid_point_ratio": 0.8999083409715857,
+      "depth_median_m": 0.09291661530733097,
+      "depth_mad_m": 0.0001469440758228302,
+      "bbox_xywh": [
+        91,
+        79,
+        152,
+        150
+      ],
+      "pixel_center_uv": [
+        165.92541816009557,
+        153.5928987455197
+      ],
+      "visible_surface_point_color": [
+        -0.03090882710857832,
+        -0.005018720503306099,
+        0.09291661530733097
+      ],
+      "estimated_object_center_color": [
+        -0.0312046614561074,
+        -0.005138458749842897,
+        0.10791321974937512
+      ],
+      "sample_index": 14,
+      "truth_object_center_color_test_only": [
+        -0.03111056354064191,
+        -0.005286286082495844,
+        0.10791426282463476
+      ],
+      "center_error_m_test_only": 0.00017523819783435513
+    },
+    {
+      "valid": true,
+      "failure_reason": null,
+      "hsv_detected": true,
+      "contour_area_px": 22183.5,
+      "mask_pixel_count": 22480,
+      "eroded_mask_pixel_count": 21889,
+      "projected_depth_point_count": 113473,
+      "mask_depth_point_count": 10931,
+      "filtered_depth_point_count": 9837,
+      "valid_point_ratio": 0.8999176653554112,
+      "depth_median_m": 0.0932776853442191,
+      "depth_mad_m": 0.000147990882396698,
+      "bbox_xywh": [
+        162,
+        129,
+        150,
+        150
+      ],
+      "pixel_center_uv": [
+        236.45336248412858,
+        203.44831368659888
+      ],
+      "visible_surface_point_color": [
+        -0.01671352798297185,
+        0.005012576437923395,
+        0.0932776853442191
+      ],
+      "estimated_object_center_color": [
+        -0.01700936233050093,
+        0.004892838191386597,
+        0.10827428978626324
+      ],
+      "sample_index": 15,
+      "truth_object_center_color_test_only": [
+        -0.017041898887855105,
+        0.004724840343195472,
+        0.10827172434020318
+      ],
+      "center_error_m_test_only": 0.00017113879184684231
+    },
+    {
+      "valid": true,
+      "failure_reason": null,
+      "hsv_detected": true,
+      "contour_area_px": 22096.5,
+      "mask_pixel_count": 22393,
+      "eroded_mask_pixel_count": 21802,
+      "projected_depth_point_count": 113473,
+      "mask_depth_point_count": 10881,
+      "filtered_depth_point_count": 9793,
+      "valid_point_ratio": 0.900009190331771,
+      "depth_median_m": 0.0931970328092574,
+      "depth_mad_m": 0.00014707446098327637,
+      "bbox_xywh": [
+        167,
+        66,
+        150,
+        150
+      ],
+      "pixel_center_uv": [
+        241.3921510948189,
+        140.84324817655886
+      ],
+      "visible_surface_point_color": [
+        -0.015580364135922476,
+        -0.00761439530592843,
+        0.0931970328092574
+      ],
+      "estimated_object_center_color": [
+        -0.015876198483451554,
+        -0.007734133552465228,
+        0.10819363725130154
+      ],
+      "sample_index": 16,
+      "truth_object_center_color_test_only": [
+        -0.015905541509787294,
+        -0.007889363592790006,
+        0.10819342467431615
+      ],
+      "center_error_m_test_only": 0.00015797918787848917
+    },
+    {
+      "valid": true,
+      "failure_reason": null,
+      "hsv_detected": true,
+      "contour_area_px": 22342.5,
+      "mask_pixel_count": 22640,
+      "eroded_mask_pixel_count": 22047,
+      "projected_depth_point_count": 113473,
+      "mask_depth_point_count": 10939,
+      "filtered_depth_point_count": 9845,
+      "valid_point_ratio": 0.8999908583965628,
+      "depth_median_m": 0.09285299479961384,
+      "depth_mad_m": 0.0001467093825340271,
+      "bbox_xywh": [
+        72,
+        85,
+        151,
+        150
+      ],
+      "pixel_center_uv": [
+        147.01832083846182,
+        159.4823393383313
+      ],
+      "visible_surface_point_color": [
+        -0.03459396794737937,
+        -0.0038702125306724904,
+        0.09285299479961384
+      ],
+      "estimated_object_center_color": [
+        -0.03488980229490845,
+        -0.003989950777209288,
+        0.10784959924165799
+      ],
+      "sample_index": 17,
+      "truth_object_center_color_test_only": [
+        -0.03481687421347278,
+        -0.004149978058757519,
+        0.10785022202972946
+      ],
+      "center_error_m_test_only": 0.00017586251381856955
+    },
+    {
+      "valid": true,
+      "failure_reason": null,
+      "hsv_detected": true,
+      "contour_area_px": 22281.5,
+      "mask_pixel_count": 22579,
+      "eroded_mask_pixel_count": 21986,
+      "projected_depth_point_count": 113473,
+      "mask_depth_point_count": 10915,
+      "filtered_depth_point_count": 9823,
+      "valid_point_ratio": 0.8999541914796152,
+      "depth_median_m": 0.09296046197414387,
+      "depth_mad_m": 0.00014673173427581787,
+      "bbox_xywh": [
+        79,
+        134,
+        152,
+        150
+      ],
+      "pixel_center_uv": [
+        154.42939957662932,
+        208.4210069639237
+      ],
+      "visible_surface_point_color": [
+        -0.03299891200553598,
+        0.005854329697084277,
+        0.09296046197414387
+      ],
+      "estimated_object_center_color": [
+        -0.033294746353065056,
+        0.0057345914505474785,
+        0.10795706641618802
+      ],
+      "sample_index": 18,
+      "truth_object_center_color_test_only": [
+        -0.03340531823265631,
+        0.005660042116062595,
+        0.1079563941544236
+      ],
+      "center_error_m_test_only": 0.00013335739861125445
+    },
+    {
+      "valid": true,
+      "failure_reason": null,
+      "hsv_detected": true,
+      "contour_area_px": 22199.0,
+      "mask_pixel_count": 22496,
+      "eroded_mask_pixel_count": 21904,
+      "projected_depth_point_count": 113473,
+      "mask_depth_point_count": 10858,
+      "filtered_depth_point_count": 9772,
+      "valid_point_ratio": 0.8999815804015473,
+      "depth_median_m": 0.09321901202201832,
+      "depth_mad_m": 0.0001482740044593811,
+      "bbox_xywh": [
+        162,
+        93,
+        150,
+        150
+      ],
+      "pixel_center_uv": [
+        236.5,
+        167.5
+      ],
+      "visible_surface_point_color": [
+        -0.016701534677174775,
+        -0.0024368773218105934,
+        0.09321901202201832
+      ],
+      "estimated_object_center_color": [
+        -0.016997369024703855,
+        -0.0025566155683473916,
+        0.10821561646406247
+      ],
+      "sample_index": 19,
+      "truth_object_center_color_test_only": [
+        -0.016961650777668844,
+        -0.0025549715317469833,
+        0.1082151827567412
+      ],
+      "center_error_m_test_only": 3.575869306389814e-05
+    }
+  ]
+}

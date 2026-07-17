@@ -1,0 +1,101 @@
+{
+  "configuration": {
+    "episodes": 100,
+    "seeds": [
+      0,
+      99
+    ],
+    "aruco_marker_size_mm": 40.0,
+    "cube_size_mm": 30.0,
+    "errors": "XY only; Z excluded",
+    "checkpoint": "/home/lenovo/mujoco_learning/08_camera/checkpoints/best_full_flow_v22.zip"
+  },
+  "rates": {
+    "goal_detection": {
+      "count": 83,
+      "rate": 0.83
+    },
+    "object_detection_over_all": {
+      "count": 83,
+      "rate": 0.83
+    },
+    "full_success_over_all": {
+      "count": 83,
+      "rate": 0.83
+    },
+    "full_success_given_control": {
+      "count": 83,
+      "denominator": 83,
+      "rate": 1.0
+    },
+    "cube_fully_inside_40mm_goal_given_control": {
+      "count": 18,
+      "denominator": 83,
+      "rate": 0.21686746987951808,
+      "criterion": "abs(dx) <= 5 mm and abs(dy) <= 5 mm"
+    }
+  },
+  "xy_error_mm": {
+    "aruco_goal_valid_detections": {
+      "count": 83,
+      "mean": 1.70819357162602,
+      "median": 1.6382966008510103,
+      "p95": 4.3298883147485,
+      "max": 5.183769975361142,
+      "std": 1.1784699102783411
+    },
+    "rgbd_object_valid_detections": {
+      "count": 83,
+      "mean": 0.9711279050313837,
+      "median": 0.8714488327048845,
+      "p95": 2.1894866540875983,
+      "max": 2.45035403634246,
+      "std": 0.6205435531826218
+    },
+    "final_object_to_true_goal_all_executed": {
+      "count": 83,
+      "mean": 8.36076763561843,
+      "median": 7.857031887010337,
+      "p95": 14.97645820337157,
+      "max": 18.69300295626759,
+      "std": 3.4343204481763694
+    },
+    "final_object_to_true_goal_successful_only": {
+      "count": 83,
+      "mean": 8.36076763561843,
+      "median": 7.857031887010337,
+      "p95": 14.97645820337157,
+      "max": 18.69300295626759,
+      "std": 3.4343204481763694
+    },
+    "final_object_to_estimated_goal_all_executed": {
+      "count": 83,
+      "mean": 8.967319649196817,
+      "median": 8.551612225505183,
+      "p95": 15.898605961434965,
+      "max": 20.314044955042345,
+      "std": 3.584040493149688
+    },
+    "final_true_goal_abs_x_all_executed": {
+      "count": 83,
+      "mean": 4.312585309535722,
+      "median": 3.7712878297423424,
+      "p95": 10.105576085147126,
+      "max": 14.38239422010712,
+      "std": 3.2095430323120997
+    },
+    "final_true_goal_abs_y_all_executed": {
+      "count": 83,
+      "mean": 6.386171082625783,
+      "median": 6.579695142505767,
+      "p95": 11.357715327780857,
+      "max": 16.82539472902342,
+      "std": 3.4661582151879236
+    }
+  },
+  "failure_counts": {
+    "goal_fail_closed": 17,
+    "object_detection": 0,
+    "task_after_control_started": 0
+  }
+}

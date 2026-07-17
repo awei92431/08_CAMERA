@@ -1,0 +1,25 @@
+# Python bytecode and test/tool caches
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.mplconfig/
+
+# Local virtual environments and editor state
+.venv/
+venv/
+env/
+.idea/
+.vscode/
+.DS_Store
+
+# Agent/session-local state and transient partial files
+.agents/
+.codex/
+.gitdata/
+*.tmp
+*.part

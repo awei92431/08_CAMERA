@@ -1,0 +1,48 @@
+{
+  "state_machine_tests": {
+    "non_observe_detection_ignored": true,
+    "moving_arm_cannot_enter_capture": true,
+    "stable_multiframe_freeze": true,
+    "frozen_goal_cannot_be_overwritten": true,
+    "missing_marker_fails_closed": true,
+    "aruco_authority_has_no_truth_fallback": true
+  },
+  "localization": {
+    "episodes": 1,
+    "valid_count": 1,
+    "valid_rate": 1.0,
+    "error_m": {
+      "mean": 0.005871947123096208,
+      "median": 0.005871947123096208,
+      "p95": 0.005871947123096208,
+      "max": 0.005871947123096208
+    },
+    "xy_error_m": {
+      "mean": 0.0018377449192777868,
+      "median": 0.0018377449192777868,
+      "p95": 0.0018377449192777868,
+      "max": 0.0018377449192777868
+    }
+  },
+  "episodes": [
+    {
+      "seed": 0,
+      "valid": true,
+      "failure_reason": null,
+      "capture_frames": 8,
+      "valid_frames": 8,
+      "error_m_evaluator_only": 0.005871947123096208,
+      "xy_error_m_evaluator_only": 0.0018377449192777868,
+      "truth_goal_world_evaluator_only": [
+        0.48809764141586737,
+        -0.09760808111499739,
+        0.315
+      ],
+      "estimated_goal_world": [
+        0.4890232733242196,
+        -0.09919569314524015,
+        0.3094230423501602
+      ]
+    }
+  ]
+}

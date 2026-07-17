@@ -1,0 +1,31 @@
+{
+  "missing_gripper": {
+    "source": "gripper_state",
+    "reason": "missing",
+    "fail_closed": true
+  },
+  "stale_gripper": {
+    "source": "gripper_state",
+    "reason": "stale",
+    "fail_closed": true
+  },
+  "gripper_fault": {
+    "source": "gripper_state",
+    "reason": "fault",
+    "fail_closed": true
+  },
+  "missing_object": {
+    "source": "object_estimate",
+    "reason": "missing",
+    "fail_closed": true
+  },
+  "empty_close": {
+    "grasp_confirmed": false,
+    "false_positive": false
+  },
+  "dependency_boundary": {
+    "forbidden_tokens_found": [],
+    "reads_only_declared_inputs": true,
+    "latch_isolated": true
+  }
+}

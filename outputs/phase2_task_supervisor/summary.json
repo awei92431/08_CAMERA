@@ -1,0 +1,349 @@
+{
+  "configuration": {
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99
+    ],
+    "checkpoint": "/home/lenovo/mujoco_learning/08_camera/checkpoints/best_full_flow_v22.zip"
+  },
+  "privileged_fsm": {
+    "rgbd_valid": {
+      "count": 100,
+      "rate": 1.0
+    },
+    "full_success": {
+      "count": 99,
+      "rate": 0.99
+    },
+    "reach_success": {
+      "count": 100,
+      "rate": 1.0
+    },
+    "grasp_success": {
+      "count": 100,
+      "rate": 1.0
+    },
+    "lift_success": {
+      "count": 100,
+      "rate": 1.0
+    },
+    "entered_place": {
+      "count": 100,
+      "rate": 1.0
+    },
+    "place_success": {
+      "count": 99,
+      "rate": 0.99
+    },
+    "supervisor_grasp_confirmed": {
+      "count": 91,
+      "rate": 0.91
+    },
+    "supervisor_task_complete": {
+      "count": 1,
+      "rate": 0.01
+    },
+    "episodes": 100,
+    "source_consistency_failures": 0,
+    "empty_grasp_confirmations": 0,
+    "drop_episodes": 0,
+    "hold_lost_or_unlatched_episodes": 0,
+    "supervisor_failure_reasons": {},
+    "steps_mean": 458.25
+  },
+  "deployable_fsm": {
+    "rgbd_valid": {
+      "count": 100,
+      "rate": 1.0
+    },
+    "full_success": {
+      "count": 7,
+      "rate": 0.07
+    },
+    "reach_success": {
+      "count": 100,
+      "rate": 1.0
+    },
+    "grasp_success": {
+      "count": 100,
+      "rate": 1.0
+    },
+    "lift_success": {
+      "count": 7,
+      "rate": 0.07
+    },
+    "entered_place": {
+      "count": 7,
+      "rate": 0.07
+    },
+    "place_success": {
+      "count": 7,
+      "rate": 0.07
+    },
+    "supervisor_grasp_confirmed": {
+      "count": 7,
+      "rate": 0.07
+    },
+    "supervisor_task_complete": {
+      "count": 7,
+      "rate": 0.07
+    },
+    "episodes": 100,
+    "source_consistency_failures": 0,
+    "empty_grasp_confirmations": 0,
+    "drop_episodes": 0,
+    "hold_lost_or_unlatched_episodes": 0,
+    "supervisor_failure_reasons": {},
+    "steps_mean": 869.7
+  },
+  "shadow": {
+    "rows": 600,
+    "matched_events": 464,
+    "delay_steps_mean": 2.125,
+    "delay_steps_median": 0.0,
+    "missed_events": 36,
+    "false_positive_events": 1,
+    "by_event": {
+      "reach_to_grasp": {
+        "matched": 100,
+        "missed": 0,
+        "false_positive": 0,
+        "delay_steps_mean": -0.11,
+        "delay_steps_median": 0.0,
+        "delay_steps_min": -1.0,
+        "delay_steps_max": 1.0
+      },
+      "grasp_confirmed": {
+        "matched": 91,
+        "missed": 9,
+        "false_positive": 0,
+        "delay_steps_mean": 6.362637362637362,
+        "delay_steps_median": 6.0,
+        "delay_steps_min": 5.0,
+        "delay_steps_max": 9.0
+      },
+      "grasp_to_lift": {
+        "matched": 91,
+        "missed": 9,
+        "false_positive": 0,
+        "delay_steps_mean": 6.362637362637362,
+        "delay_steps_median": 6.0,
+        "delay_steps_min": 5.0,
+        "delay_steps_max": 9.0
+      },
+      "lift_to_place": {
+        "matched": 91,
+        "missed": 9,
+        "false_positive": 0,
+        "delay_steps_mean": -0.7692307692307693,
+        "delay_steps_median": -1.0,
+        "delay_steps_min": -2.0,
+        "delay_steps_max": 0.0
+      },
+      "release_commanded": {
+        "matched": 91,
+        "missed": 9,
+        "false_positive": 0,
+        "delay_steps_mean": -1.0,
+        "delay_steps_median": -1.0,
+        "delay_steps_min": -1.0,
+        "delay_steps_max": -1.0
+      },
+      "release_complete": {
+        "matched": 0,
+        "missed": 0,
+        "false_positive": 1,
+        "delay_steps_mean": null,
+        "delay_steps_median": null,
+        "delay_steps_min": null,
+        "delay_steps_max": null
+      }
+    }
+  },
+  "latch_disabled": {
+    "rgbd_valid": {
+      "count": 10,
+      "rate": 1.0
+    },
+    "full_success": {
+      "count": 0,
+      "rate": 0.0
+    },
+    "reach_success": {
+      "count": 10,
+      "rate": 1.0
+    },
+    "grasp_success": {
+      "count": 10,
+      "rate": 1.0
+    },
+    "lift_success": {
+      "count": 0,
+      "rate": 0.0
+    },
+    "entered_place": {
+      "count": 0,
+      "rate": 0.0
+    },
+    "place_success": {
+      "count": 0,
+      "rate": 0.0
+    },
+    "supervisor_grasp_confirmed": {
+      "count": 0,
+      "rate": 0.0
+    },
+    "supervisor_task_complete": {
+      "count": 0,
+      "rate": 0.0
+    },
+    "episodes": 10,
+    "source_consistency_failures": 0,
+    "empty_grasp_confirmations": 0,
+    "drop_episodes": 0,
+    "hold_lost_or_unlatched_episodes": 0,
+    "supervisor_failure_reasons": {},
+    "steps_mean": 900.0
+  },
+  "seed_comparison": {
+    "identical": 8,
+    "same_initial_states": 100
+  },
+  "failure_analysis": {
+    "privileged_fsm": {
+      "classification": {
+        "success": 99,
+        "place_or_release": 1
+      },
+      "terminal_diagnostic_counts_nonexclusive": {
+        "sensor_hold_false": 1,
+        "effort_contact_false": 1
+      }
+    },
+    "deployable_fsm": {
+      "classification": {
+        "grasp_confirmation_not_reached": 93,
+        "success": 7
+      },
+      "terminal_diagnostic_counts_nonexclusive": {
+        "stable_geometry_false": 93,
+        "sensor_hold_false": 93,
+        "effort_contact_false": 93
+      }
+    },
+    "latch_disabled": {
+      "classification": {
+        "grasp_confirmation_not_reached": 10
+      },
+      "terminal_diagnostic_counts_nonexclusive": {
+        "stable_geometry_false": 10,
+        "sensor_hold_false": 10,
+        "effort_contact_false": 10
+      }
+    }
+  },
+  "interpretation": {
+    "supervisor_input_truth_reads": 0,
+    "deployable_source_consistency_failures": 0,
+    "dominant_deployable_failure": "grasp_confirmation_not_reached",
+    "latch_off_scope": "10-seed diagnostic, not the 100-seed A/B"
+  }
+}

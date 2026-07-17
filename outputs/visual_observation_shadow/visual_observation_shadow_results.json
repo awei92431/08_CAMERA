@@ -1,0 +1,1470 @@
+{
+  "frame_convention": "T_A_B maps B-frame points into frame A",
+  "base_to_world_transform": "T_world_base = inverse(T_base_world)",
+  "T_base_world": [
+    [
+      -1.0,
+      0.0,
+      -0.0,
+      0.0
+    ],
+    [
+      0.0,
+      -1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      -0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "T_world_base": [
+    [
+      -1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      -1.0,
+      -0.0,
+      0.0
+    ],
+    [
+      -0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "pregrasp_height_from_environment_m": 0.07,
+  "grasp_height_offset_from_environment_m": 0.018,
+  "vision_truth_separation": {
+    "detector_reads_object_site_truth": false,
+    "adapter_reads_object_site_truth": false,
+    "truth_only_in_function": "truth_evaluator_test_only",
+    "policy_input": "original_truth_observation"
+  },
+  "adapter_contract_audit": {
+    "place_gate_object_to_goal_residual": 5.960464455334602e-09,
+    "failed_visual_localization_valid": false,
+    "failed_visual_localization_reason": "visual_localization_failed",
+    "failed_visual_localization_observation": null
+  },
+  "summary": {
+    "samples": 20,
+    "visual_localization_success_rate": 1.0,
+    "failure_reason_counts": {},
+    "object_position": {
+      "xyz_mae_m": [
+        0.00072702094912529,
+        0.0005974411964416504,
+        0.0
+      ],
+      "norm_mean_m": 0.0009584100146800993,
+      "norm_median_m": 0.0008653180007467494,
+      "norm_max_m": 0.0022796371343210475
+    },
+    "pregrasp_position": {
+      "xyz_mae_m": [
+        0.00072702094912529,
+        0.0005974411964416504,
+        0.0
+      ],
+      "norm_mean_m": 0.0009584100146800993,
+      "norm_median_m": 0.0008653180007467494,
+      "norm_max_m": 0.0022796371343210475
+    },
+    "grasp_position": {
+      "xyz_mae_m": [
+        0.00072702094912529,
+        0.0005974411964416504,
+        0.0
+      ],
+      "norm_mean_m": 0.0009584100146800993,
+      "norm_median_m": 0.0008653180007467494,
+      "norm_max_m": 0.0022796371343210475
+    },
+    "pinch_to_pregrasp": {
+      "xyz_mae_m": [
+        0.0007270168513059616,
+        0.0005974266503471881,
+        4.097819328308106e-09
+      ],
+      "norm_mean_m": 0.0009583971421857397,
+      "norm_median_m": 0.0008653039935280771,
+      "norm_max_m": 0.002279627290597861
+    },
+    "pinch_to_grasp": {
+      "xyz_mae_m": [
+        0.0007270168513059616,
+        0.0005974266503471881,
+        3.8184225559234616e-09
+      ],
+      "norm_mean_m": 0.0009583971421843511,
+      "norm_median_m": 0.0008653039935210717,
+      "norm_max_m": 0.002279627290597861
+    },
+    "object_to_goal": {
+      "xyz_mae_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "norm_mean_m": 0.0,
+      "norm_median_m": 0.0,
+      "norm_max_m": 0.0
+    },
+    "object_lift": {
+      "xyz_mae_m": [
+        0.0
+      ],
+      "norm_mean_m": 0.0,
+      "norm_median_m": 0.0,
+      "norm_max_m": 0.0
+    },
+    "full_39d_max_abs_difference": 0.0021456778049468994,
+    "maximum_internal_consistency_residual": 1.3969838619232178e-08,
+    "unchanged_obs_35_39_max_abs_difference": 0.0,
+    "base_world_round_trip_max_m": 0.0,
+    "policy_used_shadow_observation": false
+  },
+  "records": [
+    {
+      "index": 0,
+      "valid": true,
+      "failure_reason": null,
+      "estimated_object_center_base": [
+        0.2096434545134,
+        -0.4833015133445004,
+        0.31500000279061857
+      ],
+      "estimated_object_center_world": [
+        -0.2096434545134,
+        0.4833015133445004,
+        0.31500000279061857
+      ],
+      "truth_object_center_world_evaluator_only": [
+        -0.2102516897759759,
+        0.48268408683046127,
+        0.315
+      ],
+      "field_error_vectors_m": {
+        "object_position": [
+          0.0006082355976104736,
+          0.0006174445152282715,
+          0.0
+        ],
+        "pregrasp_position": [
+          0.0006082355976104736,
+          0.0006174445152282715,
+          0.0
+        ],
+        "grasp_position": [
+          0.0006082355976104736,
+          0.0006174445152282715,
+          0.0
+        ],
+        "pinch_to_pregrasp": [
+          0.0006082355976104736,
+          0.0006174133159220219,
+          7.450580596923828e-09
+        ],
+        "pinch_to_grasp": [
+          0.0006082355976104736,
+          0.0006174133159220219,
+          5.587935447692871e-09
+        ],
+        "object_to_goal": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "object_lift": [
+          0.0
+        ]
+      },
+      "full_39d_max_abs_difference": 0.0006174445152282715,
+      "internal_consistency_residual": 1.30385160446167e-08,
+      "unchanged_obs_35_39_max_abs_difference": 0.0,
+      "base_world_round_trip_residual_m": 0.0,
+      "policy_input": "original_truth_observation",
+      "truth_policy_action": [
+        -1.0,
+        -0.9888381361961365,
+        -0.589253306388855,
+        0.8063987493515015
+      ]
+    },
+    {
+      "index": 1,
+      "valid": true,
+      "failure_reason": null,
+      "estimated_object_center_base": [
+        0.23207125476118814,
+        -0.49965085719600205,
+        0.31500000281442014
+      ],
+      "estimated_object_center_world": [
+        -0.23207125476118814,
+        0.49965085719600205,
+        0.31500000281442014
+      ],
+      "truth_object_center_world_evaluator_only": [
+        -0.232633592079966,
+        0.49919396849866626,
+        0.315
+      ],
+      "field_error_vectors_m": {
+        "object_position": [
+          0.0005623400211334229,
+          0.00045689940452575684,
+          0.0
+        ],
+        "pregrasp_position": [
+          0.0005623400211334229,
+          0.00045689940452575684,
+          0.0
+        ],
+        "grasp_position": [
+          0.0005623400211334229,
+          0.00045689940452575684,
+          0.0
+        ],
+        "pinch_to_pregrasp": [
+          0.0005623325705528259,
+          0.00045687519013881683,
+          7.450580596923828e-09
+        ],
+        "pinch_to_grasp": [
+          0.0005623325705528259,
+          0.00045687519013881683,
+          5.587935447692871e-09
+        ],
+        "object_to_goal": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "object_lift": [
+          0.0
+        ]
+      },
+      "full_39d_max_abs_difference": 0.0005623400211334229,
+      "internal_consistency_residual": 1.30385160446167e-08,
+      "unchanged_obs_35_39_max_abs_difference": 0.0,
+      "base_world_round_trip_residual_m": 0.0,
+      "policy_input": "original_truth_observation",
+      "truth_policy_action": [
+        -1.0,
+        -0.8030620813369751,
+        -0.6090467572212219,
+        0.841157078742981
+      ]
+    },
+    {
+      "index": 2,
+      "valid": true,
+      "failure_reason": null,
+      "estimated_object_center_base": [
+        0.22012371915559162,
+        -0.4910569687566375,
+        0.31500000023216995
+      ],
+      "estimated_object_center_world": [
+        -0.22012371915559162,
+        0.4910569687566375,
+        0.31500000023216995
+      ],
+      "truth_object_center_world_evaluator_only": [
+        -0.22061161142421465,
+        0.4905313970589873,
+        0.315
+      ],
+      "field_error_vectors_m": {
+        "object_position": [
+          0.00048789381980895996,
+          0.0005255937576293945,
+          0.0
+        ],
+        "pregrasp_position": [
+          0.00048789381980895996,
+          0.0005255937576293945,
+          0.0
+        ],
+        "grasp_position": [
+          0.00048789381980895996,
+          0.0005255937576293945,
+          0.0
+        ],
+        "pinch_to_pregrasp": [
+          0.00048789381980895996,
+          0.0005255581345409155,
+          3.725290298461914e-09
+        ],
+        "pinch_to_grasp": [
+          0.00048789381980895996,
+          0.0005255581345409155,
+          3.725290298461914e-09
+        ],
+        "object_to_goal": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "object_lift": [
+          0.0
+        ]
+      },
+      "full_39d_max_abs_difference": 0.0005255937576293945,
+      "internal_consistency_residual": 1.0011717677116394e-08,
+      "unchanged_obs_35_39_max_abs_difference": 0.0,
+      "base_world_round_trip_residual_m": 0.0,
+      "policy_input": "original_truth_observation",
+      "truth_policy_action": [
+        -1.0,
+        -0.8954617977142334,
+        -0.6007522344589233,
+        0.8253210783004761
+      ]
+    },
+    {
+      "index": 3,
+      "valid": true,
+      "failure_reason": null,
+      "estimated_object_center_base": [
+        0.20943387010584993,
+        -0.48476874411398857,
+        0.31500000149930707
+      ],
+      "estimated_object_center_world": [
+        -0.20943387010584993,
+        0.48476874411398857,
+        0.31500000149930707
+      ],
+      "truth_object_center_world_evaluator_only": [
+        -0.2096969092396364,
+        0.48451069842146244,
+        0.315
+      ],
+      "field_error_vectors_m": {
+        "object_position": [
+          0.00026303529739379883,
+          0.0002580583095550537,
+          0.0
+        ],
+        "pregrasp_position": [
+          0.00026303529739379883,
+          0.0002580583095550537,
+          0.0
+        ],
+        "grasp_position": [
+          0.00026303529739379883,
+          0.0002580583095550537,
+          0.0
+        ],
+        "pinch_to_pregrasp": [
+          0.00026303529739379883,
+          0.0002580322325229645,
+          5.587935447692871e-09
+        ],
+        "pinch_to_grasp": [
+          0.00026303529739379883,
+          0.0002580322325229645,
+          5.587935447692871e-09
+        ],
+        "object_to_goal": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "object_lift": [
+          0.0
+        ]
+      },
+      "full_39d_max_abs_difference": 0.00026303529739379883,
+      "internal_consistency_residual": 1.1175870895385742e-08,
+      "unchanged_obs_35_39_max_abs_difference": 0.0,
+      "base_world_round_trip_residual_m": 0.0,
+      "policy_input": "original_truth_observation",
+      "truth_policy_action": [
+        -1.0,
+        -0.9595561027526855,
+        -0.5907201170921326,
+        0.8110250234603882
+      ]
+    },
+    {
+      "index": 4,
+      "valid": true,
+      "failure_reason": null,
+      "estimated_object_center_base": [
+        0.23647296238706467,
+        -0.4906378166381727,
+        0.3149999982428444
+      ],
+      "estimated_object_center_world": [
+        -0.23647296238706467,
+        0.4906378166381727,
+        0.3149999982428444
+      ],
+      "truth_object_center_world_evaluator_only": [
+        -0.2378010825301142,
+        0.49001422796214816,
+        0.315
+      ],
+      "field_error_vectors_m": {
+        "object_position": [
+          0.0013281255960464478,
+          0.0006235837936401367,
+          0.0
+        ],
+        "pregrasp_position": [
+          0.0013281255960464478,
+          0.0006235837936401367,
+          0.0
+        ],
+        "grasp_position": [
+          0.0013281255960464478,
+          0.0006235837936401367,
+          0.0
+        ],
+        "pinch_to_pregrasp": [
+          0.001328110694885254,
+          0.0006235754117369652,
+          1.862645149230957e-09
+        ],
+        "pinch_to_grasp": [
+          0.001328110694885254,
+          0.0006235754117369652,
+          1.862645149230957e-09
+        ],
+        "object_to_goal": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "object_lift": [
+          0.0
+        ]
+      },
+      "full_39d_max_abs_difference": 0.0013281255960464478,
+      "internal_consistency_residual": 7.683411240577698e-09,
+      "unchanged_obs_35_39_max_abs_difference": 0.0,
+      "base_world_round_trip_residual_m": 0.0,
+      "policy_input": "original_truth_observation",
+      "truth_policy_action": [
+        -1.0,
+        -0.9421337842941284,
+        -0.6019473671913147,
+        0.8191472291946411
+      ]
+    },
+    {
+      "index": 5,
+      "valid": true,
+      "failure_reason": null,
+      "estimated_object_center_base": [
+        0.22473505293909685,
+        -0.4929434381486205,
+        0.3149999976736771
+      ],
+      "estimated_object_center_world": [
+        -0.22473505293909685,
+        0.4929434381486205,
+        0.3149999976736771
+      ],
+      "truth_object_center_world_evaluator_only": [
+        -0.22527058211438172,
+        0.49221692549470913,
+        0.315
+      ],
+      "field_error_vectors_m": {
+        "object_position": [
+          0.0005355328321456909,
+          0.0007265210151672363,
+          0.0
+        ],
+        "pregrasp_position": [
+          0.0005355328321456909,
+          0.0007265210151672363,
+          0.0
+        ],
+        "grasp_position": [
+          0.0005355328321456909,
+          0.0007265210151672363,
+          0.0
+        ],
+        "pinch_to_pregrasp": [
+          0.000535525381565094,
+          0.0007264991290867329,
+          1.862645149230957e-09
+        ],
+        "pinch_to_grasp": [
+          0.000535525381565094,
+          0.0007264991290867329,
+          0.0
+        ],
+        "object_to_goal": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "object_lift": [
+          0.0
+        ]
+      },
+      "full_39d_max_abs_difference": 0.0007265210151672363,
+      "internal_consistency_residual": 7.450580596923828e-09,
+      "unchanged_obs_35_39_max_abs_difference": 0.0,
+      "base_world_round_trip_residual_m": 0.0,
+      "policy_input": "original_truth_observation",
+      "truth_policy_action": [
+        -1.0,
+        -0.8830225467681885,
+        -0.6030933260917664,
+        0.828234076499939
+      ]
+    },
+    {
+      "index": 6,
+      "valid": true,
+      "failure_reason": null,
+      "estimated_object_center_base": [
+        0.21048187180431877,
+        -0.4849783567916612,
+        0.31499999096913467
+      ],
+      "estimated_object_center_world": [
+        -0.21048187180431877,
+        0.4849783567916612,
+        0.31499999096913467
+      ],
+      "truth_object_center_world_evaluator_only": [
+        -0.2107953036816133,
+        0.48456008633521475,
+        0.315
+      ],
+      "field_error_vectors_m": {
+        "object_position": [
+          0.0003134310245513916,
+          0.0004182755947113037,
+          0.0
+        ],
+        "pregrasp_position": [
+          0.0003134310245513916,
+          0.0004182755947113037,
+          0.0
+        ],
+        "grasp_position": [
+          0.0003134310245513916,
+          0.0004182755947113037,
+          0.0
+        ],
+        "pinch_to_pregrasp": [
+          0.0003134235739707947,
+          0.00041825720109045506,
+          -5.587935447692871e-09
+        ],
+        "pinch_to_grasp": [
+          0.0003134235739707947,
+          0.00041825720109045506,
+          -5.587935447692871e-09
+        ],
+        "object_to_goal": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "object_lift": [
+          0.0
+        ]
+      },
+      "full_39d_max_abs_difference": 0.0004182755947113037,
+      "internal_consistency_residual": 1.30385160446167e-08,
+      "unchanged_obs_35_39_max_abs_difference": 0.0,
+      "base_world_round_trip_residual_m": 0.0,
+      "policy_input": "original_truth_observation",
+      "truth_policy_action": [
+        -1.0,
+        -0.9611849784851074,
+        -0.5914238095283508,
+        0.8112472891807556
+      ]
+    },
+    {
+      "index": 7,
+      "valid": true,
+      "failure_reason": null,
+      "estimated_object_center_base": [
+        0.22242939364350492,
+        -0.4843495862730397,
+        0.3149999969277449
+      ],
+      "estimated_object_center_world": [
+        -0.22242939364350492,
+        0.4843495862730397,
+        0.3149999969277449
+      ],
+      "truth_object_center_world_evaluator_only": [
+        -0.2229269927710333,
+        0.48368834952279893,
+        0.315
+      ],
+      "field_error_vectors_m": {
+        "object_position": [
+          0.0004975944757461548,
+          0.0006612241268157959,
+          0.0
+        ],
+        "pregrasp_position": [
+          0.0004975944757461548,
+          0.0006612241268157959,
+          0.0
+        ],
+        "grasp_position": [
+          0.0004975944757461548,
+          0.0006612241268157959,
+          0.0
+        ],
+        "pinch_to_pregrasp": [
+          0.0004975944757461548,
+          0.0006612234283238649,
+          0.0
+        ],
+        "pinch_to_grasp": [
+          0.0004975944757461548,
+          0.0006612234283238649,
+          0.0
+        ],
+        "object_to_goal": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "object_lift": [
+          0.0
+        ]
+      },
+      "full_39d_max_abs_difference": 0.0006612241268157959,
+      "internal_consistency_residual": 7.683411240577698e-09,
+      "unchanged_obs_35_39_max_abs_difference": 0.0,
+      "base_world_round_trip_residual_m": 0.0,
+      "policy_input": "original_truth_observation",
+      "truth_policy_action": [
+        -1.0,
+        -0.9987406730651855,
+        -0.5957180857658386,
+        0.8087209463119507
+      ]
+    },
+    {
+      "index": 8,
+      "valid": true,
+      "failure_reason": null,
+      "estimated_object_center_base": [
+        0.23144246693088094,
+        -0.48319679586007924,
+        0.31500000428982
+      ],
+      "estimated_object_center_world": [
+        -0.23144246693088094,
+        0.48319679586007924,
+        0.31500000428982
+      ],
+      "truth_object_center_world_evaluator_only": [
+        -0.23234957628071443,
+        0.48241005287707106,
+        0.315
+      ],
+      "field_error_vectors_m": {
+        "object_position": [
+          0.0009071081876754761,
+          0.0007867515087127686,
+          0.0
+        ],
+        "pregrasp_position": [
+          0.0009071081876754761,
+          0.0007867515087127686,
+          0.0
+        ],
+        "grasp_position": [
+          0.0009071081876754761,
+          0.0007867515087127686,
+          0.0
+        ],
+        "pinch_to_pregrasp": [
+          0.0009071081876754761,
+          0.0007867296226322651,
+          7.450580596923828e-09
+        ],
+        "pinch_to_grasp": [
+          0.0009071081876754761,
+          0.0007867296226322651,
+          7.450580596923828e-09
+        ],
+        "object_to_goal": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "object_lift": [
+          0.0
+        ]
+      },
+      "full_39d_max_abs_difference": 0.0009071081876754761,
+      "internal_consistency_residual": 1.30385160446167e-08,
+      "unchanged_obs_35_39_max_abs_difference": 0.0,
+      "base_world_round_trip_residual_m": 0.0,
+      "policy_input": "original_truth_observation",
+      "truth_policy_action": [
+        -1.0,
+        -1.0,
+        -0.5961863398551941,
+        0.8038082718849182
+      ]
+    },
+    {
+      "index": 9,
+      "valid": true,
+      "failure_reason": null,
+      "estimated_object_center_base": [
+        0.21760847247594062,
+        -0.49399144420955937,
+        0.3149999978983697
+      ],
+      "estimated_object_center_world": [
+        -0.21760847247594062,
+        0.49399144420955937,
+        0.3149999978983697
+      ],
+      "truth_object_center_world_evaluator_only": [
+        -0.2181735952654264,
+        0.4934687478032171,
+        0.315
+      ],
+      "field_error_vectors_m": {
+        "object_position": [
+          0.0005651265382766724,
+          0.0005226731300354004,
+          0.0
+        ],
+        "pregrasp_position": [
+          0.0005651265382766724,
+          0.0005226731300354004,
+          0.0
+        ],
+        "grasp_position": [
+          0.0005651265382766724,
+          0.0005226731300354004,
+          0.0
+        ],
+        "pinch_to_pregrasp": [
+          0.0005651190876960754,
+          0.0005226829089224339,
+          1.862645149230957e-09
+        ],
+        "pinch_to_grasp": [
+          0.0005651190876960754,
+          0.0005226829089224339,
+          1.862645149230957e-09
+        ],
+        "object_to_goal": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "object_lift": [
+          0.0
+        ]
+      },
+      "full_39d_max_abs_difference": 0.0005651265382766724,
+      "internal_consistency_residual": 9.778887033462524e-09,
+      "unchanged_obs_35_39_max_abs_difference": 0.0,
+      "base_world_round_trip_residual_m": 0.0,
+      "policy_input": "original_truth_observation",
+      "truth_policy_action": [
+        -1.0,
+        -0.8455007672309875,
+        -0.6023774147033691,
+        0.8325429558753967
+      ]
+    },
+    {
+      "index": 10,
+      "valid": true,
+      "failure_reason": null,
+      "estimated_object_center_base": [
+        0.21865648336635587,
+        -0.5011180567484926,
+        0.3149999904238876
+      ],
+      "estimated_object_center_world": [
+        -0.21865648336635587,
+        0.5011180567484926,
+        0.3149999904238876
+      ],
+      "truth_object_center_world_evaluator_only": [
+        -0.2192590543082329,
+        0.5005477443903841,
+        0.315
+      ],
+      "field_error_vectors_m": {
+        "object_position": [
+          0.0006025731563568115,
+          0.0005702972412109375,
+          0.0
+        ],
+        "pregrasp_position": [
+          0.0006025731563568115,
+          0.0005702972412109375,
+          0.0
+        ],
+        "grasp_position": [
+          0.0006025731563568115,
+          0.0005702972412109375,
+          0.0
+        ],
+        "pinch_to_pregrasp": [
+          0.0006025731563568115,
+          0.0005702991038560867,
+          -5.587935447692871e-09
+        ],
+        "pinch_to_grasp": [
+          0.0006025731563568115,
+          0.0005702991038560867,
+          -5.587935447692871e-09
+        ],
+        "object_to_goal": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "object_lift": [
+          0.0
+        ]
+      },
+      "full_39d_max_abs_difference": 0.0006025731563568115,
+      "internal_consistency_residual": 1.30385160446167e-08,
+      "unchanged_obs_35_39_max_abs_difference": 0.0,
+      "base_world_round_trip_residual_m": 0.0,
+      "policy_input": "original_truth_observation",
+      "truth_policy_action": [
+        -1.0,
+        -0.7417781352996826,
+        -0.6082150340080261,
+        0.8483877778053284
+      ]
+    },
+    {
+      "index": 11,
+      "valid": true,
+      "failure_reason": null,
+      "estimated_object_center_base": [
+        0.2123683327394131,
+        -0.4862359972273572,
+        0.3150000035604668
+      ],
+      "estimated_object_center_world": [
+        -0.2123683327394131,
+        0.4862359972273572,
+        0.3150000035604668
+      ],
+      "truth_object_center_world_evaluator_only": [
+        -0.2129584190267168,
+        0.48551761218665235,
+        0.315
+      ],
+      "field_error_vectors_m": {
+        "object_position": [
+          0.0005900859832763672,
+          0.0007183849811553955,
+          0.0
+        ],
+        "pregrasp_position": [
+          0.0005900859832763672,
+          0.0007183849811553955,
+          0.0
+        ],
+        "grasp_position": [
+          0.0005900859832763672,
+          0.0007183849811553955,
+          0.0
+        ],
+        "pinch_to_pregrasp": [
+          0.0005900859832763672,
+          0.0007183714769780636,
+          7.450580596923828e-09
+        ],
+        "pinch_to_grasp": [
+          0.0005900859832763672,
+          0.0007183714769780636,
+          7.450580596923828e-09
+        ],
+        "object_to_goal": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "object_lift": [
+          0.0
+        ]
+      },
+      "full_39d_max_abs_difference": 0.0007183849811553955,
+      "internal_consistency_residual": 1.30385160446167e-08,
+      "unchanged_obs_35_39_max_abs_difference": 0.0,
+      "base_world_round_trip_residual_m": 0.0,
+      "policy_input": "original_truth_observation",
+      "truth_policy_action": [
+        -1.0,
+        -0.9513851404190063,
+        -0.5935031771659851,
+        0.8137659430503845
+      ]
+    },
+    {
+      "index": 12,
+      "valid": true,
+      "failure_reason": null,
+      "estimated_object_center_base": [
+        0.2282983529553752,
+        -0.49902202771130516,
+        0.3149999994621408
+      ],
+      "estimated_object_center_world": [
+        -0.2282983529553752,
+        0.49902202771130516,
+        0.3149999994621408
+      ],
+      "truth_object_center_world_evaluator_only": [
+        -0.2289468585687748,
+        0.49844480158200277,
+        0.315
+      ],
+      "field_error_vectors_m": {
+        "object_position": [
+          0.0006485134363174438,
+          0.0005772411823272705,
+          0.0
+        ],
+        "pregrasp_position": [
+          0.0006485134363174438,
+          0.0005772411823272705,
+          0.0
+        ],
+        "grasp_position": [
+          0.0006485134363174438,
+          0.0005772411823272705,
+          0.0
+        ],
+        "pinch_to_pregrasp": [
+          0.0006485059857368469,
+          0.0005772123113274574,
+          3.725290298461914e-09
+        ],
+        "pinch_to_grasp": [
+          0.0006485059857368469,
+          0.0005772123113274574,
+          1.862645149230957e-09
+        ],
+        "object_to_goal": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "object_lift": [
+          0.0
+        ]
+      },
+      "full_39d_max_abs_difference": 0.0006485134363174438,
+      "internal_consistency_residual": 9.313225746154785e-09,
+      "unchanged_obs_35_39_max_abs_difference": 0.0,
+      "base_world_round_trip_residual_m": 0.0,
+      "policy_input": "original_truth_observation",
+      "truth_policy_action": [
+        -1.0,
+        -0.8034094572067261,
+        -0.6082962155342102,
+        0.8409483432769775
+      ]
+    },
+    {
+      "index": 13,
+      "valid": true,
+      "failure_reason": null,
+      "estimated_object_center_base": [
+        0.22536387792502058,
+        -0.49315304663075366,
+        0.3149999998590879
+      ],
+      "estimated_object_center_world": [
+        -0.22536387792502058,
+        0.49315304663075366,
+        0.3149999998590879
+      ],
+      "truth_object_center_world_evaluator_only": [
+        -0.22619450976517186,
+        0.49235215638707286,
+        0.315
+      ],
+      "field_error_vectors_m": {
+        "object_position": [
+          0.0008306354284286499,
+          0.0008008778095245361,
+          0.0
+        ],
+        "pregrasp_position": [
+          0.0008306354284286499,
+          0.0008008778095245361,
+          0.0
+        ],
+        "grasp_position": [
+          0.0008306354284286499,
+          0.0008008778095245361,
+          0.0
+        ],
+        "pinch_to_pregrasp": [
+          0.000830627977848053,
+          0.0008008768782019615,
+          3.725290298461914e-09
+        ],
+        "pinch_to_grasp": [
+          0.000830627977848053,
+          0.0008008768782019615,
+          3.725290298461914e-09
+        ],
+        "object_to_goal": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "object_lift": [
+          0.0
+        ]
+      },
+      "full_39d_max_abs_difference": 0.0008306354284286499,
+      "internal_consistency_residual": 1.1175870895385742e-08,
+      "unchanged_obs_35_39_max_abs_difference": 0.0,
+      "base_world_round_trip_residual_m": 0.0,
+      "policy_input": "original_truth_observation",
+      "truth_policy_action": [
+        -1.0,
+        -0.8834476470947266,
+        -0.6033394932746887,
+        0.8283003568649292
+      ]
+    },
+    {
+      "index": 14,
+      "valid": true,
+      "failure_reason": null,
+      "estimated_object_center_base": [
+        0.2345864690946996,
+        -0.4977644132700413,
+        0.3150000015473793
+      ],
+      "estimated_object_center_world": [
+        -0.2345864690946996,
+        0.4977644132700413,
+        0.3150000015473793
+      ],
+      "truth_object_center_world_evaluator_only": [
+        -0.2351206732366554,
+        0.4972918284903771,
+        0.315
+      ],
+      "field_error_vectors_m": {
+        "object_position": [
+          0.0005342066287994385,
+          0.00047257542610168457,
+          0.0
+        ],
+        "pregrasp_position": [
+          0.0005342066287994385,
+          0.00047257542610168457,
+          0.0
+        ],
+        "grasp_position": [
+          0.0005342066287994385,
+          0.00047257542610168457,
+          0.0
+        ],
+        "pinch_to_pregrasp": [
+          0.0005341991782188416,
+          0.0004725717008113861,
+          5.587935447692871e-09
+        ],
+        "pinch_to_grasp": [
+          0.0005341991782188416,
+          0.0004725717008113861,
+          5.587935447692871e-09
+        ],
+        "object_to_goal": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "object_lift": [
+          0.0
+        ]
+      },
+      "full_39d_max_abs_difference": 0.0005342066287994385,
+      "internal_consistency_residual": 1.1175870895385742e-08,
+      "unchanged_obs_35_39_max_abs_difference": 0.0,
+      "base_world_round_trip_residual_m": 0.0,
+      "policy_input": "original_truth_observation",
+      "truth_policy_action": [
+        -1.0,
+        -0.8367108106613159,
+        -0.6075688004493713,
+        0.8360418081283569
+      ]
+    },
+    {
+      "index": 15,
+      "valid": true,
+      "failure_reason": null,
+      "estimated_object_center_base": [
+        0.2203333220766416,
+        -0.4881224857523978,
+        0.3149999961339149
+      ],
+      "estimated_object_center_world": [
+        -0.2203333220766416,
+        0.4881224857523978,
+        0.3149999961339149
+      ],
+      "truth_object_center_world_evaluator_only": [
+        -0.2210449938115835,
+        0.4872777962612156,
+        0.315
+      ],
+      "field_error_vectors_m": {
+        "object_position": [
+          0.0007116645574569702,
+          0.0008446872234344482,
+          0.0
+        ],
+        "pregrasp_position": [
+          0.0007116645574569702,
+          0.0008446872234344482,
+          0.0
+        ],
+        "grasp_position": [
+          0.0007116645574569702,
+          0.0008446872234344482,
+          0.0
+        ],
+        "pinch_to_pregrasp": [
+          0.0007116645574569702,
+          0.0008446760475635529,
+          0.0
+        ],
+        "pinch_to_grasp": [
+          0.0007116645574569702,
+          0.0008446760475635529,
+          0.0
+        ],
+        "object_to_goal": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "object_lift": [
+          0.0
+        ]
+      },
+      "full_39d_max_abs_difference": 0.0008446872234344482,
+      "internal_consistency_residual": 7.450580596923828e-09,
+      "unchanged_obs_35_39_max_abs_difference": 0.0,
+      "base_world_round_trip_residual_m": 0.0,
+      "policy_input": "original_truth_observation",
+      "truth_policy_action": [
+        -1.0,
+        -0.9436601400375366,
+        -0.5982213616371155,
+        0.8175806403160095
+      ]
+    },
+    {
+      "index": 16,
+      "valid": true,
+      "failure_reason": null,
+      "estimated_object_center_base": [
+        0.21928529089710438,
+        -0.5004892387859894,
+        0.3149999932549518
+      ],
+      "estimated_object_center_world": [
+        -0.21928529089710438,
+        0.5004892387859894,
+        0.3149999932549518
+      ],
+      "truth_object_center_world_evaluator_only": [
+        -0.2199101346950324,
+        0.49989262120111594,
+        0.315
+      ],
+      "field_error_vectors_m": {
+        "object_position": [
+          0.0006248354911804199,
+          0.0005966126918792725,
+          0.0
+        ],
+        "pregrasp_position": [
+          0.0006248354911804199,
+          0.0005966126918792725,
+          0.0
+        ],
+        "grasp_position": [
+          0.0006248354911804199,
+          0.0005966126918792725,
+          0.0
+        ],
+        "pinch_to_pregrasp": [
+          0.0006248354911804199,
+          0.0005966043099761009,
+          -3.725290298461914e-09
+        ],
+        "pinch_to_grasp": [
+          0.0006248354911804199,
+          0.0005966043099761009,
+          -3.725290298461914e-09
+        ],
+        "object_to_goal": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "object_lift": [
+          0.0
+        ]
+      },
+      "full_39d_max_abs_difference": 0.0006248354911804199,
+      "internal_consistency_residual": 1.1175870895385742e-08,
+      "unchanged_obs_35_39_max_abs_difference": 0.0,
+      "base_world_round_trip_residual_m": 0.0,
+      "policy_input": "original_truth_observation",
+      "truth_policy_action": [
+        -1.0,
+        -0.7539663314819336,
+        -0.6078828573226929,
+        0.8467854261398315
+      ]
+    },
+    {
+      "index": 17,
+      "valid": true,
+      "failure_reason": null,
+      "estimated_object_center_base": [
+        0.23668257640156948,
+        -0.49692599373334695,
+        0.3149999982188239
+      ],
+      "estimated_object_center_world": [
+        -0.23668257640156948,
+        0.49692599373334695,
+        0.3149999982188239
+      ],
+      "truth_object_center_world_evaluator_only": [
+        -0.2388282513985467,
+        0.4961560454099652,
+        0.315
+      ],
+      "field_error_vectors_m": {
+        "object_position": [
+          0.0021456778049468994,
+          0.0007699429988861084,
+          0.0
+        ],
+        "pregrasp_position": [
+          0.0021456778049468994,
+          0.0007699429988861084,
+          0.0
+        ],
+        "grasp_position": [
+          0.0021456778049468994,
+          0.0007699429988861084,
+          0.0
+        ],
+        "pinch_to_pregrasp": [
+          0.0021456703543663025,
+          0.0007699346169829369,
+          1.862645149230957e-09
+        ],
+        "pinch_to_grasp": [
+          0.0021456703543663025,
+          0.0007699346169829369,
+          1.862645149230957e-09
+        ],
+        "object_to_goal": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "object_lift": [
+          0.0
+        ]
+      },
+      "full_39d_max_abs_difference": 0.0021456778049468994,
+      "internal_consistency_residual": 1.3969838619232178e-08,
+      "unchanged_obs_35_39_max_abs_difference": 0.0,
+      "base_world_round_trip_residual_m": 0.0,
+      "policy_input": "original_truth_observation",
+      "truth_policy_action": [
+        -1.0,
+        -0.8616509437561035,
+        -0.6064778566360474,
+        0.8319602608680725
+      ]
+    },
+    {
+      "index": 18,
+      "valid": true,
+      "failure_reason": null,
+      "estimated_object_center_base": [
+        0.236263334234868,
+        -0.4868649130373954,
+        0.3150000000554178
+      ],
+      "estimated_object_center_world": [
+        -0.236263334234868,
+        0.4868649130373954,
+        0.3150000000554178
+      ],
+      "truth_object_center_world_evaluator_only": [
+        -0.23741463702354604,
+        0.48634517232646307,
+        0.315
+      ],
+      "field_error_vectors_m": {
+        "object_position": [
+          0.0011513084173202515,
+          0.0005197525024414062,
+          0.0
+        ],
+        "pregrasp_position": [
+          0.0011513084173202515,
+          0.0005197525024414062,
+          0.0
+        ],
+        "grasp_position": [
+          0.0011513084173202515,
+          0.0005197525024414062,
+          0.0
+        ],
+        "pinch_to_pregrasp": [
+          0.0011513009667396545,
+          0.0005197272403165698,
+          3.725290298461914e-09
+        ],
+        "pinch_to_grasp": [
+          0.0011513009667396545,
+          0.0005197272403165698,
+          3.725290298461914e-09
+        ],
+        "object_to_goal": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "object_lift": [
+          0.0
+        ]
+      },
+      "full_39d_max_abs_difference": 0.0011513084173202515,
+      "internal_consistency_residual": 1.1408701539039612e-08,
+      "unchanged_obs_35_39_max_abs_difference": 0.0,
+      "base_world_round_trip_residual_m": 0.0,
+      "policy_input": "original_truth_observation",
+      "truth_policy_action": [
+        -1.0,
+        -0.9896898865699768,
+        -0.5992291569709778,
+        0.8111761808395386
+      ]
+    },
+    {
+      "index": 19,
+      "valid": true,
+      "failure_reason": null,
+      "estimated_object_center_base": [
+        0.22033333440042005,
+        -0.49503948557354527,
+        0.31499999173901294
+      ],
+      "estimated_object_center_world": [
+        -0.22033333440042005,
+        0.49503948557354527,
+        0.31499999173901294
+      ],
+      "truth_object_center_world_evaluator_only": [
+        -0.2209658343414843,
+        0.4945580592935866,
+        0.315
+      ],
+      "field_error_vectors_m": {
+        "object_position": [
+          0.0006324946880340576,
+          0.0004814267158508301,
+          0.0
+        ],
+        "pregrasp_position": [
+          0.0006324946880340576,
+          0.0004814267158508301,
+          0.0
+        ],
+        "grasp_position": [
+          0.0006324946880340576,
+          0.0004814267158508301,
+          0.0
+        ],
+        "pinch_to_pregrasp": [
+          0.0006324946880340576,
+          0.00048141274601221085,
+          -3.725290298461914e-09
+        ],
+        "pinch_to_grasp": [
+          0.0006324946880340576,
+          0.00048141274601221085,
+          -5.587935447692871e-09
+        ],
+        "object_to_goal": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "object_lift": [
+          0.0
+        ]
+      },
+      "full_39d_max_abs_difference": 0.0006324946880340576,
+      "internal_consistency_residual": 1.30385160446167e-08,
+      "unchanged_obs_35_39_max_abs_difference": 0.0,
+      "base_world_round_trip_residual_m": 0.0,
+      "policy_input": "original_truth_observation",
+      "truth_policy_action": [
+        -1.0,
+        -0.837295651435852,
+        -0.6040233969688416,
+        0.8345508575439453
+      ]
+    }
+  ]
+}

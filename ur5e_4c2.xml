@@ -1,0 +1,340 @@
+<mujoco model="ur5e_4c2">
+  <compiler angle="radian" meshdir="assets" autolimits="true" />
+  <option integrator="implicitfast" cone="elliptic" impratio="10" />
+  <default>
+    <default class="ur5e">
+      <material specular="0.5" shininess="0.25" />
+      <joint axis="0 1 0" range="-6.28319 6.28319" armature="0.1" />
+      <general gaintype="fixed" biastype="affine" ctrlrange="-6.2831 6.2831" gainprm="2000" biasprm="0 -2000 -400" forcerange="-150 150" />
+      <default class="size3">
+        <default class="size3_limited">
+          <joint range="-3.1415 3.1415" />
+          <general ctrlrange="-3.1415 3.1415" />
+        </default>
+      </default>
+      <default class="size1">
+        <general gainprm="500" biasprm="0 -500 -100" forcerange="-28 28" />
+      </default>
+      <default class="visual">
+        <geom type="mesh" contype="0" conaffinity="0" group="2" />
+      </default>
+      <default class="collision">
+        <geom type="capsule" group="3" />
+        <default class="eef_collision">
+          <geom type="cylinder" />
+        </default>
+      </default>
+      <site size="0.001" rgba="0.5 0.5 0.5 0.3" group="4" />
+    </default>
+    <default class="2f85">
+      <mesh scale="0.001 0.001 0.001" />
+      <general biastype="affine" />
+      <joint axis="1 0 0" />
+      <default class="driver">
+        <joint range="0 0.8" armature="0.005" damping="0.1" solimplimit="0.95 0.99 0.001" solreflimit="0.005 1" />
+      </default>
+      <default class="follower">
+        <joint range="-0.872664 0.872664" armature="0.001" pos="0 -0.018 0.0065" solimplimit="0.95 0.99 0.001" solreflimit="0.005 1" />
+      </default>
+      <default class="spring_link">
+        <joint range="-0.29670597283 0.8" armature="0.001" stiffness="0.05" springref="2.62" damping="0.00125" />
+      </default>
+      <default class="coupler">
+        <joint range="-1.57 0" armature="0.001" solimplimit="0.95 0.99 0.001" solreflimit="0.005 1" />
+      </default>
+      <default class="visual_2f85">
+        <geom type="mesh" contype="0" conaffinity="0" group="2" />
+      </default>
+      <default class="collision_2f85">
+        <geom type="mesh" group="3" />
+        <default class="pad_box1">
+          <geom mass="0" type="box" pos="0 -0.0026 0.028125" size="0.011 0.004 0.009375" friction="3.0" solimp="0.95 0.99 0.001" solref="0.004 1" priority="1" rgba="0.55 0.55 0.55 1" />
+        </default>
+        <default class="pad_box2">
+          <geom mass="0" type="box" pos="0 -0.0026 0.009375" size="0.011 0.004 0.009375" friction="3.0" solimp="0.95 0.99 0.001" solref="0.004 1" priority="1" rgba="0.45 0.45 0.45 1" />
+        </default>
+      </default>
+    </default>
+    <default class="4c2">
+      <geom contype="1" conaffinity="1" condim="3" friction="0.8 0.02 0.01" />
+      <joint damping="0.15" armature="0.0005" frictionloss="0.012" />
+    </default>
+  </default>
+  <asset>
+    <material class="ur5e" name="black" rgba="0.033 0.033 0.033 1" />
+    <material class="ur5e" name="jointgray" rgba="0.278 0.278 0.278 1" />
+    <material class="ur5e" name="linkgray" rgba="0.82 0.82 0.82 1" />
+    <material class="ur5e" name="urblue" rgba="0.49 0.678 0.8 1" />
+    <material name="metal" rgba="0.58 0.58 0.58 1" />
+    <material name="silicone" rgba="0.1882 0.1882 0.1882 1" />
+    <material name="gray" rgba="0.4627 0.4627 0.4627 1" />
+    <material name="black_2f85" rgba="0.149 0.149 0.149 1" />
+    <mesh class="2f85" file="base_mount_2f85.stl" />
+    <mesh class="2f85" file="base_2f85.stl" />
+    <mesh class="2f85" file="driver.stl" />
+    <mesh class="2f85" file="coupler.stl" />
+    <mesh class="2f85" file="follower.stl" />
+    <mesh class="2f85" file="pad.stl" />
+    <mesh class="2f85" file="silicone_pad.stl" />
+    <mesh class="2f85" file="spring_link.stl" />
+    <mesh file="base_0.obj" />
+    <mesh file="base_1.obj" />
+    <mesh file="shoulder_0.obj" />
+    <mesh file="shoulder_1.obj" />
+    <mesh file="shoulder_2.obj" />
+    <mesh file="upperarm_0.obj" />
+    <mesh file="upperarm_1.obj" />
+    <mesh file="upperarm_2.obj" />
+    <mesh file="upperarm_3.obj" />
+    <mesh file="forearm_0.obj" />
+    <mesh file="forearm_1.obj" />
+    <mesh file="forearm_2.obj" />
+    <mesh file="forearm_3.obj" />
+    <mesh file="wrist1_0.obj" />
+    <mesh file="wrist1_1.obj" />
+    <mesh file="wrist1_2.obj" />
+    <mesh file="wrist2_0.obj" />
+    <mesh file="wrist2_1.obj" />
+    <mesh file="wrist2_2.obj" />
+    <mesh file="wrist3.obj" />
+    <mesh name="base_link" file="4C2/base_link.STL" />
+    <mesh name="r_1" file="4C2/r_1.STL" />
+    <mesh name="r_3" file="4C2/r_3.STL" />
+    <mesh name="r_4" file="4C2/r_4.STL" />
+    <mesh name="l_1" file="4C2/l_1.STL" />
+    <mesh name="l_3" file="4C2/l_3.STL" />
+    <mesh name="l_4" file="4C2/l_4.STL" />
+    <mesh name="r_2_base" file="4C2/r_2_base.STL" />
+    <mesh name="r_2" file="4C2/r_2.STL" />
+    <mesh name="r_22" file="4C2/r_22.STL" />
+    <mesh name="l_2_base" file="4C2/l_2_base.STL" />
+    <mesh name="l_2" file="4C2/l_2.STL" />
+    <mesh name="l_22" file="4C2/l_22.STL" />
+    <!-- Native adapter STL plus the assembly-positioned D435 visual. -->
+    <mesh name="d435i_adapter" file="d435i_adapter.stl" scale="0.001 0.001 0.001" />
+    <mesh name="d435i_camera_assembly" file="d435i_camera_assembly.stl" scale="0.001 0.001 0.001" />
+  </asset>
+  <worldbody>
+    <light name="spotlight" mode="targetbodycom" target="wrist_2_link" pos="0 -1 2" />
+    <body name="base" quat="0 0 0 -1" childclass="ur5e">
+      <inertial mass="4.0" pos="0 0 0" diaginertia="0.00443333156 0.00443333156 0.0072" />
+      <geom mesh="base_0" material="black" class="visual" />
+      <geom mesh="base_1" material="jointgray" class="visual" />
+      <body name="shoulder_link" pos="0 0 0.163">
+        <inertial mass="3.7" pos="0 0 0" diaginertia="0.0102675 0.0102675 0.00666" />
+        <joint name="shoulder_pan_joint" class="size3" axis="0 0 1" />
+        <geom mesh="shoulder_0" material="urblue" class="visual" />
+        <geom mesh="shoulder_1" material="black" class="visual" />
+        <geom mesh="shoulder_2" material="jointgray" class="visual" />
+        <geom class="collision" size="0.06 0.06" pos="0 0 -0.04" />
+        <body name="upper_arm_link" pos="0 0.138 0" quat="1 0 1 0">
+          <inertial mass="8.393" pos="0 0 0.2125" diaginertia="0.133886 0.133886 0.0151074" />
+          <joint name="shoulder_lift_joint" class="size3" />
+          <geom mesh="upperarm_0" material="linkgray" class="visual" />
+          <geom mesh="upperarm_1" material="black" class="visual" />
+          <geom mesh="upperarm_2" material="jointgray" class="visual" />
+          <geom mesh="upperarm_3" material="urblue" class="visual" />
+          <geom class="collision" pos="0 -0.04 0" quat="1 1 0 0" size="0.06 0.06" />
+          <geom class="collision" size="0.05 0.2" pos="0 0 0.2" />
+          <body name="forearm_link" pos="0 -0.131 0.425">
+            <inertial mass="2.275" pos="0 0 0.196" diaginertia="0.0311796 0.0311796 0.004095" />
+            <joint name="elbow_joint" class="size3_limited" />
+            <geom mesh="forearm_0" material="urblue" class="visual" />
+            <geom mesh="forearm_1" material="linkgray" class="visual" />
+            <geom mesh="forearm_2" material="black" class="visual" />
+            <geom mesh="forearm_3" material="jointgray" class="visual" />
+            <geom class="collision" pos="0 0.08 0" quat="1 1 0 0" size="0.055 0.06" />
+            <geom class="collision" size="0.038 0.19" pos="0 0 0.2" />
+            <body name="wrist_1_link" pos="0 0 0.392" quat="1 0 1 0">
+              <inertial mass="1.219" pos="0 0.127 0" diaginertia="0.0025599 0.0025599 0.0021942" />
+              <joint name="wrist_1_joint" class="size1" />
+              <geom mesh="wrist1_0" material="black" class="visual" />
+              <geom mesh="wrist1_1" material="urblue" class="visual" />
+              <geom mesh="wrist1_2" material="jointgray" class="visual" />
+              <geom class="collision" pos="0 0.05 0" quat="1 1 0 0" size="0.04 0.07" />
+              <body name="wrist_2_link" pos="0 0.127 0">
+                <inertial mass="1.219" pos="0 0 0.1" diaginertia="0.0025599 0.0025599 0.0021942" />
+                <joint name="wrist_2_joint" axis="0 0 1" class="size1" />
+                <geom mesh="wrist2_0" material="black" class="visual" />
+                <geom mesh="wrist2_1" material="urblue" class="visual" />
+                <geom mesh="wrist2_2" material="jointgray" class="visual" />
+                <geom class="collision" size="0.04 0.06" pos="0 0 0.04" />
+                <geom class="collision" pos="0 0.02 0.1" quat="1 1 0 0" size="0.04 0.04" />
+                <body name="wrist_3_link" pos="0 0 0.1">
+                  <inertial mass="0.1889" pos="0 0.0771683 0" quat="1 0 0 1" diaginertia="0.000132134 9.90863e-05 9.90863e-05" />
+                  <joint name="wrist_3_joint" class="size1" />
+                  <geom material="linkgray" mesh="wrist3" class="visual" />
+                  <geom class="eef_collision" pos="0 0.08 0" quat="1 1 0 0" size="0.04 0.02" />
+                  <!-- STEP-defined mechanical chain.  The adapter's native flange
+                       frame has its centre at X=Y=0, mating plane at Z=0, and axis
+                       along +Z.  The transform below places that plane directly on
+                       the UR5e tool flange. Its rotational indexing about the
+                       common flange axis is intentionally flipped 180 degrees
+                       from the earlier import so the physical adapter and D435i
+                       occupy the correct side of the gripper. -->
+                  <body name="d435i_adapter"
+                        pos="0 0.092435 0"
+                        quat="0 0 1 1">
+                    <!-- The STL exporter shifted the native STEP origin by
+                         +42.5 mm on X/Y; undo that translation here so the flange
+                         centre remains the body origin.  The mesh-derived inertia
+                         is normalized to the specified 100 g adapter mass. -->
+                    <geom name="d435i_adapter_visual" type="mesh"
+                          mesh="d435i_adapter" pos="-0.0425 -0.0425 0" mass="0.100"
+                          rgba="0.34 0.38 0.42 1" contype="0" conaffinity="0" group="2" />
+                    <body name="d435i_camera">
+                      <!-- This visual STL is already positioned in the exported
+                           assembly frame. Convert it back to adapter-native STEP
+                           coordinates with the measured rigid translation. Its
+                           mesh-derived inertia is normalized to the specified
+                           75 g camera mass. -->
+                      <geom name="d435i_camera_visual" type="mesh"
+                            mesh="d435i_camera_assembly"
+                            pos="-0.057848647 -0.044035437 -0.149378998" mass="0.075"
+                            rgba="0.12 0.14 0.16 1" contype="0" conaffinity="0" group="2" />
+
+                      <!-- The supplied D435 CAD has its lens face along assembly
+                           +Z.  Its front-face circular geometry gives the Depth and
+                           Color lens centres at assembly X=75.348648 mm and
+                           X=90.348648 mm, respectively, on the common sensor row
+                           Y=142.908081 mm.  Z=208.503174 mm is the outer lens-face
+                           plane, so the simulated camera frusta visibly originate
+                           at the CAD lenses.  The optical origins below are shifted
+                           4.2 mm inward from that exterior face along the common
+                           optical axis, as specified for the current camera model.
+                           Factory calibration must still replace this nominal value.
+
+                           MuJoCo cameras use +X right, +Y up, -Z forward.  Rotating
+                           180 degrees about assembly Y makes -Z point through the
+                           CAD front face (+assembly Z). -->
+                    <body name="d435i_mount_frame"
+                          pos="0.017500001 0.098872644 0.054924176"
+                          quat="0 0 1 0">
+                      <!-- Depth is 4.2 mm inward from the CAD depth-lens face
+                           centre. Color is likewise 4.2 mm inward from its face
+                           centre and 15 mm farther along assembly +X, which is -X
+                           in this MuJoCo camera frame. This preserves the validated
+                           Color_T_Depth translation of +15 mm optical X. -->
+                      <camera name="eye_in_hand_depth" pos="0 0 0" quat="1 0 0 0" fovy="58" />
+                      <camera name="eye_in_hand_color" pos="-0.015 0 0" quat="1 0 0 0" fovy="42.5" />
+                    </body>
+                    </body>
+                    <!-- Restore the adapter-to-4C2 rotational indexing recovered
+                         from the STEP assembly. Together with the 180 degree adapter
+                         correction above, this leaves the already validated gripper
+                         and pinch/TCP world orientation unchanged. The measured
+                         12.5 mm axial plate thickness is also preserved. -->
+                    <body name="base_4c2"
+                          pos="0 0 0.0125"
+                          quat="0.70710678 0 0 0.70710678"
+                          childclass="4c2">
+                    <site name="attachment_site" pos="0 0 0" quat="1 0 0 0" />
+                    <geom type="mesh" mesh="base_link" rgba="0.25 0.25 0.25 1" />
+                    <site name="pinch" pos="-0.004 0 0.119" quat="0.7071068 0 0 -0.7071068" type="sphere" group="5" rgba="0.9 0.9 0.9 1" size="0.004" />
+                    <geom name="r_2_base_geom" pos="-0.0125 0.03 0.081" quat="-2.59734e-06 0.707105 2.59735e-06 0.707108" type="mesh" rgba="0.898039 0.917647 0.929412 1" mesh="r_2_base" />
+                    <geom name="l_2_base_geom" pos="-0.012574 -0.03 0.081" quat="-2.59734e-06 0.707105 2.59735e-06 0.707108" type="mesh" rgba="0.898039 0.917647 0.929412 1" mesh="l_2_base" />
+                    <body name="r_1" pos="-0.0125 0.04 0.079" quat="-2.59734e-06 0.707105 2.59735e-06 0.707108">
+                      <inertial pos="0.01588 0.00512 0.01252" quat="0.415878 0.416502 0.57208 0.571223" mass="0.00864" diaginertia="2.7375e-06 2.39153e-06 3.94979e-07" />
+                      <joint name="r_1_joint" type="hinge" pos="0 0 0" axis="0 0 1" limited="true" range="0 0.9" />
+                      <geom name="r_1_geom" type="mesh" rgba="0.25 0.25 0.25 1" mesh="r_1" contype="0" conaffinity="0" group="2" />
+                      <!-- The link profile is not box-shaped; reuse its visual mesh
+                           so collision does not fill empty space around the link. -->
+                      <geom name="r_1_link_collision" type="mesh" mesh="r_1" margin="0" rgba="0 0 0 0" group="3" contype="2" conaffinity="0" friction="1.2 0.02 0.001" solimp="0.99 0.999 0.0001" solref="0.004 1" />
+                      <body name="r_3" pos="0.03997 -0.0129 0.0035" quat="1 0 0 0">
+                        <inertial pos="0.00883481 -0.00994307 0.009" quat="0.155412 0.689817 -0.155412 0.689817" mass="0.00981882" diaginertia="1.20207e-06 1.16127e-06 4.01997e-07" />
+                        <joint name="r_3_joint" type="hinge" pos="0 0 0" axis="0 0 -1" limited="true" range="0 0.9" />
+                        <geom name="r_3_geom" type="mesh" rgba="0.4 0.4 0.4 1" mesh="r_3" contype="0" conaffinity="0" group="2" />
+                        <geom name="r_3_link_collision" type="mesh" mesh="r_3" margin="0" rgba="0 0 0 0" group="3" contype="2" conaffinity="0" friction="1.2 0.02 0.001" solimp="0.99 0.999 0.0001" solref="0.004 1" />
+                        <geom name="right_pad1" pos="0.002 0.01 0" type="mesh" rgba="0.898039 0.917647 0.929412 1" mesh="r_4" contype="0" conaffinity="0" group="2" />
+                        <!-- r_4 is a 2 mm diameter, 18 mm long visual pin. Keep the
+                             legacy pad-named collision box just inside the mesh and
+                             do not add an invisible contact margin. -->
+                        <geom name="right_pad1_collision" pos="0.002 0.01 0.009" type="box" size="0.00095 0.00095 0.00895" margin="0" rgba="0 0 0 0" group="3" friction="4.0 0.02 0.001" solimp="0.995 0.9995 0.0001" solref="0.004 1" priority="2" />
+                      </body>
+                    </body>
+                    <body name="r_2" pos="-0.0125 0.03 0.081" quat="-2.59734e-06 0.707105 2.59735e-06 0.707108">
+                      <inertial pos="0.0176389 0.0056311 0.0124596" quat="0.422765 0.412946 0.574445 0.566356" mass="0.0120216" diaginertia="2.49512e-06 2.16176e-06 4.44919e-07" />
+                      <joint name="r_2_joint" type="hinge" pos="0 0 0" axis="0 0 1" limited="true" range="0 0.9" />
+                      <geom name="r_2_geom" type="mesh" rgba="0.25 0.25 0.25 1" mesh="r_2" contype="0" conaffinity="0" group="2" />
+                      <geom name="r_2_link_collision" type="mesh" mesh="r_2" margin="0" rgba="0 0 0 0" group="3" contype="2" conaffinity="0" friction="1.2 0.02 0.001" solimp="0.99 0.999 0.0001" solref="0.004 1" />
+                      <geom name="right_pad2" pos="0.03997 -0.0129 0.003" type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="r_22" contype="0" conaffinity="0" group="2" />
+                      <!-- r_22 visual cap AABB is about 6 x 6 x 2.9 mm. -->
+                      <geom name="right_pad2_collision" pos="0.03997 -0.0129 0.00455" type="box" size="0.0029 0.0029 0.0014" margin="0" rgba="0 0 0 0" group="3" friction="4.0 0.02 0.001" solimp="0.995 0.9995 0.0001" solref="0.004 1" priority="2" />
+                    </body>
+                    <body name="l_1" pos="-0.0125 -0.04 0.079" quat="-2.59734e-06 0.707105 2.59735e-06 0.707108">
+                      <inertial pos="0.01588 -0.00512 0.01249" quat="0.571779 0.571525 0.416099 0.416281" mass="0.00864" diaginertia="2.7375e-06 2.39153e-06 3.94984e-07" />
+                      <joint name="l_1_joint" type="hinge" pos="0 0 0" axis="0 0 -1" limited="true" range="0 0.9" />
+                      <geom name="l_1_geom" type="mesh" rgba="0.25 0.25 0.25 1" mesh="l_1" contype="0" conaffinity="0" group="2" />
+                      <geom name="l_1_link_collision" type="mesh" mesh="l_1" margin="0" rgba="0 0 0 0" group="3" contype="2" conaffinity="0" friction="1.2 0.02 0.001" solimp="0.99 0.999 0.0001" solref="0.004 1" />
+                      <body name="l_3" pos="0.03997 0.0129 0.0035" quat="1 0 0 0">
+                        <inertial pos="0.00883481 0.00994307 0.009" quat="-0.155412 0.689817 0.155412 0.689817" mass="0.00981882" diaginertia="1.20207e-06 1.16127e-06 4.01997e-07" />
+                        <joint name="l_3_joint" type="hinge" pos="0 0 0" axis="0 0 1" limited="true" range="0 0.9" />
+                        <geom name="l_3_geom" type="mesh" rgba="0.4 0.4 0.4 1" mesh="l_3" contype="0" conaffinity="0" group="2" />
+                        <geom name="l_3_link_collision" type="mesh" mesh="l_3" margin="0" rgba="0 0 0 0" group="3" contype="2" conaffinity="0" friction="1.2 0.02 0.001" solimp="0.99 0.999 0.0001" solref="0.004 1" />
+                        <geom name="left_pad1" pos="0.002 -0.01 0" type="mesh" rgba="0.898039 0.917647 0.929412 1" mesh="l_4" contype="0" conaffinity="0" group="2" />
+                        <!-- l_4 mirrors the r_4 pin; use the same dimensions. -->
+                        <geom name="left_pad1_collision" pos="0.002 -0.01 0.009" type="box" size="0.00095 0.00095 0.00895" margin="0" rgba="0 0 0 0" group="3" friction="4.0 0.02 0.001" solimp="0.995 0.9995 0.0001" solref="0.004 1" priority="2" />
+                      </body>
+                    </body>
+                    <body name="l_2" pos="-0.012574 -0.03 0.081" quat="-2.59734e-06 0.707105 2.59735e-06 0.707108">
+                      <inertial pos="0.0177384 -0.00554857 0.0124678" quat="0.555689 0.580612 0.407911 0.433252" mass="0.0120754" diaginertia="2.51208e-06 2.20653e-06 4.79405e-07" />
+                      <joint name="l_2_joint" type="hinge" pos="0 0 0" axis="0 0 -1" limited="true" range="0 0.9" />
+                      <geom name="l_2_geom" type="mesh" rgba="0.25 0.25 0.25 1" mesh="l_2" contype="0" conaffinity="0" group="2" />
+                      <geom name="l_2_link_collision" type="mesh" mesh="l_2" margin="0" rgba="0 0 0 0" group="3" contype="2" conaffinity="0" friction="1.2 0.02 0.001" solimp="0.99 0.999 0.0001" solref="0.004 1" />
+                      <geom name="left_pad2" pos="0.03997 0.0129 0.0035" type="mesh" rgba="0.898039 0.917647 0.929412 1" mesh="l_22" contype="0" conaffinity="0" group="2" />
+                      <!-- l_22 visual cap AABB is about 6 x 6 x 2.9 mm. -->
+                      <geom name="left_pad2_collision" pos="0.03997 0.0129 0.00495" type="box" size="0.0029 0.0029 0.0014" margin="0" rgba="0 0 0 0" group="3" friction="4.0 0.02 0.001" solimp="0.995 0.9995 0.0001" solref="0.004 1" priority="2" />
+                    </body>
+                  </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <contact>
+    <exclude body1="base_4c2" body2="r_1" />
+    <exclude body1="base_4c2" body2="r_2" />
+    <exclude body1="base_4c2" body2="l_1" />
+    <exclude body1="base_4c2" body2="l_2" />
+    <exclude body1="r_1" body2="r_2" />
+    <exclude body1="r_1" body2="r_3" />
+    <exclude body1="r_2" body2="r_3" />
+    <exclude body1="l_1" body2="l_2" />
+    <exclude body1="l_1" body2="l_3" />
+    <exclude body1="l_2" body2="l_3" />
+    <exclude body1="r_1" body2="l_1" />
+    <exclude body1="r_2" body2="l_2" />
+    <exclude body1="r_1" body2="l_2" />
+    <exclude body1="r_2" body2="l_1" />
+    <exclude body1="r_3" body2="l_1" />
+    <exclude body1="l_3" body2="r_1" />
+  </contact>
+  <equality>
+    <joint name="left_gripper_mimic_right" joint1="r_1_joint" joint2="l_1_joint" polycoef="0 1 0 0 0" solref="0.002 1" solimp="0.99 0.999 0.0001 0.5 2" />
+    <joint name="right_inner_mimic_drive" joint1="r_1_joint" joint2="r_2_joint" polycoef="0 1 0 0 0" solref="0.002 1" solimp="0.99 0.999 0.0001 0.5 2" />
+    <joint name="left_inner_mimic_drive" joint1="r_1_joint" joint2="l_2_joint" polycoef="0 1 0 0 0" solref="0.002 1" solimp="0.99 0.999 0.0001 0.5 2" />
+    <joint name="right_tip_mimic_drive" joint1="r_1_joint" joint2="r_3_joint" polycoef="0 1 0 0 0" solref="0.002 1" solimp="0.99 0.999 0.0001 0.5 2" />
+    <joint name="left_tip_mimic_drive" joint1="r_1_joint" joint2="l_3_joint" polycoef="0 1 0 0 0" solref="0.002 1" solimp="0.99 0.999 0.0001 0.5 2" />
+  </equality>
+  <actuator>
+    <general class="size3" name="shoulder_pan" joint="shoulder_pan_joint" />
+    <general class="size3" name="shoulder_lift" joint="shoulder_lift_joint" />
+    <general class="size3_limited" name="elbow" joint="elbow_joint" />
+    <general class="size1" name="wrist_1" joint="wrist_1_joint" />
+    <general class="size1" name="wrist_2" joint="wrist_2_joint" />
+    <general class="size1" name="wrist_3" joint="wrist_3_joint" />
+    <position name="fingers_actuator" joint="r_1_joint" ctrllimited="true" ctrlrange="0 0.9" kp="15" forcelimited="true" forcerange="-3 3" />
+  </actuator>
+  <sensor>
+    <jointpos name="sense_gripper_right" joint="r_1_joint" />
+    <jointpos name="sense_gripper_left" joint="l_1_joint" />
+    <jointpos name="sense_r_2" joint="r_2_joint" />
+    <jointpos name="sense_r_3" joint="r_3_joint" />
+    <jointpos name="sense_l_2" joint="l_2_joint" />
+    <jointpos name="sense_l_3" joint="l_3_joint" />
+  </sensor>
+</mujoco>

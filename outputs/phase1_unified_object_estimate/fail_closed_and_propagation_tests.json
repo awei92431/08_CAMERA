@@ -1,0 +1,37 @@
+{
+  "missing": {
+    "reason": "missing",
+    "physics_unchanged": true,
+    "behavior": "diagnostic_stop_before_model_predict_or_env.step"
+  },
+  "dropout": {
+    "reason": "rgbd_dropout",
+    "physics_unchanged": true,
+    "behavior": "diagnostic_stop_before_model_predict_or_env.step"
+  },
+  "stale": {
+    "reason": "stale",
+    "physics_unchanged": true,
+    "behavior": "diagnostic_stop_before_model_predict_or_env.step"
+  },
+  "mode_mixing_rejected": true,
+  "valid_observation": {
+    "estimate_id": "visual-001",
+    "finite": true,
+    "object_position_matches": true
+  },
+  "tcp_fk_propagation": {
+    "expected": [
+      0.0,
+      3.0,
+      0.0
+    ],
+    "actual": [
+      0.0,
+      3.0,
+      0.0
+    ],
+    "error_m": 0.0,
+    "uses_object_truth": false
+  }
+}

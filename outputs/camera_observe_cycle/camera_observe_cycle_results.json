@@ -1,0 +1,2641 @@
+{
+  "summary": {
+    "environment": "My4C2AllStageSinglePPOV22Cube3cm-v0",
+    "samples": 100,
+    "seed_range": [
+      0,
+      99
+    ],
+    "home_arm_qpos_rad": [
+      -1.5708,
+      -1.5708,
+      1.5708,
+      -1.5708,
+      -1.5708,
+      0.0
+    ],
+    "camera_observe_arm_qpos_rad": [
+      -3.50356411,
+      -1.39121562,
+      0.03083238,
+      -0.38197572,
+      -1.56229418,
+      -0.34007296
+    ],
+    "vision_success_count": 100,
+    "vision_success_rate": 1.0,
+    "center_error_mm": {
+      "mean": 0.9198601637173717,
+      "median": 0.8442498461849359,
+      "p95": 1.9228486563976905,
+      "max": 2.8169328800700724
+    },
+    "failure_reason_counts": {},
+    "episodes_with_bad_task_contacts": 0,
+    "max_object_displacement_mm": 0.02909242593757133,
+    "max_observe_joint_error_rad": 0.046297328040307395,
+    "max_home_joint_error_rad": 0.04472880558729031
+  },
+  "episodes": [
+    {
+      "seed": 0,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.00021374865898339272,
+      "mask_pixels": 706,
+      "valid_depth_points": 309,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 1,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0015396792300055495,
+      "mask_pixels": 878,
+      "valid_depth_points": 398,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 2,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0007767112296041846,
+      "mask_pixels": 754,
+      "valid_depth_points": 330,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 3,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0012581512902637068,
+      "mask_pixels": 767,
+      "valid_depth_points": 329,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 4,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0006119140406206848,
+      "mask_pixels": 646,
+      "valid_depth_points": 272,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 5,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0009145292796497844,
+      "mask_pixels": 808,
+      "valid_depth_points": 349,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593751582e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 6,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0007177764942059556,
+      "mask_pixels": 721,
+      "valid_depth_points": 286,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 7,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0015907106028256032,
+      "mask_pixels": 822,
+      "valid_depth_points": 351,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 8,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.001994078571791586,
+      "mask_pixels": 951,
+      "valid_depth_points": 420,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 9,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0003210713331003626,
+      "mask_pixels": 658,
+      "valid_depth_points": 274,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 10,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.001203969225118609,
+      "mask_pixels": 643,
+      "valid_depth_points": 267,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 11,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0006755662402999545,
+      "mask_pixels": 781,
+      "valid_depth_points": 325,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 12,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.001216718356877556,
+      "mask_pixels": 937,
+      "valid_depth_points": 409,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 13,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.001164231238123836,
+      "mask_pixels": 950,
+      "valid_depth_points": 402,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 14,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0012720304793823727,
+      "mask_pixels": 672,
+      "valid_depth_points": 282,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 15,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.00045409061932453717,
+      "mask_pixels": 754,
+      "valid_depth_points": 320,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 16,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0005420132755252697,
+      "mask_pixels": 688,
+      "valid_depth_points": 291,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 17,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0003955602799822647,
+      "mask_pixels": 663,
+      "valid_depth_points": 284,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 18,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.001008111707125937,
+      "mask_pixels": 751,
+      "valid_depth_points": 333,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 19,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0014031644965653012,
+      "mask_pixels": 878,
+      "valid_depth_points": 368,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 20,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.00040427219447392325,
+      "mask_pixels": 744,
+      "valid_depth_points": 306,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 21,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.001050644430445639,
+      "mask_pixels": 672,
+      "valid_depth_points": 289,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 22,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.000170494197757808,
+      "mask_pixels": 734,
+      "valid_depth_points": 312,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593751582e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 23,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0004704963506659451,
+      "mask_pixels": 706,
+      "valid_depth_points": 296,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 24,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0004473414369192943,
+      "mask_pixels": 746,
+      "valid_depth_points": 320,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 25,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0005963446568111978,
+      "mask_pixels": 765,
+      "valid_depth_points": 320,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593751582e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 26,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0005471552941885422,
+      "mask_pixels": 721,
+      "valid_depth_points": 307,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 27,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0001568589601517244,
+      "mask_pixels": 686,
+      "valid_depth_points": 284,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 28,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.00213037484739013,
+      "mask_pixels": 970,
+      "valid_depth_points": 416,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 29,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0008608564464731862,
+      "mask_pixels": 809,
+      "valid_depth_points": 343,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 30,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.000507079734200923,
+      "mask_pixels": 775,
+      "valid_depth_points": 339,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 31,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.001171558336560038,
+      "mask_pixels": 639,
+      "valid_depth_points": 259,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593751582e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 32,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0004751576406284055,
+      "mask_pixels": 808,
+      "valid_depth_points": 342,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593751582e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 33,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0006222673316474348,
+      "mask_pixels": 728,
+      "valid_depth_points": 307,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 34,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0014378374360998517,
+      "mask_pixels": 947,
+      "valid_depth_points": 433,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 35,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0009767695287752206,
+      "mask_pixels": 752,
+      "valid_depth_points": 316,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 36,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0005911294831179619,
+      "mask_pixels": 752,
+      "valid_depth_points": 306,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 37,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0004142531239827193,
+      "mask_pixels": 700,
+      "valid_depth_points": 298,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 38,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0005417372183735026,
+      "mask_pixels": 726,
+      "valid_depth_points": 306,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 39,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0005847132569687108,
+      "mask_pixels": 725,
+      "valid_depth_points": 324,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 40,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0004895450065824816,
+      "mask_pixels": 692,
+      "valid_depth_points": 301,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 41,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0019190997134822226,
+      "mask_pixels": 921,
+      "valid_depth_points": 388,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 42,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0008329255121390617,
+      "mask_pixels": 672,
+      "valid_depth_points": 289,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 43,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0005773420599309624,
+      "mask_pixels": 681,
+      "valid_depth_points": 275,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 44,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0008985082578836155,
+      "mask_pixels": 780,
+      "valid_depth_points": 323,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 45,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0009794879104671223,
+      "mask_pixels": 710,
+      "valid_depth_points": 296,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 46,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0004618152323660562,
+      "mask_pixels": 646,
+      "valid_depth_points": 273,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 47,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.001026535357058764,
+      "mask_pixels": 707,
+      "valid_depth_points": 303,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 48,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0011680786180226878,
+      "mask_pixels": 743,
+      "valid_depth_points": 327,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 49,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.00021322798829115534,
+      "mask_pixels": 786,
+      "valid_depth_points": 330,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 50,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.001271782691793103,
+      "mask_pixels": 816,
+      "valid_depth_points": 348,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 51,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0010655061049654562,
+      "mask_pixels": 652,
+      "valid_depth_points": 275,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 52,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0006842999628069677,
+      "mask_pixels": 715,
+      "valid_depth_points": 305,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 53,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0007557046237928172,
+      "mask_pixels": 854,
+      "valid_depth_points": 372,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 54,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0009630954746263279,
+      "mask_pixels": 782,
+      "valid_depth_points": 325,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 55,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0014710867932365142,
+      "mask_pixels": 962,
+      "valid_depth_points": 433,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 56,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0005162351167721567,
+      "mask_pixels": 668,
+      "valid_depth_points": 284,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 57,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0010302429768843653,
+      "mask_pixels": 703,
+      "valid_depth_points": 306,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 58,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0012255570841081583,
+      "mask_pixels": 873,
+      "valid_depth_points": 385,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 59,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0011759349661348362,
+      "mask_pixels": 784,
+      "valid_depth_points": 338,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 60,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0010883228802778578,
+      "mask_pixels": 749,
+      "valid_depth_points": 315,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 61,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.000670258102873736,
+      "mask_pixels": 824,
+      "valid_depth_points": 355,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 62,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0009916025657357103,
+      "mask_pixels": 726,
+      "valid_depth_points": 324,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 63,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0021051241828791,
+      "mask_pixels": 891,
+      "valid_depth_points": 378,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593751582e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 64,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0006778644928596921,
+      "mask_pixels": 655,
+      "valid_depth_points": 261,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 65,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.00022384239226205078,
+      "mask_pixels": 835,
+      "valid_depth_points": 360,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 66,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0010262562428025063,
+      "mask_pixels": 888,
+      "valid_depth_points": 395,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 67,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.000795923547824792,
+      "mask_pixels": 730,
+      "valid_depth_points": 315,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 68,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0014964456015888364,
+      "mask_pixels": 820,
+      "valid_depth_points": 352,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 69,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.00013149320316094702,
+      "mask_pixels": 709,
+      "valid_depth_points": 296,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 70,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.00021517795391760337,
+      "mask_pixels": 765,
+      "valid_depth_points": 313,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 71,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0006821838246240119,
+      "mask_pixels": 763,
+      "valid_depth_points": 329,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 72,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0007353206863820075,
+      "mask_pixels": 652,
+      "valid_depth_points": 283,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 73,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0013770097946438613,
+      "mask_pixels": 721,
+      "valid_depth_points": 307,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 74,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0014017049933616886,
+      "mask_pixels": 677,
+      "valid_depth_points": 291,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 75,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0004508403546405092,
+      "mask_pixels": 749,
+      "valid_depth_points": 316,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 76,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0022050982781708865,
+      "mask_pixels": 1015,
+      "valid_depth_points": 430,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 77,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0006570228126289047,
+      "mask_pixels": 666,
+      "valid_depth_points": 285,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 78,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.001781170535199071,
+      "mask_pixels": 886,
+      "valid_depth_points": 376,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 79,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0014603779413256645,
+      "mask_pixels": 640,
+      "valid_depth_points": 268,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 80,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.00025649555618630543,
+      "mask_pixels": 667,
+      "valid_depth_points": 285,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 81,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0007184695366582239,
+      "mask_pixels": 724,
+      "valid_depth_points": 311,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 82,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0028169328800700722,
+      "mask_pixels": 975,
+      "valid_depth_points": 445,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 83,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0002578044144486834,
+      "mask_pixels": 750,
+      "valid_depth_points": 315,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593751582e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 84,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.001198180815786284,
+      "mask_pixels": 810,
+      "valid_depth_points": 357,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 85,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0008671838367129614,
+      "mask_pixels": 821,
+      "valid_depth_points": 351,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 86,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0008574309105134568,
+      "mask_pixels": 704,
+      "valid_depth_points": 293,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 87,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.001151454265984429,
+      "mask_pixels": 769,
+      "valid_depth_points": 334,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 88,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.00042889345100497156,
+      "mask_pixels": 809,
+      "valid_depth_points": 343,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 89,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.001024807794909283,
+      "mask_pixels": 756,
+      "valid_depth_points": 331,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 90,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0007601903747172055,
+      "mask_pixels": 785,
+      "valid_depth_points": 341,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 91,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.001554102834547491,
+      "mask_pixels": 885,
+      "valid_depth_points": 396,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 92,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0006989436733939721,
+      "mask_pixels": 681,
+      "valid_depth_points": 294,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 93,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0007349961004742828,
+      "mask_pixels": 699,
+      "valid_depth_points": 279,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 94,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.00037763305773670934,
+      "mask_pixels": 842,
+      "valid_depth_points": 365,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 95,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0014346518326854077,
+      "mask_pixels": 855,
+      "valid_depth_points": 392,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 96,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0005697954958166649,
+      "mask_pixels": 711,
+      "valid_depth_points": 307,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 97,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0012802391176396422,
+      "mask_pixels": 711,
+      "valid_depth_points": 315,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 98,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0018120158487074404,
+      "mask_pixels": 964,
+      "valid_depth_points": 447,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    },
+    {
+      "seed": 99,
+      "vision_valid": true,
+      "failure_reason": null,
+      "center_error_m": 0.0008555741802308103,
+      "mask_pixels": 730,
+      "valid_depth_points": 310,
+      "observe_joint_error_max_rad": 0.046297328040307395,
+      "home_joint_error_max_rad": 0.04472880558729031,
+      "object_displacement_m": 2.909242593757133e-05,
+      "bad_contacts_at_observe": [],
+      "bad_contacts_at_home": [],
+      "camera_world_position": [
+        0.42172782455407937,
+        0.07086955723992146,
+        0.8428941996585996
+      ],
+      "reached_joint_position": [
+        -3.3475283593873284,
+        -1.3970381547500224,
+        0.16097281258589058,
+        -0.4747212116900478,
+        -1.5632682674288605,
+        -0.3124544765899856
+      ]
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "configuration": {
+    "checkpoint": "/home/lenovo/mujoco_learning/08_camera/checkpoints/best_full_flow_v22.zip",
+    "environment": "My4C2AllStageSinglePPOV22Cube3cm-v0",
+    "object_source": "rgbd",
+    "goal_source": "aruco",
+    "seeds": [
+      0
+    ],
+    "deterministic": true,
+    "goal_failure_behavior": "fail_closed_before_PPO"
+  },
+  "results": {
+    "episodes": 1,
+    "rgbd_valid": {
+      "count": 1,
+      "rate": 1.0
+    },
+    "full_success": {
+      "count": 1,
+      "rate": 1.0
+    },
+    "reach_success": {
+      "count": 1,
+      "rate": 1.0
+    },
+    "grasp_success": {
+      "count": 1,
+      "rate": 1.0
+    },
+    "lift_success": {
+      "count": 1,
+      "rate": 1.0
+    },
+    "entered_place": {
+      "count": 1,
+      "rate": 1.0
+    },
+    "place_success": {
+      "count": 1,
+      "rate": 1.0
+    },
+    "episode_steps": {
+      "mean": 456.0,
+      "median": 456.0,
+      "p95": 456.0,
+      "max": 456.0
+    },
+    "episode_return": {
+      "mean": 3232.6009543667715,
+      "median": 3232.6009543667715,
+      "p95": 3232.6009543667715,
+      "max": 3232.6009543667715
+    },
+    "visual_error_m": {
+      "mean": 0.000458498788197514,
+      "median": 0.000458498788197514,
+      "p95": 0.000458498788197514,
+      "max": 0.000458498788197514
+    },
+    "visual_xy_error_m": {
+      "mean": 0.00044325800899614663,
+      "median": 0.00044325800899614663,
+      "p95": 0.00044325800899614663,
+      "max": 0.00044325800899614663
+    },
+    "grasp_visual_xy_error_m": {
+      "mean": 0.0025224141336436688,
+      "median": 0.0025224141336436688,
+      "p95": 0.0025224141336436688,
+      "max": 0.0025224141336436688
+    },
+    "min_grasp_xy_error_m": {
+      "mean": 0.0038910527209707548,
+      "median": 0.0038910527209707548,
+      "p95": 0.0038910527209707548,
+      "max": 0.0038910527209707548
+    },
+    "grasp_horizontal_drift_m": {
+      "mean": 0.0029474907019171447,
+      "median": 0.0029474907019171447,
+      "p95": 0.0029474907019171447,
+      "max": 0.0029474907019171447
+    },
+    "final_goal_xy_error_m": {
+      "mean": 0.00857155885617855,
+      "median": 0.00857155885617855,
+      "p95": 0.00857155885617855,
+      "max": 0.00857155885617855
+    },
+    "dq_clip_rate": {
+      "mean": 0.3647887323943662,
+      "median": 0.3647887323943662,
+      "p95": 0.3647887323943662,
+      "max": 0.3647887323943662
+    },
+    "max_joint_velocity_rad_s": {
+      "mean": 0.5450213077369574,
+      "median": 0.5450213077369574,
+      "p95": 0.5450213077369574,
+      "max": 0.5450213077369574
+    },
+    "max_actuator_force_n": {
+      "mean": 32.62455299656631,
+      "median": 32.62455299656631,
+      "p95": 32.62455299656631,
+      "max": 32.62455299656631
+    },
+    "max_runtime_estimator_error_m_evaluator_only": {
+      "mean": 0.004147825246467737,
+      "median": 0.004147825246467737,
+      "p95": 0.004147825246467737,
+      "max": 0.004147825246467737
+    },
+    "ik_nonconverged_calls": 0,
+    "ik_calls": 456,
+    "robot_table_contact_steps": 0,
+    "drop_episodes": 0,
+    "fling_episodes": 0,
+    "object_source_consistency_failures": 0,
+    "object_source_consistent_episodes": 1,
+    "failure_classes": {
+      "success": 1
+    },
+    "tcp_tracking": {
+      "Reach": {
+        "mean": 0.027318406369187413,
+        "median": 0.027318406369187413,
+        "p95": 0.027318406369187413,
+        "max": 0.027318406369187413
+      },
+      "Grasp": {
+        "mean": 0.014255656104773045,
+        "median": 0.014255656104773045,
+        "p95": 0.014255656104773045,
+        "max": 0.014255656104773045
+      },
+      "Lift": {
+        "mean": 0.02800136381079934,
+        "median": 0.02800136381079934,
+        "p95": 0.02800136381079934,
+        "max": 0.02800136381079934
+      },
+      "Place": {
+        "mean": 0.01185815527759761,
+        "median": 0.01185815527759761,
+        "p95": 0.01185815527759761,
+        "max": 0.01185815527759761
+      }
+    }
+  },
+  "goal_localization_error_m_evaluator_only": {
+    "mean": 0.002607556580214235,
+    "median": 0.002607556580214235,
+    "p95": 0.002607556580214235,
+    "max": 0.002607556580214235
+  },
+  "goal_source_consistency_failures": 0
+}

@@ -1,0 +1,5397 @@
+{
+  "checkpoint": "/home/lenovo/mujoco_learning/08_camera/checkpoints/best_full_flow_v22.zip",
+  "environment": "My4C2AllStageSinglePPOV22Cube3cm-v0",
+  "coordinate_frame": "MuJoCo world",
+  "error_definition": "Gaussian sigma per XYZ axis",
+  "reconstructed_fields": {
+    "object_position": [
+      15,
+      18
+    ],
+    "pregrasp_position": [
+      18,
+      21
+    ],
+    "grasp_position": [
+      21,
+      24
+    ],
+    "pinch_to_pregrasp": [
+      24,
+      27
+    ],
+    "pinch_to_grasp": [
+      27,
+      30
+    ],
+    "object_to_goal": [
+      30,
+      33
+    ],
+    "object_lift": [
+      34,
+      35
+    ]
+  },
+  "remaining_privileged_observation": {
+    "35:37": "true left/right object contact flags",
+    "37": "true gripper vertical alignment",
+    "38": "true grasp FSM phase"
+  },
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "single_state_audit": {
+    "position_error_m": [
+      0.1,
+      0.1,
+      0.1
+    ],
+    "pregrasp_height_from_env_m": 0.07,
+    "grasp_height_offset_from_env_m": 0.018,
+    "estimated_initial_object_z_m": 0.41500000000000004,
+    "stage": 0,
+    "maximum_consistency_residual": 1.4901161193847656e-08,
+    "model_predict_receives_corrupted_directly": true,
+    "clean_action": [
+      1.0,
+      -1.0,
+      -0.16264453530311584,
+      -0.5109943747520447
+    ],
+    "corrupted_action": [
+      1.0,
+      -1.0,
+      -0.17948877811431885,
+      -0.47271230816841125
+    ],
+    "action_delta": [
+      0.0,
+      0.0,
+      -0.016844242811203003,
+      0.03828206658363342
+    ],
+    "fields": {
+      "pinch_position": {
+        "indices": [
+          12,
+          15
+        ],
+        "clean": [
+          -0.13399738073349,
+          0.4879997670650482,
+          0.36406534910202026
+        ],
+        "corrupted": [
+          -0.13399738073349,
+          0.4879997670650482,
+          0.36406534910202026
+        ],
+        "delta": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "object_position": {
+        "indices": [
+          15,
+          18
+        ],
+        "clean": [
+          0.5410885214805603,
+          -0.09208531677722931,
+          0.3149999976158142
+        ],
+        "corrupted": [
+          0.6410885453224182,
+          0.007914682850241661,
+          0.41499999165534973
+        ],
+        "delta": [
+          0.10000002384185791,
+          0.10000000149011612,
+          0.09999999403953552
+        ]
+      },
+      "pregrasp_position": {
+        "indices": [
+          18,
+          21
+        ],
+        "clean": [
+          0.5410885214805603,
+          -0.09208531677722931,
+          0.38499999046325684
+        ],
+        "corrupted": [
+          0.6410885453224182,
+          0.007914682850241661,
+          0.48499998450279236
+        ],
+        "delta": [
+          0.10000002384185791,
+          0.10000000149011612,
+          0.09999999403953552
+        ]
+      },
+      "grasp_position": {
+        "indices": [
+          21,
+          24
+        ],
+        "clean": [
+          0.5410885214805603,
+          -0.09208531677722931,
+          0.3330000042915344
+        ],
+        "corrupted": [
+          0.6410885453224182,
+          0.007914682850241661,
+          0.43299999833106995
+        ],
+        "delta": [
+          0.10000002384185791,
+          0.10000000149011612,
+          0.09999999403953552
+        ]
+      },
+      "pinch_to_pregrasp": {
+        "indices": [
+          24,
+          27
+        ],
+        "clean": [
+          0.6750859022140503,
+          -0.580085039138794,
+          0.02093464694917202
+        ],
+        "corrupted": [
+          0.7750859260559082,
+          -0.4800850749015808,
+          0.12093465030193329
+        ],
+        "delta": [
+          0.10000002384185791,
+          0.09999996423721313,
+          0.10000000149011612
+        ]
+      },
+      "pinch_to_grasp": {
+        "indices": [
+          27,
+          30
+        ],
+        "clean": [
+          0.6750859022140503,
+          -0.580085039138794,
+          -0.031065352261066437
+        ],
+        "corrupted": [
+          0.7750859260559082,
+          -0.4800850749015808,
+          0.06893464922904968
+        ],
+        "delta": [
+          0.10000002384185791,
+          0.09999996423721313,
+          0.10000000149011612
+        ]
+      },
+      "object_to_goal": {
+        "indices": [
+          30,
+          33
+        ],
+        "clean": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "corrupted": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "delta": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "object_lift": {
+        "indices": [
+          34,
+          35
+        ],
+        "clean": [
+          0.0
+        ],
+        "corrupted": [
+          0.0
+        ],
+        "delta": [
+          0.0
+        ]
+      }
+    }
+  },
+  "results": [
+    {
+      "mode": "fixed",
+      "level_mm_per_axis_sigma": 0.0,
+      "episodes": 20,
+      "success_rate": 1.0,
+      "reach_success_rate": 1.0,
+      "grasp_success_rate": 1.0,
+      "lift_success_rate": 1.0,
+      "place_success_rate": 1.0,
+      "mean_return": 3411.1027288561722,
+      "failure_stage_counts": {
+        "none": 20
+      },
+      "actual_3d_error": {
+        "mean_m": 0.0,
+        "p95_m": 0.0,
+        "max_m": 0.0,
+        "axis_std_m": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "episode_records": [
+        {
+          "seed": 0,
+          "return": 3245.4636681314637,
+          "steps": 465,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 1,
+          "return": 3259.419676594966,
+          "steps": 380,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 2,
+          "return": 3715.7000838293666,
+          "steps": 528,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0,
+            -0.0,
+            -0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 3,
+          "return": 3428.004851615113,
+          "steps": 460,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0,
+            -0.0,
+            -0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 4,
+          "return": 3584.4287491433406,
+          "steps": 577,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 5,
+          "return": 3422.630113386561,
+          "steps": 476,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0,
+            0.0,
+            0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 6,
+          "return": 3352.3913395268432,
+          "steps": 472,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0,
+            -0.0,
+            -0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 7,
+          "return": 3575.0284764151115,
+          "steps": 483,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0,
+            -0.0,
+            -0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 8,
+          "return": 3316.142531795168,
+          "steps": 368,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0,
+            -0.0,
+            0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 9,
+          "return": 3268.0454318421544,
+          "steps": 506,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0,
+            0.0,
+            -0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 10,
+          "return": 3552.074791051457,
+          "steps": 608,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 11,
+          "return": 3541.333492775375,
+          "steps": 437,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0,
+            0.0,
+            0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 12,
+          "return": 3427.997482944873,
+          "steps": 382,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0,
+            0.0,
+            -0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 13,
+          "return": 3500.733896691734,
+          "steps": 507,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 14,
+          "return": 3351.3756160254843,
+          "steps": 511,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 15,
+          "return": 3360.422793937271,
+          "steps": 440,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 16,
+          "return": 3282.1099414046603,
+          "steps": 446,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 17,
+          "return": 3271.677996790131,
+          "steps": 522,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0,
+            0.0,
+            -0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 18,
+          "return": 3404.467737952267,
+          "steps": 417,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 19,
+          "return": 3362.605905270099,
+          "steps": 392,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0,
+            -0.0,
+            -0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        }
+      ]
+    },
+    {
+      "mode": "fixed",
+      "level_mm_per_axis_sigma": 2.0,
+      "episodes": 20,
+      "success_rate": 0.95,
+      "reach_success_rate": 1.0,
+      "grasp_success_rate": 0.95,
+      "lift_success_rate": 0.95,
+      "place_success_rate": 0.95,
+      "mean_return": 3232.9976860969027,
+      "failure_stage_counts": {
+        "none": 19,
+        "grasp": 1
+      },
+      "actual_3d_error": {
+        "mean_m": 0.0034606794397345586,
+        "p95_m": 0.005371147086807459,
+        "max_m": 0.005371147086807459,
+        "axis_std_m": [
+          0.0016431389065276465,
+          0.0026057349746432517,
+          0.0018656402900064089
+        ]
+      },
+      "episode_records": [
+        {
+          "seed": 0,
+          "return": 3232.4666226600434,
+          "steps": 460,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0017650156105208149,
+            7.097856890007807e-05,
+            -0.0018400733139965948
+          ],
+          "estimated_initial_object_z_m": 0.3131599266860034
+        },
+        {
+          "seed": 1,
+          "return": 3260.735002075783,
+          "steps": 381,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.00017298981370218318,
+            0.0012067102235437882,
+            -0.00037821099328519983
+          ],
+          "estimated_initial_object_z_m": 0.3146217890067148
+        },
+        {
+          "seed": 2,
+          "return": 3759.884786166611,
+          "steps": 555,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0030904105985335864,
+            -0.00346427522020081,
+            -0.000279150541074665
+          ],
+          "estimated_initial_object_z_m": 0.3147208494589253
+        },
+        {
+          "seed": 3,
+          "return": -255.9514394889531,
+          "steps": 403,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.000369955596507552,
+            -0.0053126988771840045,
+            -0.00020383404024502543
+          ],
+          "estimated_initial_object_z_m": 0.31479616595975496
+        },
+        {
+          "seed": 4,
+          "return": 3582.434106513345,
+          "steps": 572,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0015830483171412597,
+            0.0018031014157275337,
+            -0.0018830406900827738
+          ],
+          "estimated_initial_object_z_m": 0.31311695930991723
+        },
+        {
+          "seed": 5,
+          "return": 3424.882184726951,
+          "steps": 478,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.00021097792732133785,
+            0.003625094675490934,
+            0.002690826964813472
+          ],
+          "estimated_initial_object_z_m": 0.3176908269648135
+        },
+        {
+          "seed": 6,
+          "return": 3365.388176698776,
+          "steps": 489,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0020016373418020165,
+            -0.0018320261287883357,
+            -0.0011262891540635774
+          ],
+          "estimated_initial_object_z_m": 0.3138737108459364
+        },
+        {
+          "seed": 7,
+          "return": 3585.4123823876453,
+          "steps": 484,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0007103234022372495,
+            -0.0013826151631827633,
+            -0.00201251635307697
+          ],
+          "estimated_initial_object_z_m": 0.312987483646923
+        },
+        {
+          "seed": 8,
+          "return": 3304.9992318901623,
+          "steps": 367,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0017945338347112282,
+            -2.4174856362741495e-05,
+            0.000886030713784128
+          ],
+          "estimated_initial_object_z_m": 0.3158860307137841
+        },
+        {
+          "seed": 9,
+          "return": 3274.116397619635,
+          "steps": 506,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.00019738265421650453,
+            0.003748389533404936,
+            -0.0038418533316350104
+          ],
+          "estimated_initial_object_z_m": 0.311158146668365
+        },
+        {
+          "seed": 10,
+          "return": 3540.270519152241,
+          "steps": 600,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0020044526981677856,
+            0.002900816056173766,
+            -0.0017071729215794053
+          ],
+          "estimated_initial_object_z_m": 0.3132928270784206
+        },
+        {
+          "seed": 11,
+          "return": 3535.2788237257405,
+          "steps": 433,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0028633810562305574,
+            9.315122625114606e-05,
+            0.002161378348505826
+          ],
+          "estimated_initial_object_z_m": 0.31716137834850583
+        },
+        {
+          "seed": 12,
+          "return": 3425.750057684581,
+          "steps": 383,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.00014022005127004806,
+            0.0039654832758956315,
+            -0.0021374241559568487
+          ],
+          "estimated_initial_object_z_m": 0.31286257584404314
+        },
+        {
+          "seed": 13,
+          "return": 3506.2090914403016,
+          "steps": 510,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0018364207255369997,
+            -0.00036449182438736804,
+            -0.000582766256277369
+          ],
+          "estimated_initial_object_z_m": 0.31441723374372266
+        },
+        {
+          "seed": 14,
+          "return": 3338.7447959489978,
+          "steps": 512,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0021396966325736063,
+            -0.0011353197022266998,
+            -0.0006590626355610916
+          ],
+          "estimated_initial_object_z_m": 0.3143409373644389
+        },
+        {
+          "seed": 15,
+          "return": 3347.4641766234267,
+          "steps": 438,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.002671501630952154,
+            0.0028141779709803614,
+            -0.0008939416380935255
+          ],
+          "estimated_initial_object_z_m": 0.31410605836190647
+        },
+        {
+          "seed": 16,
+          "return": 3282.9254216582103,
+          "steps": 447,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0010277589458889888,
+            -6.767262670158411e-05,
+            0.003777037645383181
+          ],
+          "estimated_initial_object_z_m": 0.3187770376453832
+        },
+        {
+          "seed": 17,
+          "return": 3271.65674173854,
+          "steps": 522,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.00014515627736403494,
+            0.00022917122496738827,
+            -0.0011022445171312116
+          ],
+          "estimated_initial_object_z_m": 0.3138977554828688
+        },
+        {
+          "seed": 18,
+          "return": 3503.020808858527,
+          "steps": 464,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            9.08432768673688e-05,
+            -0.0046373875265787795,
+            0.00047486736616509295
+          ],
+          "estimated_initial_object_z_m": 0.3154748673661651
+        },
+        {
+          "seed": 19,
+          "return": 3374.2658338574925,
+          "steps": 395,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0018792356736570452,
+            -0.002326445864528402,
+            -0.00392015969927607
+          ],
+          "estimated_initial_object_z_m": 0.31107984030072394
+        }
+      ]
+    },
+    {
+      "mode": "fixed",
+      "level_mm_per_axis_sigma": 5.0,
+      "episodes": 20,
+      "success_rate": 0.75,
+      "reach_success_rate": 1.0,
+      "grasp_success_rate": 0.75,
+      "lift_success_rate": 0.75,
+      "place_success_rate": 0.75,
+      "mean_return": 2453.654610988695,
+      "failure_stage_counts": {
+        "none": 15,
+        "grasp": 5
+      },
+      "actual_3d_error": {
+        "mean_m": 0.008921009883291909,
+        "p95_m": 0.013427867717018647,
+        "max_m": 0.013427867717018647,
+        "axis_std_m": [
+          0.004272161203704448,
+          0.006949276075901144,
+          0.004475292665350226
+        ]
+      },
+      "episode_records": [
+        {
+          "seed": 0,
+          "return": 3231.378983588661,
+          "steps": 459,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.004412539026302037,
+            0.0001774464222501952,
+            -0.004600183284991487
+          ],
+          "estimated_initial_object_z_m": 0.3103998167150085
+        },
+        {
+          "seed": 1,
+          "return": 3260.0960714438284,
+          "steps": 382,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.00043247453425545793,
+            0.003016775558859471,
+            -0.0009455274832129995
+          ],
+          "estimated_initial_object_z_m": 0.314054472516787
+        },
+        {
+          "seed": 2,
+          "return": -467.79148872175205,
+          "steps": 900,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.0077260264963339665,
+            -0.008660688050502024,
+            -0.0006978763526866625
+          ],
+          "estimated_initial_object_z_m": 0.31430212364731336
+        },
+        {
+          "seed": 3,
+          "return": -404.9902878942371,
+          "steps": 900,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.00092488899126888,
+            -0.013281747192960013,
+            -0.0005095851006125635
+          ],
+          "estimated_initial_object_z_m": 0.31449041489938745
+        },
+        {
+          "seed": 4,
+          "return": 3564.0607517462095,
+          "steps": 566,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.00395762079285315,
+            0.004507753539318834,
+            -0.004707601725206935
+          ],
+          "estimated_initial_object_z_m": 0.31029239827479305
+        },
+        {
+          "seed": 5,
+          "return": 3428.6193396754406,
+          "steps": 485,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0005274448183033446,
+            0.009062736688727336,
+            0.00672706741203368
+          ],
+          "estimated_initial_object_z_m": 0.32172706741203366
+        },
+        {
+          "seed": 6,
+          "return": 3355.225300534558,
+          "steps": 495,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.005004093354505042,
+            -0.004580065321970839,
+            -0.002815722885158943
+          ],
+          "estimated_initial_object_z_m": 0.31218427711484104
+        },
+        {
+          "seed": 7,
+          "return": 3566.802213901931,
+          "steps": 482,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0017758085055931236,
+            -0.003456537907956908,
+            -0.005031290882692424
+          ],
+          "estimated_initial_object_z_m": 0.30996870911730756
+        },
+        {
+          "seed": 8,
+          "return": 3298.190404087598,
+          "steps": 367,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.00448633458677807,
+            -6.0437140906853735e-05,
+            0.00221507678446032
+          ],
+          "estimated_initial_object_z_m": 0.3172150767844603
+        },
+        {
+          "seed": 9,
+          "return": 3267.572134234822,
+          "steps": 507,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0004934566355412613,
+            0.00937097383351234,
+            -0.009604633329087526
+          ],
+          "estimated_initial_object_z_m": 0.3053953666709125
+        },
+        {
+          "seed": 10,
+          "return": 3512.2032411722453,
+          "steps": 588,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.005011131745419463,
+            0.007252040140434415,
+            -0.004267932303948513
+          ],
+          "estimated_initial_object_z_m": 0.3107320676960515
+        },
+        {
+          "seed": 11,
+          "return": 3506.8370885136246,
+          "steps": 428,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.007158452640576394,
+            0.00023287806562786518,
+            0.0054034458712645655
+          ],
+          "estimated_initial_object_z_m": 0.32040344587126457
+        },
+        {
+          "seed": 12,
+          "return": -209.90505215575087,
+          "steps": 325,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.00035055012817512013,
+            0.009913708189739077,
+            -0.005343560389892122
+          ],
+          "estimated_initial_object_z_m": 0.30965643961010786
+        },
+        {
+          "seed": 13,
+          "return": 3497.803382679465,
+          "steps": 510,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.004591051813842499,
+            -0.0009112295609684201,
+            -0.0014569156406934226
+          ],
+          "estimated_initial_object_z_m": 0.31354308435930656
+        },
+        {
+          "seed": 14,
+          "return": 3282.5947112697595,
+          "steps": 539,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.005349241581434016,
+            -0.00283829925556675,
+            -0.001647656588902729
+          ],
+          "estimated_initial_object_z_m": 0.3133523434110973
+        },
+        {
+          "seed": 15,
+          "return": 3304.3887257497017,
+          "steps": 433,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0066787540773803845,
+            0.0070354449274509035,
+            -0.0022348540952338136
+          ],
+          "estimated_initial_object_z_m": 0.3127651459047662
+        },
+        {
+          "seed": 16,
+          "return": 3282.5582210454772,
+          "steps": 448,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.002569397364722472,
+            -0.00016918156675396027,
+            0.009442594113457952
+          ],
+          "estimated_initial_object_z_m": 0.32444259411345794
+        },
+        {
+          "seed": 17,
+          "return": 3263.978362912417,
+          "steps": 522,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.00036289069341008737,
+            0.0005729280624184707,
+            -0.002755611292828029
+          ],
+          "estimated_initial_object_z_m": 0.31224438870717197
+        },
+        {
+          "seed": 18,
+          "return": -243.75262548460324,
+          "steps": 369,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.000227108192168422,
+            -0.011593468816446947,
+            0.0011871684154127324
+          ],
+          "estimated_initial_object_z_m": 0.3161871684154127
+        },
+        {
+          "seed": 19,
+          "return": -222.77725852549227,
+          "steps": 357,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.004698089184142613,
+            -0.005816114661321005,
+            -0.009800399248190175
+          ],
+          "estimated_initial_object_z_m": 0.30519960075180985
+        }
+      ]
+    },
+    {
+      "mode": "fixed",
+      "level_mm_per_axis_sigma": 10.0,
+      "episodes": 20,
+      "success_rate": 0.45,
+      "reach_success_rate": 0.95,
+      "grasp_success_rate": 0.45,
+      "lift_success_rate": 0.45,
+      "place_success_rate": 0.45,
+      "mean_return": 1295.9225582999127,
+      "failure_stage_counts": {
+        "none": 9,
+        "grasp": 10,
+        "reach": 1
+      },
+      "actual_3d_error": {
+        "mean_m": 0.018003861078903803,
+        "p95_m": 0.026647319198646446,
+        "max_m": 0.026855735434037294,
+        "axis_std_m": [
+          0.00781621532012248,
+          0.01455321980654523,
+          0.0085781141438846
+        ]
+      },
+      "episode_records": [
+        {
+          "seed": 0,
+          "return": 3203.716781036213,
+          "steps": 455,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.008825078052604074,
+            0.0003548928445003904,
+            -0.009200366569982974
+          ],
+          "estimated_initial_object_z_m": 0.30579963343001704
+        },
+        {
+          "seed": 1,
+          "return": 3235.531227296454,
+          "steps": 380,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0008649490685109159,
+            0.006033551117718942,
+            -0.001891054966425999
+          ],
+          "estimated_initial_object_z_m": 0.313108945033574
+        },
+        {
+          "seed": 2,
+          "return": -241.1098690061241,
+          "steps": 311,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.015452052992667933,
+            -0.01732137610100405,
+            -0.001395752705373325
+          ],
+          "estimated_initial_object_z_m": 0.31360424729462666
+        },
+        {
+          "seed": 3,
+          "return": -494.38404132105836,
+          "steps": 900,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.00184977798253776,
+            -0.026563494385920025,
+            -0.001019170201225127
+          ],
+          "estimated_initial_object_z_m": 0.3139808297987749
+        },
+        {
+          "seed": 4,
+          "return": 3530.3313209346225,
+          "steps": 561,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0079152415857063,
+            0.009015507078637668,
+            -0.00941520345041387
+          ],
+          "estimated_initial_object_z_m": 0.30558479654958615
+        },
+        {
+          "seed": 5,
+          "return": -283.01295675000284,
+          "steps": 410,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            -0.0010548896366066893,
+            0.01812547337745467,
+            0.01345413482406736
+          ],
+          "estimated_initial_object_z_m": 0.3284541348240674
+        },
+        {
+          "seed": 6,
+          "return": -483.1715075857513,
+          "steps": 900,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.010008186709010084,
+            -0.009160130643941678,
+            -0.005631445770317886
+          ],
+          "estimated_initial_object_z_m": 0.3093685542296821
+        },
+        {
+          "seed": 7,
+          "return": -245.38174353501827,
+          "steps": 395,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.003551617011186247,
+            -0.006913075815913816,
+            -0.010062581765384849
+          ],
+          "estimated_initial_object_z_m": 0.3049374182346152
+        },
+        {
+          "seed": 8,
+          "return": 3296.2850143777955,
+          "steps": 369,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.00897266917355614,
+            -0.00012087428181370747,
+            0.00443015356892064
+          ],
+          "estimated_initial_object_z_m": 0.3194301535689206
+        },
+        {
+          "seed": 9,
+          "return": -310.8690680152896,
+          "steps": 453,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.0009869132710825226,
+            0.01874194766702468,
+            -0.019209266658175052
+          ],
+          "estimated_initial_object_z_m": 0.29579073334182493
+        },
+        {
+          "seed": 10,
+          "return": -330.9166756768521,
+          "steps": 496,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            -0.010022263490838927,
+            0.01450408028086883,
+            -0.008535864607897027
+          ],
+          "estimated_initial_object_z_m": 0.306464135392103
+        },
+        {
+          "seed": 11,
+          "return": 3448.454590348509,
+          "steps": 422,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.014316905281152788,
+            0.00046575613125573036,
+            0.010806891742529131
+          ],
+          "estimated_initial_object_z_m": 0.32580689174252914
+        },
+        {
+          "seed": 12,
+          "return": -357.5575915112213,
+          "steps": 900,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.0007011002563502403,
+            0.019827416379478154,
+            -0.010687120779784244
+          ],
+          "estimated_initial_object_z_m": 0.30431287922021577
+        },
+        {
+          "seed": 13,
+          "return": 3484.7366645837997,
+          "steps": 511,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.009182103627684998,
+            -0.0018224591219368402,
+            -0.0029138312813868452
+          ],
+          "estimated_initial_object_z_m": 0.31208616871861317
+        },
+        {
+          "seed": 14,
+          "return": 3092.721566975789,
+          "steps": 536,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.010698483162868032,
+            -0.0056765985111335,
+            -0.003295313177805458
+          ],
+          "estimated_initial_object_z_m": 0.31170468682219454
+        },
+        {
+          "seed": 15,
+          "return": -425.1992642582376,
+          "steps": 900,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            -0.013357508154760769,
+            0.014070889854901807,
+            -0.004469708190467627
+          ],
+          "estimated_initial_object_z_m": 0.3105302918095324
+        },
+        {
+          "seed": 16,
+          "return": 3274.77238550304,
+          "steps": 448,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.005138794729444944,
+            -0.00033836313350792054,
+            0.018885188226915903
+          ],
+          "estimated_initial_object_z_m": 0.33388518822691593
+        },
+        {
+          "seed": 17,
+          "return": 3265.302937921199,
+          "steps": 522,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0007257813868201747,
+            0.0011458561248369413,
+            -0.005511222585656058
+          ],
+          "estimated_initial_object_z_m": 0.30948877741434394
+        },
+        {
+          "seed": 18,
+          "return": -509.5288252656932,
+          "steps": 900,
+          "success": false,
+          "reach_success": false,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "reach",
+          "initial_position_error_m": [
+            0.000454216384336844,
+            -0.023186937632893895,
+            0.0023743368308254647
+          ],
+          "estimated_initial_object_z_m": 0.31737433683082544
+        },
+        {
+          "seed": 19,
+          "return": -232.2697800539157,
+          "steps": 388,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.009396178368285227,
+            -0.01163222932264201,
+            -0.01960079849638035
+          ],
+          "estimated_initial_object_z_m": 0.29539920150361965
+        }
+      ]
+    },
+    {
+      "mode": "fixed",
+      "level_mm_per_axis_sigma": 15.0,
+      "episodes": 20,
+      "success_rate": 0.25,
+      "reach_success_rate": 0.7,
+      "grasp_success_rate": 0.25,
+      "lift_success_rate": 0.25,
+      "place_success_rate": 0.25,
+      "mean_return": 465.7663090278429,
+      "failure_stage_counts": {
+        "none": 5,
+        "grasp": 9,
+        "reach": 6
+      },
+      "actual_3d_error": {
+        "mean_m": 0.02773257096609114,
+        "p95_m": 0.04028360315105595,
+        "max_m": 0.04028360315105595,
+        "axis_std_m": [
+          0.012770771442195933,
+          0.021354093211511015,
+          0.01427563182352874
+        ]
+      },
+      "episode_records": [
+        {
+          "seed": 0,
+          "return": 3167.5030117918373,
+          "steps": 452,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.013237617078906111,
+            0.0005323392667505855,
+            -0.01380054985497446
+          ],
+          "estimated_initial_object_z_m": 0.3011994501450255
+        },
+        {
+          "seed": 1,
+          "return": 3223.982281606542,
+          "steps": 381,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0012974236027663737,
+            0.009050326676578412,
+            -0.0028365824496389986
+          ],
+          "estimated_initial_object_z_m": 0.312163417550361
+        },
+        {
+          "seed": 2,
+          "return": -556.1854367708136,
+          "steps": 900,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.0231780794890019,
+            -0.025982064151506074,
+            -0.002093629058059987
+          ],
+          "estimated_initial_object_z_m": 0.31290637094194
+        },
+        {
+          "seed": 3,
+          "return": -567.6701218076668,
+          "steps": 900,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.0027746669738066398,
+            -0.03984524157888003,
+            -0.0015287553018376906
+          ],
+          "estimated_initial_object_z_m": 0.3134712446981623
+        },
+        {
+          "seed": 4,
+          "return": -306.67237493000493,
+          "steps": 457,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            -0.011872862378559447,
+            0.0135232606179565,
+            -0.014122805175620803
+          ],
+          "estimated_initial_object_z_m": 0.3008771948243792
+        },
+        {
+          "seed": 5,
+          "return": -531.0673270894738,
+          "steps": 900,
+          "success": false,
+          "reach_success": false,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "reach",
+          "initial_position_error_m": [
+            -0.0015823344549100338,
+            0.027188210066182005,
+            0.02018120223610104
+          ],
+          "estimated_initial_object_z_m": 0.33518120223610104
+        },
+        {
+          "seed": 6,
+          "return": -495.5086366420562,
+          "steps": 900,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.015012280063515123,
+            -0.013740195965912517,
+            -0.008447168655476829
+          ],
+          "estimated_initial_object_z_m": 0.30655283134452316
+        },
+        {
+          "seed": 7,
+          "return": -253.85016345161392,
+          "steps": 429,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.00532742551677937,
+            -0.010369613723870724,
+            -0.015093872648077272
+          ],
+          "estimated_initial_object_z_m": 0.29990612735192274
+        },
+        {
+          "seed": 8,
+          "return": -420.98760369961093,
+          "steps": 900,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            -0.01345900376033421,
+            -0.0001813114227205612,
+            0.00664523035338096
+          ],
+          "estimated_initial_object_z_m": 0.32164523035338094
+        },
+        {
+          "seed": 9,
+          "return": -542.2910167238659,
+          "steps": 900,
+          "success": false,
+          "reach_success": false,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "reach",
+          "initial_position_error_m": [
+            0.001480369906623784,
+            0.02811292150053702,
+            -0.028813899987262574
+          ],
+          "estimated_initial_object_z_m": 0.2861861000127374
+        },
+        {
+          "seed": 10,
+          "return": -512.6315067750936,
+          "steps": 900,
+          "success": false,
+          "reach_success": false,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "reach",
+          "initial_position_error_m": [
+            -0.015033395236258391,
+            0.021756120421303243,
+            -0.01280379691184554
+          ],
+          "estimated_initial_object_z_m": 0.3021962030881545
+        },
+        {
+          "seed": 11,
+          "return": -385.7035871325244,
+          "steps": 900,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            -0.02147535792172918,
+            0.0006986341968835954,
+            0.016210337613793695
+          ],
+          "estimated_initial_object_z_m": 0.3312103376137937
+        },
+        {
+          "seed": 12,
+          "return": -495.0814067142624,
+          "steps": 900,
+          "success": false,
+          "reach_success": false,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "reach",
+          "initial_position_error_m": [
+            0.0010516503845253604,
+            0.029741124569217233,
+            -0.016030681169676365
+          ],
+          "estimated_initial_object_z_m": 0.2989693188303236
+        },
+        {
+          "seed": 13,
+          "return": 3473.140472086075,
+          "steps": 511,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.013773155441527497,
+            -0.0027336886829052603,
+            -0.004370746922080267
+          ],
+          "estimated_initial_object_z_m": 0.3106292530779197
+        },
+        {
+          "seed": 14,
+          "return": -472.30660038831894,
+          "steps": 900,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            -0.016047724744302046,
+            -0.008514897766700249,
+            -0.004942969766708187
+          ],
+          "estimated_initial_object_z_m": 0.31005703023329184
+        },
+        {
+          "seed": 15,
+          "return": -523.8063242816696,
+          "steps": 900,
+          "success": false,
+          "reach_success": false,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "reach",
+          "initial_position_error_m": [
+            -0.020036262232141153,
+            0.021106334782352708,
+            -0.006704562285701441
+          ],
+          "estimated_initial_object_z_m": 0.30829543771429857
+        },
+        {
+          "seed": 16,
+          "return": 3284.6464651246706,
+          "steps": 458,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.007708192094167416,
+            -0.0005075447002618808,
+            0.028327782340373853
+          ],
+          "estimated_initial_object_z_m": 0.34332778234037387
+        },
+        {
+          "seed": 17,
+          "return": 3265.672808777286,
+          "steps": 521,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.001088672080230262,
+            0.0017187841872554118,
+            -0.008266833878484087
+          ],
+          "estimated_initial_object_z_m": 0.3067331661215159
+        },
+        {
+          "seed": 18,
+          "return": -586.754600516516,
+          "steps": 900,
+          "success": false,
+          "reach_success": false,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "reach",
+          "initial_position_error_m": [
+            0.000681324576505266,
+            -0.03478040644934084,
+            0.003561505246238197
+          ],
+          "estimated_initial_object_z_m": 0.3185615052462382
+        },
+        {
+          "seed": 19,
+          "return": -449.1021519060622,
+          "steps": 900,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.014094267552427838,
+            -0.017448343983963013,
+            -0.029401197744570524
+          ],
+          "estimated_initial_object_z_m": 0.2855988022554295
+        }
+      ]
+    },
+    {
+      "mode": "fixed",
+      "level_mm_per_axis_sigma": 20.0,
+      "episodes": 20,
+      "success_rate": 0.1,
+      "reach_success_rate": 0.6,
+      "grasp_success_rate": 0.1,
+      "lift_success_rate": 0.1,
+      "place_success_rate": 0.1,
+      "mean_return": -121.59983052939756,
+      "failure_stage_counts": {
+        "grasp": 10,
+        "reach": 8,
+        "none": 2
+      },
+      "actual_3d_error": {
+        "mean_m": 0.036079679657250174,
+        "p95_m": 0.05371147086807459,
+        "max_m": 0.05371147086807459,
+        "axis_std_m": [
+          0.016763880596454367,
+          0.027492956424024634,
+          0.01849162321427836
+        ]
+      },
+      "episode_records": [
+        {
+          "seed": 0,
+          "return": -377.3562293304419,
+          "steps": 900,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            -0.017650156105208148,
+            0.0007097856890007808,
+            -0.018400733139965948
+          ],
+          "estimated_initial_object_z_m": 0.29659926686003407
+        },
+        {
+          "seed": 1,
+          "return": -235.09779264889875,
+          "steps": 353,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            -0.0017298981370218317,
+            0.012067102235437884,
+            -0.003782109932851998
+          ],
+          "estimated_initial_object_z_m": 0.311217890067148
+        },
+        {
+          "seed": 2,
+          "return": -612.2988987087388,
+          "steps": 900,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.030904105985335866,
+            -0.0346427522020081,
+            -0.00279150541074665
+          ],
+          "estimated_initial_object_z_m": 0.31220849458925337
+        },
+        {
+          "seed": 3,
+          "return": -603.6815932578527,
+          "steps": 900,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.00369955596507552,
+            -0.05312698877184005,
+            -0.002038340402450254
+          ],
+          "estimated_initial_object_z_m": 0.31296165959754974
+        },
+        {
+          "seed": 4,
+          "return": -455.9233109524676,
+          "steps": 900,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            -0.0158304831714126,
+            0.018031014157275337,
+            -0.01883040690082774
+          ],
+          "estimated_initial_object_z_m": 0.29616959309917223
+        },
+        {
+          "seed": 5,
+          "return": -594.0661804082343,
+          "steps": 900,
+          "success": false,
+          "reach_success": false,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "reach",
+          "initial_position_error_m": [
+            -0.0021097792732133786,
+            0.03625094675490934,
+            0.02690826964813472
+          ],
+          "estimated_initial_object_z_m": 0.3419082696481347
+        },
+        {
+          "seed": 6,
+          "return": -538.8678859447098,
+          "steps": 900,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.020016373418020168,
+            -0.018320261287883357,
+            -0.011262891540635773
+          ],
+          "estimated_initial_object_z_m": 0.30373710845936425
+        },
+        {
+          "seed": 7,
+          "return": -262.17033944847435,
+          "steps": 450,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.007103234022372494,
+            -0.013826151631827632,
+            -0.020125163530769697
+          ],
+          "estimated_initial_object_z_m": 0.2948748364692303
+        },
+        {
+          "seed": 8,
+          "return": -402.1621052085228,
+          "steps": 900,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            -0.01794533834711228,
+            -0.00024174856362741494,
+            0.00886030713784128
+          ],
+          "estimated_initial_object_z_m": 0.3238603071378413
+        },
+        {
+          "seed": 9,
+          "return": -599.0948674232924,
+          "steps": 900,
+          "success": false,
+          "reach_success": false,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "reach",
+          "initial_position_error_m": [
+            0.001973826542165045,
+            0.03748389533404936,
+            -0.038418533316350104
+          ],
+          "estimated_initial_object_z_m": 0.2765814666836499
+        },
+        {
+          "seed": 10,
+          "return": -567.927421251455,
+          "steps": 900,
+          "success": false,
+          "reach_success": false,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "reach",
+          "initial_position_error_m": [
+            -0.020044526981677854,
+            0.02900816056173766,
+            -0.017071729215794054
+          ],
+          "estimated_initial_object_z_m": 0.297928270784206
+        },
+        {
+          "seed": 11,
+          "return": -479.6662663611392,
+          "steps": 900,
+          "success": false,
+          "reach_success": false,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "reach",
+          "initial_position_error_m": [
+            -0.028633810562305576,
+            0.0009315122625114607,
+            0.021613783485058262
+          ],
+          "estimated_initial_object_z_m": 0.33661378348505827
+        },
+        {
+          "seed": 12,
+          "return": -566.003709202934,
+          "steps": 900,
+          "success": false,
+          "reach_success": false,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "reach",
+          "initial_position_error_m": [
+            0.0014022005127004805,
+            0.03965483275895631,
+            -0.021374241559568487
+          ],
+          "estimated_initial_object_z_m": 0.29362575844043154
+        },
+        {
+          "seed": 13,
+          "return": -437.1287553935408,
+          "steps": 900,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            -0.018364207255369996,
+            -0.0036449182438736804,
+            -0.0058276625627736904
+          ],
+          "estimated_initial_object_z_m": 0.30917233743722633
+        },
+        {
+          "seed": 14,
+          "return": -528.8441393034433,
+          "steps": 900,
+          "success": false,
+          "reach_success": false,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "reach",
+          "initial_position_error_m": [
+            -0.021396966325736063,
+            -0.011353197022267,
+            -0.006590626355610916
+          ],
+          "estimated_initial_object_z_m": 0.3084093736443891
+        },
+        {
+          "seed": 15,
+          "return": -587.6322571818893,
+          "steps": 900,
+          "success": false,
+          "reach_success": false,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "reach",
+          "initial_position_error_m": [
+            -0.026715016309521538,
+            0.028141779709803614,
+            -0.008939416380935254
+          ],
+          "estimated_initial_object_z_m": 0.30606058361906474
+        },
+        {
+          "seed": 16,
+          "return": 3289.625137772459,
+          "steps": 461,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.010277589458889888,
+            -0.0006767262670158411,
+            0.03777037645383181
+          ],
+          "estimated_initial_object_z_m": 0.3527703764538318
+        },
+        {
+          "seed": 17,
+          "return": 3280.8652277927886,
+          "steps": 529,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0014515627736403495,
+            0.0022917122496738827,
+            -0.011022445171312116
+          ],
+          "estimated_initial_object_z_m": 0.3039775548286879
+        },
+        {
+          "seed": 18,
+          "return": -646.6301205269515,
+          "steps": 900,
+          "success": false,
+          "reach_success": false,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "reach",
+          "initial_position_error_m": [
+            0.000908432768673688,
+            -0.04637387526578779,
+            0.0047486736616509295
+          ],
+          "estimated_initial_object_z_m": 0.31974867366165094
+        },
+        {
+          "seed": 19,
+          "return": -507.9351036002129,
+          "steps": 900,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.018792356736570454,
+            -0.02326445864528402,
+            -0.0392015969927607
+          ],
+          "estimated_initial_object_z_m": 0.2757984030072393
+        }
+      ]
+    },
+    {
+      "mode": "fixed",
+      "level_mm_per_axis_sigma": 30.0,
+      "episodes": 20,
+      "success_rate": 0.1,
+      "reach_success_rate": 0.25,
+      "grasp_success_rate": 0.1,
+      "lift_success_rate": 0.1,
+      "place_success_rate": 0.1,
+      "mean_return": -222.67814465985666,
+      "failure_stage_counts": {
+        "reach": 15,
+        "grasp": 3,
+        "none": 2
+      },
+      "actual_3d_error": {
+        "mean_m": 0.05252435276163745,
+        "p95_m": 0.0805672063021119,
+        "max_m": 0.0805672063021119,
+        "axis_std_m": [
+          0.024560376745098103,
+          0.04029130668283862,
+          0.027003239495548517
+        ]
+      },
+      "episode_records": [
+        {
+          "seed": 0,
+          "return": -491.76430450416683,
+          "steps": 900,
+          "success": false,
+          "reach_success": false,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "reach",
+          "initial_position_error_m": [
+            -0.026475234157812222,
+            0.001064678533501171,
+            -0.02760109970994892
+          ],
+          "estimated_initial_object_z_m": 0.2873989002900511
+        },
+        {
+          "seed": 1,
+          "return": -382.18564342945217,
+          "steps": 900,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            -0.0025948472055327475,
+            0.018100653353156824,
+            -0.005673164899277997
+          ],
+          "estimated_initial_object_z_m": 0.309326835100722
+        },
+        {
+          "seed": 2,
+          "return": -689.986143954608,
+          "steps": 900,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.0463561589780038,
+            -0.05196412830301215,
+            -0.004187258116119974
+          ],
+          "estimated_initial_object_z_m": 0.31081274188388003
+        },
+        {
+          "seed": 3,
+          "return": -724.2635456481325,
+          "steps": 900,
+          "success": false,
+          "reach_success": false,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "reach",
+          "initial_position_error_m": [
+            0.0055493339476132796,
+            -0.07969048315776006,
+            -0.003057510603675381
+          ],
+          "estimated_initial_object_z_m": 0.31194248939632463
+        },
+        {
+          "seed": 4,
+          "return": -566.9481884228487,
+          "steps": 900,
+          "success": false,
+          "reach_success": false,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "reach",
+          "initial_position_error_m": [
+            -0.023745724757118895,
+            0.027046521235913,
+            -0.028245610351241606
+          ],
+          "estimated_initial_object_z_m": 0.2867543896487584
+        },
+        {
+          "seed": 5,
+          "return": -689.1085557918443,
+          "steps": 900,
+          "success": false,
+          "reach_success": false,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "reach",
+          "initial_position_error_m": [
+            -0.0031646689098200676,
+            0.05437642013236401,
+            0.04036240447220208
+          ],
+          "estimated_initial_object_z_m": 0.3553624044722021
+        },
+        {
+          "seed": 6,
+          "return": -657.0595881844456,
+          "steps": 900,
+          "success": false,
+          "reach_success": false,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "reach",
+          "initial_position_error_m": [
+            0.030024560127030246,
+            -0.027480391931825034,
+            -0.016894337310953658
+          ],
+          "estimated_initial_object_z_m": 0.29810566268904637
+        },
+        {
+          "seed": 7,
+          "return": -479.42900082699396,
+          "steps": 900,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.01065485103355874,
+            -0.020739227447741447,
+            -0.030187745296154544
+          ],
+          "estimated_initial_object_z_m": 0.28481225470384547
+        },
+        {
+          "seed": 8,
+          "return": -513.3025596688078,
+          "steps": 900,
+          "success": false,
+          "reach_success": false,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "reach",
+          "initial_position_error_m": [
+            -0.02691800752066842,
+            -0.0003626228454411224,
+            0.01329046070676192
+          ],
+          "estimated_initial_object_z_m": 0.32829046070676193
+        },
+        {
+          "seed": 9,
+          "return": -687.5103967221562,
+          "steps": 900,
+          "success": false,
+          "reach_success": false,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "reach",
+          "initial_position_error_m": [
+            0.002960739813247568,
+            0.05622584300107404,
+            -0.05762779997452515
+          ],
+          "estimated_initial_object_z_m": 0.25737220002547484
+        },
+        {
+          "seed": 10,
+          "return": -657.6899823997107,
+          "steps": 900,
+          "success": false,
+          "reach_success": false,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "reach",
+          "initial_position_error_m": [
+            -0.030066790472516782,
+            0.043512240842606485,
+            -0.02560759382369108
+          ],
+          "estimated_initial_object_z_m": 0.2893924061763089
+        },
+        {
+          "seed": 11,
+          "return": -576.6702970779684,
+          "steps": 900,
+          "success": false,
+          "reach_success": false,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "reach",
+          "initial_position_error_m": [
+            -0.04295071584345836,
+            0.0013972683937671908,
+            0.03242067522758739
+          ],
+          "estimated_initial_object_z_m": 0.3474206752275874
+        },
+        {
+          "seed": 12,
+          "return": -669.7977238861143,
+          "steps": 900,
+          "success": false,
+          "reach_success": false,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "reach",
+          "initial_position_error_m": [
+            0.002103300769050721,
+            0.059482249138434466,
+            -0.03206136233935273
+          ],
+          "estimated_initial_object_z_m": 0.28293863766064725
+        },
+        {
+          "seed": 13,
+          "return": -543.6121411330232,
+          "steps": 900,
+          "success": false,
+          "reach_success": false,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "reach",
+          "initial_position_error_m": [
+            -0.027546310883054995,
+            -0.005467377365810521,
+            -0.008741493844160534
+          ],
+          "estimated_initial_object_z_m": 0.3062585061558395
+        },
+        {
+          "seed": 14,
+          "return": -600.3926333140855,
+          "steps": 900,
+          "success": false,
+          "reach_success": false,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "reach",
+          "initial_position_error_m": [
+            -0.03209544948860409,
+            -0.017029795533400498,
+            -0.009885939533416373
+          ],
+          "estimated_initial_object_z_m": 0.3051140604665836
+        },
+        {
+          "seed": 15,
+          "return": -681.5820683482967,
+          "steps": 900,
+          "success": false,
+          "reach_success": false,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "reach",
+          "initial_position_error_m": [
+            -0.040072524464282305,
+            0.042212669564705416,
+            -0.013409124571402881
+          ],
+          "estimated_initial_object_z_m": 0.30159087542859714
+        },
+        {
+          "seed": 16,
+          "return": 3234.43411108474,
+          "steps": 438,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.015416384188334832,
+            -0.0010150894005237616,
+            0.05665556468074771
+          ],
+          "estimated_initial_object_z_m": 0.37165556468074773
+        },
+        {
+          "seed": 17,
+          "return": 3295.0424977152975,
+          "steps": 556,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.002177344160460524,
+            0.0034375683745108236,
+            -0.016533667756968174
+          ],
+          "estimated_initial_object_z_m": 0.2984663322430318
+        },
+        {
+          "seed": 18,
+          "return": -722.2653457414166,
+          "steps": 900,
+          "success": false,
+          "reach_success": false,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "reach",
+          "initial_position_error_m": [
+            0.001362649153010532,
+            -0.06956081289868168,
+            0.007123010492476394
+          ],
+          "estimated_initial_object_z_m": 0.3221230104924764
+        },
+        {
+          "seed": 19,
+          "return": -649.4713829430992,
+          "steps": 900,
+          "success": false,
+          "reach_success": false,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "reach",
+          "initial_position_error_m": [
+            0.028188535104855677,
+            -0.03489668796792603,
+            -0.05880239548914105
+          ],
+          "estimated_initial_object_z_m": 0.25619760451085893
+        }
+      ]
+    },
+    {
+      "mode": "jitter",
+      "level_mm_per_axis_sigma": 0.0,
+      "episodes": 20,
+      "success_rate": 1.0,
+      "reach_success_rate": 1.0,
+      "grasp_success_rate": 1.0,
+      "lift_success_rate": 1.0,
+      "place_success_rate": 1.0,
+      "mean_return": 3411.1027288561722,
+      "failure_stage_counts": {
+        "none": 20
+      },
+      "actual_3d_error": {
+        "mean_m": 0.0,
+        "p95_m": 0.0,
+        "max_m": 0.0,
+        "axis_std_m": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "episode_records": [
+        {
+          "seed": 0,
+          "return": 3245.4636681314637,
+          "steps": 465,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 1,
+          "return": 3259.419676594966,
+          "steps": 380,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 2,
+          "return": 3715.7000838293666,
+          "steps": 528,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0,
+            -0.0,
+            -0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 3,
+          "return": 3428.004851615113,
+          "steps": 460,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0,
+            -0.0,
+            -0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 4,
+          "return": 3584.4287491433406,
+          "steps": 577,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 5,
+          "return": 3422.630113386561,
+          "steps": 476,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0,
+            0.0,
+            0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 6,
+          "return": 3352.3913395268432,
+          "steps": 472,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0,
+            -0.0,
+            -0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 7,
+          "return": 3575.0284764151115,
+          "steps": 483,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0,
+            -0.0,
+            -0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 8,
+          "return": 3316.142531795168,
+          "steps": 368,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0,
+            -0.0,
+            0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 9,
+          "return": 3268.0454318421544,
+          "steps": 506,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0,
+            0.0,
+            -0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 10,
+          "return": 3552.074791051457,
+          "steps": 608,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 11,
+          "return": 3541.333492775375,
+          "steps": 437,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0,
+            0.0,
+            0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 12,
+          "return": 3427.997482944873,
+          "steps": 382,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0,
+            0.0,
+            -0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 13,
+          "return": 3500.733896691734,
+          "steps": 507,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 14,
+          "return": 3351.3756160254843,
+          "steps": 511,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 15,
+          "return": 3360.422793937271,
+          "steps": 440,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 16,
+          "return": 3282.1099414046603,
+          "steps": 446,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 17,
+          "return": 3271.677996790131,
+          "steps": 522,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0,
+            0.0,
+            -0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 18,
+          "return": 3404.467737952267,
+          "steps": 417,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        },
+        {
+          "seed": 19,
+          "return": 3362.605905270099,
+          "steps": 392,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0,
+            -0.0,
+            -0.0
+          ],
+          "estimated_initial_object_z_m": 0.315
+        }
+      ]
+    },
+    {
+      "mode": "jitter",
+      "level_mm_per_axis_sigma": 2.0,
+      "episodes": 20,
+      "success_rate": 1.0,
+      "reach_success_rate": 1.0,
+      "grasp_success_rate": 1.0,
+      "lift_success_rate": 1.0,
+      "place_success_rate": 1.0,
+      "mean_return": 3412.7000265239694,
+      "failure_stage_counts": {
+        "none": 20
+      },
+      "actual_3d_error": {
+        "mean_m": 0.003193675103834146,
+        "p95_m": 0.005623498898155043,
+        "max_m": 0.009156546664909246,
+        "axis_std_m": [
+          0.0020071267583026673,
+          0.0020068581302941577,
+          0.0019961820297146613
+        ]
+      },
+      "episode_records": [
+        {
+          "seed": 0,
+          "return": 3246.9184264488813,
+          "steps": 464,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0017650156105208149,
+            7.097856890007807e-05,
+            -0.0018400733139965948
+          ],
+          "estimated_initial_object_z_m": 0.3131599266860034
+        },
+        {
+          "seed": 1,
+          "return": 3259.29882033841,
+          "steps": 380,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.00017298981370218318,
+            0.0012067102235437882,
+            -0.00037821099328519983
+          ],
+          "estimated_initial_object_z_m": 0.3146217890067148
+        },
+        {
+          "seed": 2,
+          "return": 3726.9493524758877,
+          "steps": 530,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0030904105985335864,
+            -0.00346427522020081,
+            -0.000279150541074665
+          ],
+          "estimated_initial_object_z_m": 0.3147208494589253
+        },
+        {
+          "seed": 3,
+          "return": 3424.867598476908,
+          "steps": 460,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.000369955596507552,
+            -0.0053126988771840045,
+            -0.00020383404024502543
+          ],
+          "estimated_initial_object_z_m": 0.31479616595975496
+        },
+        {
+          "seed": 4,
+          "return": 3585.965635225408,
+          "steps": 579,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0015830483171412597,
+            0.0018031014157275337,
+            -0.0018830406900827738
+          ],
+          "estimated_initial_object_z_m": 0.31311695930991723
+        },
+        {
+          "seed": 5,
+          "return": 3418.1130976952472,
+          "steps": 474,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.00021097792732133785,
+            0.003625094675490934,
+            0.002690826964813472
+          ],
+          "estimated_initial_object_z_m": 0.3176908269648135
+        },
+        {
+          "seed": 6,
+          "return": 3348.8022435585112,
+          "steps": 471,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0020016373418020165,
+            -0.0018320261287883357,
+            -0.0011262891540635774
+          ],
+          "estimated_initial_object_z_m": 0.3138737108459364
+        },
+        {
+          "seed": 7,
+          "return": 3582.9097675305643,
+          "steps": 486,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0007103234022372495,
+            -0.0013826151631827633,
+            -0.00201251635307697
+          ],
+          "estimated_initial_object_z_m": 0.312987483646923
+        },
+        {
+          "seed": 8,
+          "return": 3327.713363952808,
+          "steps": 369,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0017945338347112282,
+            -2.4174856362741495e-05,
+            0.000886030713784128
+          ],
+          "estimated_initial_object_z_m": 0.3158860307137841
+        },
+        {
+          "seed": 9,
+          "return": 3265.7989309545032,
+          "steps": 506,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.00019738265421650453,
+            0.003748389533404936,
+            -0.0038418533316350104
+          ],
+          "estimated_initial_object_z_m": 0.311158146668365
+        },
+        {
+          "seed": 10,
+          "return": 3548.0933279745796,
+          "steps": 609,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0020044526981677856,
+            0.002900816056173766,
+            -0.0017071729215794053
+          ],
+          "estimated_initial_object_z_m": 0.3132928270784206
+        },
+        {
+          "seed": 11,
+          "return": 3548.5461370652483,
+          "steps": 437,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0028633810562305574,
+            9.315122625114606e-05,
+            0.002161378348505826
+          ],
+          "estimated_initial_object_z_m": 0.31716137834850583
+        },
+        {
+          "seed": 12,
+          "return": 3427.148627820977,
+          "steps": 382,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.00014022005127004806,
+            0.0039654832758956315,
+            -0.0021374241559568487
+          ],
+          "estimated_initial_object_z_m": 0.31286257584404314
+        },
+        {
+          "seed": 13,
+          "return": 3502.0641761266834,
+          "steps": 509,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0018364207255369997,
+            -0.00036449182438736804,
+            -0.000582766256277369
+          ],
+          "estimated_initial_object_z_m": 0.31441723374372266
+        },
+        {
+          "seed": 14,
+          "return": 3344.9476547307327,
+          "steps": 509,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0021396966325736063,
+            -0.0011353197022266998,
+            -0.0006590626355610916
+          ],
+          "estimated_initial_object_z_m": 0.3143409373644389
+        },
+        {
+          "seed": 15,
+          "return": 3363.4118429034907,
+          "steps": 440,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.002671501630952154,
+            0.0028141779709803614,
+            -0.0008939416380935255
+          ],
+          "estimated_initial_object_z_m": 0.31410605836190647
+        },
+        {
+          "seed": 16,
+          "return": 3281.6367671784924,
+          "steps": 445,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0010277589458889888,
+            -6.767262670158411e-05,
+            0.003777037645383181
+          ],
+          "estimated_initial_object_z_m": 0.3187770376453832
+        },
+        {
+          "seed": 17,
+          "return": 3284.5354387923758,
+          "steps": 534,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.00014515627736403494,
+            0.00022917122496738827,
+            -0.0011022445171312116
+          ],
+          "estimated_initial_object_z_m": 0.3138977554828688
+        },
+        {
+          "seed": 18,
+          "return": 3400.0436248164947,
+          "steps": 415,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            9.08432768673688e-05,
+            -0.0046373875265787795,
+            0.00047486736616509295
+          ],
+          "estimated_initial_object_z_m": 0.3154748673661651
+        },
+        {
+          "seed": 19,
+          "return": 3366.2356964132014,
+          "steps": 393,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0018792356736570452,
+            -0.002326445864528402,
+            -0.00392015969927607
+          ],
+          "estimated_initial_object_z_m": 0.31107984030072394
+        }
+      ]
+    },
+    {
+      "mode": "jitter",
+      "level_mm_per_axis_sigma": 5.0,
+      "episodes": 20,
+      "success_rate": 1.0,
+      "reach_success_rate": 1.0,
+      "grasp_success_rate": 1.0,
+      "lift_success_rate": 1.0,
+      "place_success_rate": 1.0,
+      "mean_return": 3413.7695316783115,
+      "failure_stage_counts": {
+        "none": 20
+      },
+      "actual_3d_error": {
+        "mean_m": 0.00798296533490208,
+        "p95_m": 0.0140583625386079,
+        "max_m": 0.02289136666227311,
+        "axis_std_m": [
+          0.00501487982564265,
+          0.0050190178773676,
+          0.004990631067531582
+        ]
+      },
+      "episode_records": [
+        {
+          "seed": 0,
+          "return": 3250.964439746798,
+          "steps": 464,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.004412539026302037,
+            0.0001774464222501952,
+            -0.004600183284991487
+          ],
+          "estimated_initial_object_z_m": 0.3103998167150085
+        },
+        {
+          "seed": 1,
+          "return": 3254.7333277610733,
+          "steps": 380,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.00043247453425545793,
+            0.003016775558859471,
+            -0.0009455274832129995
+          ],
+          "estimated_initial_object_z_m": 0.314054472516787
+        },
+        {
+          "seed": 2,
+          "return": 3725.594560613713,
+          "steps": 530,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0077260264963339665,
+            -0.008660688050502024,
+            -0.0006978763526866625
+          ],
+          "estimated_initial_object_z_m": 0.31430212364731336
+        },
+        {
+          "seed": 3,
+          "return": 3423.5142662417993,
+          "steps": 461,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.00092488899126888,
+            -0.013281747192960013,
+            -0.0005095851006125635
+          ],
+          "estimated_initial_object_z_m": 0.31449041489938745
+        },
+        {
+          "seed": 4,
+          "return": 3587.6146438213973,
+          "steps": 588,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.00395762079285315,
+            0.004507753539318834,
+            -0.004707601725206935
+          ],
+          "estimated_initial_object_z_m": 0.31029239827479305
+        },
+        {
+          "seed": 5,
+          "return": 3417.041680402129,
+          "steps": 477,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0005274448183033446,
+            0.009062736688727336,
+            0.00672706741203368
+          ],
+          "estimated_initial_object_z_m": 0.32172706741203366
+        },
+        {
+          "seed": 6,
+          "return": 3347.3987529899528,
+          "steps": 469,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.005004093354505042,
+            -0.004580065321970839,
+            -0.002815722885158943
+          ],
+          "estimated_initial_object_z_m": 0.31218427711484104
+        },
+        {
+          "seed": 7,
+          "return": 3582.462396538659,
+          "steps": 487,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0017758085055931236,
+            -0.003456537907956908,
+            -0.005031290882692424
+          ],
+          "estimated_initial_object_z_m": 0.30996870911730756
+        },
+        {
+          "seed": 8,
+          "return": 3310.582924016643,
+          "steps": 369,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.00448633458677807,
+            -6.0437140906853735e-05,
+            0.00221507678446032
+          ],
+          "estimated_initial_object_z_m": 0.3172150767844603
+        },
+        {
+          "seed": 9,
+          "return": 3272.2381099066533,
+          "steps": 509,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0004934566355412613,
+            0.00937097383351234,
+            -0.009604633329087526
+          ],
+          "estimated_initial_object_z_m": 0.3053953666709125
+        },
+        {
+          "seed": 10,
+          "return": 3553.755577648218,
+          "steps": 609,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.005011131745419463,
+            0.007252040140434415,
+            -0.004267932303948513
+          ],
+          "estimated_initial_object_z_m": 0.3107320676960515
+        },
+        {
+          "seed": 11,
+          "return": 3542.531918628485,
+          "steps": 435,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.007158452640576394,
+            0.00023287806562786518,
+            0.0054034458712645655
+          ],
+          "estimated_initial_object_z_m": 0.32040344587126457
+        },
+        {
+          "seed": 12,
+          "return": 3436.1856002161053,
+          "steps": 386,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.00035055012817512013,
+            0.009913708189739077,
+            -0.005343560389892122
+          ],
+          "estimated_initial_object_z_m": 0.30965643961010786
+        },
+        {
+          "seed": 13,
+          "return": 3506.971253824717,
+          "steps": 511,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.004591051813842499,
+            -0.0009112295609684201,
+            -0.0014569156406934226
+          ],
+          "estimated_initial_object_z_m": 0.31354308435930656
+        },
+        {
+          "seed": 14,
+          "return": 3350.2502125979977,
+          "steps": 507,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.005349241581434016,
+            -0.00283829925556675,
+            -0.001647656588902729
+          ],
+          "estimated_initial_object_z_m": 0.3133523434110973
+        },
+        {
+          "seed": 15,
+          "return": 3354.780585208952,
+          "steps": 438,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0066787540773803845,
+            0.0070354449274509035,
+            -0.0022348540952338136
+          ],
+          "estimated_initial_object_z_m": 0.3127651459047662
+        },
+        {
+          "seed": 16,
+          "return": 3277.5284771017746,
+          "steps": 445,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.002569397364722472,
+            -0.00016918156675396027,
+            0.009442594113457952
+          ],
+          "estimated_initial_object_z_m": 0.32444259411345794
+        },
+        {
+          "seed": 17,
+          "return": 3302.100597974663,
+          "steps": 544,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.00036289069341008737,
+            0.0005729280624184707,
+            -0.002755611292828029
+          ],
+          "estimated_initial_object_z_m": 0.31224438870717197
+        },
+        {
+          "seed": 18,
+          "return": 3401.76738070806,
+          "steps": 417,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.000227108192168422,
+            -0.011593468816446947,
+            0.0011871684154127324
+          ],
+          "estimated_initial_object_z_m": 0.3161871684154127
+        },
+        {
+          "seed": 19,
+          "return": 3377.3739276184397,
+          "steps": 395,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.004698089184142613,
+            -0.005816114661321005,
+            -0.009800399248190175
+          ],
+          "estimated_initial_object_z_m": 0.30519960075180985
+        }
+      ]
+    },
+    {
+      "mode": "jitter",
+      "level_mm_per_axis_sigma": 10.0,
+      "episodes": 20,
+      "success_rate": 1.0,
+      "reach_success_rate": 1.0,
+      "grasp_success_rate": 1.0,
+      "lift_success_rate": 1.0,
+      "place_success_rate": 1.0,
+      "mean_return": 3412.576651973436,
+      "failure_stage_counts": {
+        "none": 20
+      },
+      "actual_3d_error": {
+        "mean_m": 0.015968702294454514,
+        "p95_m": 0.028120640230845925,
+        "max_m": 0.04578273332454622,
+        "axis_std_m": [
+          0.010036401509568886,
+          0.010043422922614701,
+          0.009975461348603677
+        ]
+      },
+      "episode_records": [
+        {
+          "seed": 0,
+          "return": 3258.9172565868234,
+          "steps": 466,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.008825078052604074,
+            0.0003548928445003904,
+            -0.009200366569982974
+          ],
+          "estimated_initial_object_z_m": 0.30579963343001704
+        },
+        {
+          "seed": 1,
+          "return": 3248.8652192015425,
+          "steps": 379,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0008649490685109159,
+            0.006033551117718942,
+            -0.001891054966425999
+          ],
+          "estimated_initial_object_z_m": 0.313108945033574
+        },
+        {
+          "seed": 2,
+          "return": 3729.640222716748,
+          "steps": 533,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.015452052992667933,
+            -0.01732137610100405,
+            -0.001395752705373325
+          ],
+          "estimated_initial_object_z_m": 0.31360424729462666
+        },
+        {
+          "seed": 3,
+          "return": 3433.7560359509844,
+          "steps": 460,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.00184977798253776,
+            -0.026563494385920025,
+            -0.001019170201225127
+          ],
+          "estimated_initial_object_z_m": 0.3139808297987749
+        },
+        {
+          "seed": 4,
+          "return": 3563.4031126652494,
+          "steps": 584,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0079152415857063,
+            0.009015507078637668,
+            -0.00941520345041387
+          ],
+          "estimated_initial_object_z_m": 0.30558479654958615
+        },
+        {
+          "seed": 5,
+          "return": 3404.9892180776055,
+          "steps": 474,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0010548896366066893,
+            0.01812547337745467,
+            0.01345413482406736
+          ],
+          "estimated_initial_object_z_m": 0.3284541348240674
+        },
+        {
+          "seed": 6,
+          "return": 3350.1209093978223,
+          "steps": 469,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.010008186709010084,
+            -0.009160130643941678,
+            -0.005631445770317886
+          ],
+          "estimated_initial_object_z_m": 0.3093685542296821
+        },
+        {
+          "seed": 7,
+          "return": 3594.137419628893,
+          "steps": 495,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.003551617011186247,
+            -0.006913075815913816,
+            -0.010062581765384849
+          ],
+          "estimated_initial_object_z_m": 0.3049374182346152
+        },
+        {
+          "seed": 8,
+          "return": 3315.1104820525316,
+          "steps": 372,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.00897266917355614,
+            -0.00012087428181370747,
+            0.00443015356892064
+          ],
+          "estimated_initial_object_z_m": 0.3194301535689206
+        },
+        {
+          "seed": 9,
+          "return": 3266.6374333049444,
+          "steps": 518,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0009869132710825226,
+            0.01874194766702468,
+            -0.019209266658175052
+          ],
+          "estimated_initial_object_z_m": 0.29579073334182493
+        },
+        {
+          "seed": 10,
+          "return": 3576.952562785772,
+          "steps": 636,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.010022263490838927,
+            0.01450408028086883,
+            -0.008535864607897027
+          ],
+          "estimated_initial_object_z_m": 0.306464135392103
+        },
+        {
+          "seed": 11,
+          "return": 3535.433602576642,
+          "steps": 434,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.014316905281152788,
+            0.00046575613125573036,
+            0.010806891742529131
+          ],
+          "estimated_initial_object_z_m": 0.32580689174252914
+        },
+        {
+          "seed": 12,
+          "return": 3427.6801067590595,
+          "steps": 385,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0007011002563502403,
+            0.019827416379478154,
+            -0.010687120779784244
+          ],
+          "estimated_initial_object_z_m": 0.30431287922021577
+        },
+        {
+          "seed": 13,
+          "return": 3498.6823533870274,
+          "steps": 515,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.009182103627684998,
+            -0.0018224591219368402,
+            -0.0029138312813868452
+          ],
+          "estimated_initial_object_z_m": 0.31208616871861317
+        },
+        {
+          "seed": 14,
+          "return": 3350.3159467108094,
+          "steps": 506,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.010698483162868032,
+            -0.0056765985111335,
+            -0.003295313177805458
+          ],
+          "estimated_initial_object_z_m": 0.31170468682219454
+        },
+        {
+          "seed": 15,
+          "return": 3346.4447208247357,
+          "steps": 438,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.013357508154760769,
+            0.014070889854901807,
+            -0.004469708190467627
+          ],
+          "estimated_initial_object_z_m": 0.3105302918095324
+        },
+        {
+          "seed": 16,
+          "return": 3266.163466598755,
+          "steps": 444,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.005138794729444944,
+            -0.00033836313350792054,
+            0.018885188226915903
+          ],
+          "estimated_initial_object_z_m": 0.33388518822691593
+        },
+        {
+          "seed": 17,
+          "return": 3287.9136840605083,
+          "steps": 541,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0007257813868201747,
+            0.0011458561248369413,
+            -0.005511222585656058
+          ],
+          "estimated_initial_object_z_m": 0.30948877741434394
+        },
+        {
+          "seed": 18,
+          "return": 3420.452401141055,
+          "steps": 431,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.000454216384336844,
+            -0.023186937632893895,
+            0.0023743368308254647
+          ],
+          "estimated_initial_object_z_m": 0.31737433683082544
+        },
+        {
+          "seed": 19,
+          "return": 3375.9168850412093,
+          "steps": 397,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.009396178368285227,
+            -0.01163222932264201,
+            -0.01960079849638035
+          ],
+          "estimated_initial_object_z_m": 0.29539920150361965
+        }
+      ]
+    },
+    {
+      "mode": "jitter",
+      "level_mm_per_axis_sigma": 15.0,
+      "episodes": 20,
+      "success_rate": 0.9,
+      "reach_success_rate": 1.0,
+      "grasp_success_rate": 0.9,
+      "lift_success_rate": 0.9,
+      "place_success_rate": 0.9,
+      "mean_return": 3046.6063640062853,
+      "failure_stage_counts": {
+        "none": 18,
+        "grasp": 2
+      },
+      "actual_3d_error": {
+        "mean_m": 0.02396103624370968,
+        "p95_m": 0.04217739585650195,
+        "max_m": 0.06867409998681932,
+        "axis_std_m": [
+          0.01506509329790751,
+          0.015055688529903235,
+          0.014974344666965863
+        ]
+      },
+      "episode_records": [
+        {
+          "seed": 0,
+          "return": 3284.878173792529,
+          "steps": 477,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.013237617078906111,
+            0.0005323392667505855,
+            -0.01380054985497446
+          ],
+          "estimated_initial_object_z_m": 0.3011994501450255
+        },
+        {
+          "seed": 1,
+          "return": 3231.375253825106,
+          "steps": 378,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0012974236027663737,
+            0.009050326676578412,
+            -0.0028365824496389986
+          ],
+          "estimated_initial_object_z_m": 0.312163417550361
+        },
+        {
+          "seed": 2,
+          "return": 3715.9609603887257,
+          "steps": 536,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0231780794890019,
+            -0.025982064151506074,
+            -0.002093629058059987
+          ],
+          "estimated_initial_object_z_m": 0.31290637094194
+        },
+        {
+          "seed": 3,
+          "return": 3409.38935169246,
+          "steps": 455,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0027746669738066398,
+            -0.03984524157888003,
+            -0.0015287553018376906
+          ],
+          "estimated_initial_object_z_m": 0.3134712446981623
+        },
+        {
+          "seed": 4,
+          "return": 3556.4749034581996,
+          "steps": 585,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.011872862378559447,
+            0.0135232606179565,
+            -0.014122805175620803
+          ],
+          "estimated_initial_object_z_m": 0.3008771948243792
+        },
+        {
+          "seed": 5,
+          "return": 3400.999033960892,
+          "steps": 477,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0015823344549100338,
+            0.027188210066182005,
+            0.02018120223610104
+          ],
+          "estimated_initial_object_z_m": 0.33518120223610104
+        },
+        {
+          "seed": 6,
+          "return": 3331.0865108014946,
+          "steps": 467,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.015012280063515123,
+            -0.013740195965912517,
+            -0.008447168655476829
+          ],
+          "estimated_initial_object_z_m": 0.30655283134452316
+        },
+        {
+          "seed": 7,
+          "return": 3588.999535621459,
+          "steps": 498,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.00532742551677937,
+            -0.010369613723870724,
+            -0.015093872648077272
+          ],
+          "estimated_initial_object_z_m": 0.29990612735192274
+        },
+        {
+          "seed": 8,
+          "return": -219.19251121481113,
+          "steps": 359,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            -0.01345900376033421,
+            -0.0001813114227205612,
+            0.00664523035338096
+          ],
+          "estimated_initial_object_z_m": 0.32164523035338094
+        },
+        {
+          "seed": 9,
+          "return": 3280.954869696048,
+          "steps": 526,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.001480369906623784,
+            0.02811292150053702,
+            -0.028813899987262574
+          ],
+          "estimated_initial_object_z_m": 0.2861861000127374
+        },
+        {
+          "seed": 10,
+          "return": 3539.0612371770244,
+          "steps": 610,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.015033395236258391,
+            0.021756120421303243,
+            -0.01280379691184554
+          ],
+          "estimated_initial_object_z_m": 0.3021962030881545
+        },
+        {
+          "seed": 11,
+          "return": 3531.237172310734,
+          "steps": 433,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.02147535792172918,
+            0.0006986341968835954,
+            0.016210337613793695
+          ],
+          "estimated_initial_object_z_m": 0.3312103376137937
+        },
+        {
+          "seed": 12,
+          "return": 3426.8799682921917,
+          "steps": 389,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0010516503845253604,
+            0.029741124569217233,
+            -0.016030681169676365
+          ],
+          "estimated_initial_object_z_m": 0.2989693188303236
+        },
+        {
+          "seed": 13,
+          "return": 3498.965156589273,
+          "steps": 517,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.013773155441527497,
+            -0.0027336886829052603,
+            -0.004370746922080267
+          ],
+          "estimated_initial_object_z_m": 0.3106292530779197
+        },
+        {
+          "seed": 14,
+          "return": 3344.7635638330303,
+          "steps": 505,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.016047724744302046,
+            -0.008514897766700249,
+            -0.004942969766708187
+          ],
+          "estimated_initial_object_z_m": 0.31005703023329184
+        },
+        {
+          "seed": 15,
+          "return": 3357.0151751956887,
+          "steps": 444,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.020036262232141153,
+            0.021106334782352708,
+            -0.006704562285701441
+          ],
+          "estimated_initial_object_z_m": 0.30829543771429857
+        },
+        {
+          "seed": 16,
+          "return": 3259.5317684077404,
+          "steps": 443,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.007708192094167416,
+            -0.0005075447002618808,
+            0.028327782340373853
+          ],
+          "estimated_initial_object_z_m": 0.34332778234037387
+        },
+        {
+          "seed": 17,
+          "return": 3246.7885803334957,
+          "steps": 531,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.001088672080230262,
+            0.0017187841872554118,
+            -0.008266833878484087
+          ],
+          "estimated_initial_object_z_m": 0.3067331661215159
+        },
+        {
+          "seed": 18,
+          "return": -236.646287681406,
+          "steps": 370,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.000681324576505266,
+            -0.03478040644934084,
+            0.003561505246238197
+          ],
+          "estimated_initial_object_z_m": 0.3185615052462382
+        },
+        {
+          "seed": 19,
+          "return": 3383.604863645829,
+          "steps": 403,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.014094267552427838,
+            -0.017448343983963013,
+            -0.029401197744570524
+          ],
+          "estimated_initial_object_z_m": 0.2855988022554295
+        }
+      ]
+    },
+    {
+      "mode": "jitter",
+      "level_mm_per_axis_sigma": 20.0,
+      "episodes": 20,
+      "success_rate": 0.85,
+      "reach_success_rate": 1.0,
+      "grasp_success_rate": 0.85,
+      "lift_success_rate": 0.85,
+      "place_success_rate": 0.85,
+      "mean_return": 2856.901266250811,
+      "failure_stage_counts": {
+        "none": 17,
+        "grasp": 3
+      },
+      "actual_3d_error": {
+        "mean_m": 0.031892692664311315,
+        "p95_m": 0.05616256427397149,
+        "max_m": 0.09156546664909244,
+        "axis_std_m": [
+          0.020057347815026903,
+          0.020029339005144,
+          0.019944521740611332
+        ]
+      },
+      "episode_records": [
+        {
+          "seed": 0,
+          "return": 3286.539197915877,
+          "steps": 478,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.017650156105208148,
+            0.0007097856890007808,
+            -0.018400733139965948
+          ],
+          "estimated_initial_object_z_m": 0.29659926686003407
+        },
+        {
+          "seed": 1,
+          "return": 3214.4017438502988,
+          "steps": 376,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0017298981370218317,
+            0.012067102235437884,
+            -0.003782109932851998
+          ],
+          "estimated_initial_object_z_m": 0.311217890067148
+        },
+        {
+          "seed": 2,
+          "return": 3694.1848547039845,
+          "steps": 528,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.030904105985335866,
+            -0.0346427522020081,
+            -0.00279150541074665
+          ],
+          "estimated_initial_object_z_m": 0.31220849458925337
+        },
+        {
+          "seed": 3,
+          "return": 3383.306957206128,
+          "steps": 453,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.00369955596507552,
+            -0.05312698877184005,
+            -0.002038340402450254
+          ],
+          "estimated_initial_object_z_m": 0.31296165959754974
+        },
+        {
+          "seed": 4,
+          "return": 3561.7678092740152,
+          "steps": 602,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0158304831714126,
+            0.018031014157275337,
+            -0.01883040690082774
+          ],
+          "estimated_initial_object_z_m": 0.29616959309917223
+        },
+        {
+          "seed": 5,
+          "return": 3374.7266846582233,
+          "steps": 475,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0021097792732133786,
+            0.03625094675490934,
+            0.02690826964813472
+          ],
+          "estimated_initial_object_z_m": 0.3419082696481347
+        },
+        {
+          "seed": 6,
+          "return": 3327.4564871370703,
+          "steps": 466,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.020016373418020168,
+            -0.018320261287883357,
+            -0.011262891540635773
+          ],
+          "estimated_initial_object_z_m": 0.30373710845936425
+        },
+        {
+          "seed": 7,
+          "return": 3567.258680471027,
+          "steps": 494,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.007103234022372494,
+            -0.013826151631827632,
+            -0.020125163530769697
+          ],
+          "estimated_initial_object_z_m": 0.2948748364692303
+        },
+        {
+          "seed": 8,
+          "return": -223.49082424801344,
+          "steps": 372,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            -0.01794533834711228,
+            -0.00024174856362741494,
+            0.00886030713784128
+          ],
+          "estimated_initial_object_z_m": 0.3238603071378413
+        },
+        {
+          "seed": 9,
+          "return": 3278.839363881424,
+          "steps": 522,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.001973826542165045,
+            0.03748389533404936,
+            -0.038418533316350104
+          ],
+          "estimated_initial_object_z_m": 0.2765814666836499
+        },
+        {
+          "seed": 10,
+          "return": 3535.2991036148687,
+          "steps": 614,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.020044526981677854,
+            0.02900816056173766,
+            -0.017071729215794054
+          ],
+          "estimated_initial_object_z_m": 0.297928270784206
+        },
+        {
+          "seed": 11,
+          "return": 3508.533566625177,
+          "steps": 430,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.028633810562305576,
+            0.0009315122625114607,
+            0.021613783485058262
+          ],
+          "estimated_initial_object_z_m": 0.33661378348505827
+        },
+        {
+          "seed": 12,
+          "return": -209.65411554512144,
+          "steps": 339,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.0014022005127004805,
+            0.03965483275895631,
+            -0.021374241559568487
+          ],
+          "estimated_initial_object_z_m": 0.29362575844043154
+        },
+        {
+          "seed": 13,
+          "return": 3479.2653851494056,
+          "steps": 516,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.018364207255369996,
+            -0.0036449182438736804,
+            -0.0058276625627736904
+          ],
+          "estimated_initial_object_z_m": 0.30917233743722633
+        },
+        {
+          "seed": 14,
+          "return": 3340.184917829811,
+          "steps": 504,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.021396966325736063,
+            -0.011353197022267,
+            -0.006590626355610916
+          ],
+          "estimated_initial_object_z_m": 0.3084093736443891
+        },
+        {
+          "seed": 15,
+          "return": 3367.3531470286475,
+          "steps": 458,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.026715016309521538,
+            0.028141779709803614,
+            -0.008939416380935254
+          ],
+          "estimated_initial_object_z_m": 0.30606058361906474
+        },
+        {
+          "seed": 16,
+          "return": 3247.043514033579,
+          "steps": 440,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.010277589458889888,
+            -0.0006767262670158411,
+            0.03777037645383181
+          ],
+          "estimated_initial_object_z_m": 0.3527703764538318
+        },
+        {
+          "seed": 17,
+          "return": 3223.6467787788947,
+          "steps": 540,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0014515627736403495,
+            0.0022917122496738827,
+            -0.011022445171312116
+          ],
+          "estimated_initial_object_z_m": 0.3039775548286879
+        },
+        {
+          "seed": 18,
+          "return": -241.30084753934426,
+          "steps": 378,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.000908432768673688,
+            -0.04637387526578779,
+            0.0047486736616509295
+          ],
+          "estimated_initial_object_z_m": 0.31974867366165094
+        },
+        {
+          "seed": 19,
+          "return": 3422.662920190266,
+          "steps": 428,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.018792356736570454,
+            -0.02326445864528402,
+            -0.0392015969927607
+          ],
+          "estimated_initial_object_z_m": 0.2757984030072393
+        }
+      ]
+    },
+    {
+      "mode": "jitter",
+      "level_mm_per_axis_sigma": 30.0,
+      "episodes": 20,
+      "success_rate": 0.7,
+      "reach_success_rate": 1.0,
+      "grasp_success_rate": 0.7,
+      "lift_success_rate": 0.7,
+      "place_success_rate": 0.7,
+      "mean_return": 2304.7604871474505,
+      "failure_stage_counts": {
+        "grasp": 6,
+        "none": 14
+      },
+      "actual_3d_error": {
+        "mean_m": 0.04784898434293404,
+        "p95_m": 0.08427147646617227,
+        "max_m": 0.13734819997363865,
+        "axis_std_m": [
+          0.030006212412430337,
+          0.030089632315598684,
+          0.02995308386689369
+        ]
+      },
+      "episode_records": [
+        {
+          "seed": 0,
+          "return": -315.7023018464871,
+          "steps": 547,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            -0.026475234157812222,
+            0.001064678533501171,
+            -0.02760109970994892
+          ],
+          "estimated_initial_object_z_m": 0.2873989002900511
+        },
+        {
+          "seed": 1,
+          "return": 3189.958532140167,
+          "steps": 375,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0025948472055327475,
+            0.018100653353156824,
+            -0.005673164899277997
+          ],
+          "estimated_initial_object_z_m": 0.309326835100722
+        },
+        {
+          "seed": 2,
+          "return": 3620.4696716386434,
+          "steps": 516,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0463561589780038,
+            -0.05196412830301215,
+            -0.004187258116119974
+          ],
+          "estimated_initial_object_z_m": 0.31081274188388003
+        },
+        {
+          "seed": 3,
+          "return": 3367.4652886081594,
+          "steps": 456,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.0055493339476132796,
+            -0.07969048315776006,
+            -0.003057510603675381
+          ],
+          "estimated_initial_object_z_m": 0.31194248939632463
+        },
+        {
+          "seed": 4,
+          "return": 3601.361372241572,
+          "steps": 725,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.023745724757118895,
+            0.027046521235913,
+            -0.028245610351241606
+          ],
+          "estimated_initial_object_z_m": 0.2867543896487584
+        },
+        {
+          "seed": 5,
+          "return": 3321.4666784941683,
+          "steps": 473,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.0031646689098200676,
+            0.05437642013236401,
+            0.04036240447220208
+          ],
+          "estimated_initial_object_z_m": 0.3553624044722021
+        },
+        {
+          "seed": 6,
+          "return": 3318.3149874650812,
+          "steps": 465,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.030024560127030246,
+            -0.027480391931825034,
+            -0.016894337310953658
+          ],
+          "estimated_initial_object_z_m": 0.29810566268904637
+        },
+        {
+          "seed": 7,
+          "return": -309.53267839387314,
+          "steps": 640,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.01065485103355874,
+            -0.020739227447741447,
+            -0.030187745296154544
+          ],
+          "estimated_initial_object_z_m": 0.28481225470384547
+        },
+        {
+          "seed": 8,
+          "return": 3392.1572991978824,
+          "steps": 408,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.02691800752066842,
+            -0.0003626228454411224,
+            0.01329046070676192
+          ],
+          "estimated_initial_object_z_m": 0.32829046070676193
+        },
+        {
+          "seed": 9,
+          "return": -277.5318224425132,
+          "steps": 438,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.002960739813247568,
+            0.05622584300107404,
+            -0.05762779997452515
+          ],
+          "estimated_initial_object_z_m": 0.25737220002547484
+        },
+        {
+          "seed": 10,
+          "return": 3575.7358503566684,
+          "steps": 668,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.030066790472516782,
+            0.043512240842606485,
+            -0.02560759382369108
+          ],
+          "estimated_initial_object_z_m": 0.2893924061763089
+        },
+        {
+          "seed": 11,
+          "return": 3476.7289989640626,
+          "steps": 424,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.04295071584345836,
+            0.0013972683937671908,
+            0.03242067522758739
+          ],
+          "estimated_initial_object_z_m": 0.3474206752275874
+        },
+        {
+          "seed": 12,
+          "return": -215.2142927898859,
+          "steps": 349,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.002103300769050721,
+            0.059482249138434466,
+            -0.03206136233935273
+          ],
+          "estimated_initial_object_z_m": 0.28293863766064725
+        },
+        {
+          "seed": 13,
+          "return": 3474.74178495144,
+          "steps": 519,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.027546310883054995,
+            -0.005467377365810521,
+            -0.008741493844160534
+          ],
+          "estimated_initial_object_z_m": 0.3062585061558395
+        },
+        {
+          "seed": 14,
+          "return": 3330.5437833557567,
+          "steps": 505,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.03209544948860409,
+            -0.017029795533400498,
+            -0.009885939533416373
+          ],
+          "estimated_initial_object_z_m": 0.3051140604665836
+        },
+        {
+          "seed": 15,
+          "return": 3313.453324135632,
+          "steps": 446,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            -0.040072524464282305,
+            0.042212669564705416,
+            -0.013409124571402881
+          ],
+          "estimated_initial_object_z_m": 0.30159087542859714
+        },
+        {
+          "seed": 16,
+          "return": 3434.585481878583,
+          "steps": 523,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.015416384188334832,
+            -0.0010150894005237616,
+            0.05665556468074771
+          ],
+          "estimated_initial_object_z_m": 0.37165556468074773
+        },
+        {
+          "seed": 17,
+          "return": 3248.110966031835,
+          "steps": 564,
+          "success": true,
+          "reach_success": true,
+          "grasp_success": true,
+          "lift_success": true,
+          "place_success": true,
+          "failure_stage": "none",
+          "initial_position_error_m": [
+            0.002177344160460524,
+            0.0034375683745108236,
+            -0.016533667756968174
+          ],
+          "estimated_initial_object_z_m": 0.2984663322430318
+        },
+        {
+          "seed": 18,
+          "return": -228.13503666042024,
+          "steps": 335,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.001362649153010532,
+            -0.06956081289868168,
+            0.007123010492476394
+          ],
+          "estimated_initial_object_z_m": 0.3221230104924764
+        },
+        {
+          "seed": 19,
+          "return": -223.76814437744852,
+          "steps": 370,
+          "success": false,
+          "reach_success": true,
+          "grasp_success": false,
+          "lift_success": false,
+          "place_success": false,
+          "failure_stage": "grasp",
+          "initial_position_error_m": [
+            0.028188535104855677,
+            -0.03489668796792603,
+            -0.05880239548914105
+          ],
+          "estimated_initial_object_z_m": 0.25619760451085893
+        }
+      ]
+    }
+  ]
+}

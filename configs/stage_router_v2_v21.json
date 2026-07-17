@@ -1,0 +1,41 @@
+{
+  "bundle_version": "4c2-stage-router-v1",
+  "environment_pipeline_version": "cube3cm-stageobs-v2.1-place-hold",
+  "env_id": "My4C2AllStageCube3cm-v0",
+  "experts": {
+    "reach": {
+      "path": "runs/v2_4c2_reach_500k/models/best_success_model.zip",
+      "sha256": "b27c84600354d72f671511b20e6fcbba9fcfdc879ed6464c6b168e476af141fb",
+      "pipeline_version": "cube3cm-stageobs-v2"
+    },
+    "grasp": {
+      "path": "runs/v2_4c2_grasp_from_reach_400k/models/best_success_model.zip",
+      "sha256": "57e3be813247750af79b079b7665720abd47d13221b7c7fcb41ce29d7f744934",
+      "pipeline_version": "cube3cm-stageobs-v2"
+    },
+    "lift": {
+      "path": "runs/v2_4c2_grasp_lift_200k/models/final_model.zip",
+      "sha256": "9fa6bf790255ea51ad19209c42cd7dab8b7772bbf167eb03982d684164946c1e",
+      "pipeline_version": "cube3cm-stageobs-v2"
+    }
+  },
+  "router": {
+    "reach": "reach",
+    "grasp": "grasp",
+    "lift": "lift",
+    "place": "zero_action_place_servo"
+  },
+  "environment_sha256": {
+    "fourc2/__init__.py": "a2ceaa02ab5207543e553c1635de3099e14c680bb9b06abda5f581050e80e120",
+    "fourc2/envs/allstage.py": "752652350a9a49f689ef235e8b0df7aafe5f6efaabee54f1b7d8c025fa9fd48a",
+    "scene_cube3cm.xml": "a1305933721eff3217082c28b2d731b1aeaad9f0ad45fa55cf50430ad5a37107",
+    "ur5e_4c2.xml": "c035860dd547af11864827c63d9ad5416972647c364608f17b8dfa7a88817a1a"
+  },
+  "validated_result": {
+    "seed": 0,
+    "episodes": 100,
+    "success_rate": 1.0,
+    "mean_steps": 130.0,
+    "max_steps": 196
+  }
+}
