@@ -16,13 +16,42 @@ UR5e cube grasp/place project with the original Robotiq 2F85 gripper replaced by
 
 The repository includes runtime meshes, formal PPO checkpoints, TensorBoard logs,
 the final 100-episode evidence package, and an exact Python dependency lock.
-Follow [PROJECT_HANDOVER.md](docs/PROJECT_HANDOVER.md), then run:
+Follow [PROJECT_HANDOVER.md](docs/PROJECT_HANDOVER.md), then run from the cloned
+`08_CAMERA` directory:
 
 ```bash
 conda env create -f environment.yml
 conda activate fourc2
 python -B scripts/verify_portable_install.py --episodes 1
 ```
+
+### Python/Conda environment origin
+
+The interpreter used during development is:
+
+```text
+/home/lenovo/mujoco_learning/01_rl_baselines3_zoo/.conda_zoo/bin/python
+```
+
+`.conda_zoo` is a **path-based Conda environment** created inside a local clone
+of the official [DLR-RM/rl-baselines3-zoo](https://github.com/DLR-RM/rl-baselines3-zoo)
+repository. The local Zoo checkout was at commit
+`22e3ff2450fd92033f7f032915e1f64894a09584`, and the environment was initially
+created with:
+
+```bash
+git clone https://github.com/DLR-RM/rl-baselines3-zoo.git 01_rl_baselines3_zoo
+cd 01_rl_baselines3_zoo
+conda create -p ./.conda_zoo python=3.10 -y
+```
+
+The Zoo repository provided the original development workspace/environment
+location; `08_CAMERA` does not import its source code at runtime. On another
+device, cloning `08_CAMERA` and creating the standalone `fourc2` environment
+from `environment.yml` is the recommended method. `requirements-lock.txt`
+records the Python packages from the verified environment. The original
+absolute `.conda_zoo/bin/python` commands in historical examples can be replaced
+with `python` after `conda activate fourc2`.
 
 The original CAD/assembly source files are retained for future mechanical
 changes. Runtime loading uses the converted MuJoCo meshes under `assets/`;
