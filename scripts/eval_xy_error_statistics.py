@@ -94,6 +94,11 @@ def main():
         raise RuntimeError(
             f"this evaluation requires a physical/configured 4 cm marker; "
             f"got {config.marker_size_m}")
+    goal_region_center_margin_m = 0.5 * (
+        config.marker_size_m - config.cube_size_m
+    )
+    if goal_region_center_margin_m < 0.0:
+        raise RuntimeError("cube is larger than the configured goal region")
 
     rows = []
     for index, seed in enumerate(range(
@@ -125,6 +130,10 @@ def main():
                     "final_goal_xy_error_m"],
                 "final_true_goal_abs_x_error_m": float(abs(final_delta_xy[0])),
                 "final_true_goal_abs_y_error_m": float(abs(final_delta_xy[1])),
+                "object_inside_goal_region_xy": bool(
+                    np.linalg.norm(final_delta_xy)
+                    <= goal_region_center_margin_m
+                ),
                 "episode_steps": source["episode_steps"],
                 "initial_object_xyz": source["initial_object_xyz"],
                 "true_goal_xyz_evaluator_only": source["initial_goal_xyz"],
@@ -150,6 +159,7 @@ def main():
                 "final_estimated_goal_xy_error_m": None,
                 "final_true_goal_abs_x_error_m": None,
                 "final_true_goal_abs_y_error_m": None,
+                "object_inside_goal_region_xy": False,
                 "episode_steps": 0,
             }
         rows.append(row)
@@ -171,6 +181,13 @@ def main():
             "placement_xy_error_definition": (
                 "Euclidean center-to-center sqrt(dx^2 + dy^2)"
             ),
+            "inside_goal_region_xy_definition": (
+                "Euclidean center distance <= "
+                "(marker_size - cube_size) / 2; yaw ignored"
+            ),
+            "inside_goal_region_xy_threshold_mm": float(
+                1000.0 * goal_region_center_margin_m
+            ),
             "checkpoint": str(CHECKPOINT),
         },
         "rates": {
@@ -191,6 +208,16 @@ def main():
                 "denominator": len(executed),
                 "rate": None if not executed else float(
                     len(successful) / len(executed)),
+            },
+            "object_inside_goal_region_xy_given_control": {
+                "count": int(sum(
+                    row["object_inside_goal_region_xy"] for row in executed
+                )),
+                "denominator": len(executed),
+                "rate": None if not executed else float(np.mean([
+                    row["object_inside_goal_region_xy"] for row in executed
+                ])),
+                "criterion": "center-to-center XY distance <= 5 mm",
             },
         },
         "xy_error_mm": {

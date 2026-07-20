@@ -63,6 +63,17 @@ def mid(kind, model, name):
     return value
 
 
+def _draw_outlined_text(image, text, origin, color):
+    cv2.putText(
+        image, text, origin, cv2.FONT_HERSHEY_SIMPLEX, 0.48,
+        (10, 10, 10), 3, cv2.LINE_AA,
+    )
+    cv2.putText(
+        image, text, origin, cv2.FONT_HERSHEY_SIMPLEX, 0.48,
+        color, 1, cv2.LINE_AA,
+    )
+
+
 def set_simulated_aruco_marker_size(model, marker_size_m):
     """Idempotently synchronize the rendered marker with the PnP size.
 
@@ -208,40 +219,11 @@ def capture_aruco_episode_goal(env, renderer, color_id, base_id,
         frozen_base = session.submit_detection(detection, env.data.time)
         if show_camera and aruco_ui_callback is not None:
             corners = None
-            if detection.diagnostics is not None:
+            if detection.valid and detection.diagnostics is not None:
                 corners = np.rint(
                     detection.diagnostics["corners"]
                 ).astype(int).copy()
-            lines = [
-                "CAPTURING GOAL AT CAMERA_OBSERVE",
-                f"state: {session.state.value}",
-                (f"valid: {len(session.valid_estimates)}/"
-                 f"{config.required_valid_frames}  frame: {session.capture_frames}/"
-                 f"{config.maximum_capture_frames}"),
-                (f"ID: {config.marker_id}  "
-                 f"reason: {detection.failure_reason or 'valid'}"),
-            ]
-            if detection.valid:
-                p = detection.position
-                lines.append(f"goal Base: {p[0]:+.4f} {p[1]:+.4f} {p[2]:+.4f} m")
-            if session.valid_estimates:
-                std = np.std(np.stack([
-                    item.position for item in session.valid_estimates]), axis=0)
-                lines.append("Base std: " + " ".join(f"{v*1000:.3f}" for v in std)
-                             + " mm")
-            if (detection.valid
-                    and truth_goal_world_evaluator_only is not None):
-                truth_base = transform_point(
-                    base_world_transform(env.data, base_id),
-                    truth_goal_world_evaluator_only)
-                lines.append(
-                    "truth error (eval only): "
-                    f"{1000*np.linalg.norm(detection.position-truth_base):.3f} mm")
-            if frozen_base is not None:
-                lines.append("GOAL FROZEN")
             aruco_ui_callback({
-                "text": "",
-                "aruco_lines": lines,
                 "aruco_corners": corners,
                 "aruco_valid": bool(detection.valid),
             })
@@ -370,21 +352,14 @@ def evaluate_mode(mode, seeds, model, save_steps=False, video_path=None,
         observe_hold_seconds / env.model.opt.timestep
     )))
     goal_ui_state = {
-        "text": (
-            "DETECTION IGNORED: NOT AT CAMERA_OBSERVE"
-            if goal_source == "aruco" else ""
-        ),
-        "aruco_lines": [],
         "aruco_corners": None,
-        "aruco_valid": None,
+        "aruco_valid": False,
     }
 
-    def update_goal_status(text):
+    def clear_goal_ui():
         goal_ui_state.update({
-            "text": text,
-            "aruco_lines": [],
             "aruco_corners": None,
-            "aruco_valid": None,
+            "aruco_valid": False,
         })
 
     def camera_panel():
@@ -413,59 +388,26 @@ def evaluate_mode(mode, seeds, model, save_steps=False, video_path=None,
                     cv2.FONT_HERSHEY_SIMPLEX, .65, (255, 255, 255), 2,
                     cv2.LINE_AA)
         aruco_corners = goal_ui_state["aruco_corners"]
-        if aruco_corners is not None:
-            aruco_color = (
-                (40, 220, 40)
-                if goal_ui_state["aruco_valid"] else (40, 40, 240)
-            )
+        if goal_ui_state["aruco_valid"] and aruco_corners is not None:
+            aruco_color = (255, 80, 255)
             cv2.polylines(rgb_bgr, [aruco_corners], True, aruco_color, 2)
-        aruco_lines = goal_ui_state["aruco_lines"]
-        if not aruco_lines and goal_ui_state["text"]:
-            aruco_lines = [goal_ui_state["text"]]
-        aruco_text_color = (
-            (40, 220, 40)
-            if goal_ui_state["aruco_valid"] else
-            (40, 40, 240)
-            if goal_ui_state["aruco_valid"] is False else
-            (0, 180, 255)
-        )
-        for index, line in enumerate(aruco_lines):
-            origin = (12, 50 + 21 * index)
-            cv2.putText(rgb_bgr, line, origin,
-                        cv2.FONT_HERSHEY_SIMPLEX, .46, (10, 10, 10), 3,
-                        cv2.LINE_AA)
-            cv2.putText(rgb_bgr, line, origin,
-                        cv2.FONT_HERSHEY_SIMPLEX, .46, aruco_text_color, 1,
-                        cv2.LINE_AA)
-        if detection.bbox_xywh is not None:
+            label_x = max(4, int(np.min(aruco_corners[:, 0])))
+            label_y = max(48, int(np.min(aruco_corners[:, 1])) - 8)
+            _draw_outlined_text(
+                rgb_bgr, "GOAL DETECTED", (label_x, label_y), aruco_color
+            )
+        if detection.valid and detection.bbox_xywh is not None:
             x, y, w, h = detection.bbox_xywh
-            color = (40, 220, 40) if detection.valid else (0, 165, 255)
+            color = (40, 220, 40)
             cv2.rectangle(rgb_bgr, (x, y), (x + w, y + h), color, 2)
             if detection.pixel_center_uv is not None:
                 u, v = (int(round(value)) for value in detection.pixel_center_uv)
                 cv2.drawMarker(rgb_bgr, (u, v), color,
                                cv2.MARKER_CROSS, 14, 2)
-        if detection.valid:
-            center = detection.estimated_object_center_color
-            lines = [
-                "CUBE DETECTED (HSV + RGB-D)",
-                (f"Color optical XYZ: {center[0]:+.3f}, "
-                 f"{center[1]:+.3f}, {center[2]:.3f} m"),
-                (f"mask: {detection.mask_pixel_count} px  "
-                 f"depth points: {detection.filtered_depth_point_count}"),
-            ]
-            text_color = (40, 220, 40)
-        else:
-            lines = ["CUBE NOT DETECTED",
-                     f"reason: {detection.failure_reason}"]
-            text_color = (40, 40, 240)
-        panel_top = HEIGHT - 76
-        cv2.rectangle(rgb_bgr, (0, panel_top - 8), (WIDTH, HEIGHT),
-                      (15, 15, 15), -1)
-        for index, line in enumerate(lines):
-            cv2.putText(rgb_bgr, line, (12, panel_top + 21 * index),
-                        cv2.FONT_HERSHEY_SIMPLEX, .48, text_color, 1,
-                        cv2.LINE_AA)
+            _draw_outlined_text(
+                rgb_bgr, "OBJECT DETECTED",
+                (max(4, x), max(48, y - 8)), color,
+            )
         cv2.imshow("D435i live RGB-D (Color | Depth)",
                    np.hstack((rgb_bgr, depth_bgr)))
         cv2.waitKey(1)
@@ -502,10 +444,7 @@ def evaluate_mode(mode, seeds, model, save_steps=False, video_path=None,
     try:
         for number, seed in enumerate(seeds):
             _, _ = wrapped.reset(seed=seed)
-            update_goal_status(
-                "DETECTION IGNORED: NOT AT CAMERA_OBSERVE"
-                if goal_source == "aruco" else ""
-            )
+            clear_goal_ui()
             live_clock.update(wall=time.monotonic(), sim=float(env.data.time))
             home_q = env.data.qpos[env.arm_qpos_ids].copy()
             initial_object_preobserve = env.data.site_xpos[env.object_site_id].copy()
@@ -521,7 +460,6 @@ def evaluate_mode(mode, seeds, model, save_steps=False, video_path=None,
                     aruco_config, frame_callback=capture,
                     show_camera=show_camera,
                     estimate_id=f"seed-{seed:03d}-goal-000001",
-                    status_callback=update_goal_status,
                     aruco_ui_callback=goal_ui_state.update,
                     truth_goal_world_evaluator_only=initial_goal,
                 )
@@ -532,6 +470,8 @@ def evaluate_mode(mode, seeds, model, save_steps=False, video_path=None,
                         "ArUco goal capture failed closed before PPO: "
                         f"seed={seed}; reason={goal_session.failure_reason}; "
                         f"failures={dict(goal_session.failure_counts)}")
+                hold(env, observe_q, steps=observe_hold_steps,
+                     frame_callback=capture)
             else:
                 hold(env, observe_q, steps=observe_hold_steps,
                      frame_callback=capture)
@@ -545,6 +485,7 @@ def evaluate_mode(mode, seeds, model, save_steps=False, video_path=None,
                 np.linalg.norm((estimate_world - visual_truth_at_capture)[:2])))
             if goal_session is not None:
                 goal_session.begin_return_home()
+                clear_goal_ui()
             move_arm(env, home_q, interpolation_steps=move_steps,
                      substeps=move_substeps, frame_callback=capture)
             hold(env, home_q, frame_callback=capture)

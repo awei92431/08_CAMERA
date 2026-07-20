@@ -69,9 +69,9 @@ Interpolation completion by itself is not considered stable.
 
 `submit_detection()` immediately ignores calls in every state except
 `CAPTURE_GOAL`. After `GOAL_FROZEN`, `GoalEstimateAuthority` rejects all later
-publications until episode reset. The live Color panel says
-`DETECTION IGNORED: NOT AT CAMERA_OBSERVE` before the window, and the dedicated
-ArUco panel exists only while capturing.
+publications until episode reset. The live D435i panel stays visually quiet
+outside valid detections. During capture, a valid marker receives a purple
+outline and the label “GOAL DETECTED”; there is no dedicated ArUco window.
 
 ## Detection and validation
 
@@ -141,9 +141,9 @@ this goal-localization change.
   object-error/final-placement-error correlation was 0.027. The final Place
   residual is therefore dominated by Place approach/release behavior rather
   than the initial visual XY estimates.
-- 78/83 executed episodes finished within 15 mm of the true goal center; five
-  exceeded 15 mm even though they satisfied the existing 24 mm Place success
-  threshold.
+- The simple XY “inside goal region” rule uses center distance
+  <= (40 mm - 30 mm)/2 = 5 mm; 13/83 executed episodes met it. This scalar
+  proxy ignores cube yaw and is not an exact polygon-containment proof.
 
 Results: `outputs/aruco4cm_xy_error_100seeds/`.
 

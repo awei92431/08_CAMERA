@@ -8,6 +8,8 @@
 - Errors in this report use X/Y only; Z is excluded.
 - Every reported XY error is the Euclidean center-to-center distance
   `sqrt(dx^2 + dy^2)`; no per-axis binary placement rule is used.
+- The simple “inside goal region” flag uses the same scalar XY distance. Its
+  threshold is `(40 mm - 30 mm) / 2 = 5 mm`.
 - Object source: existing RGB-D cube localizer.
 - Goal source: stable-window, multi-frame frozen ArUco estimate.
 - Final placement error: MuJoCo final cube center XY versus MuJoCo true goal
@@ -34,6 +36,7 @@ removes planar mirror solutions without using the true goal coordinate.
 - Fail closed at ArUco capture: 17.
 - Object-localization failures after valid goal: 0.
 - Task failures after both visual estimates were available: 0.
+- Object inside goal region by the simple XY rule: 13/83 = 15.66%.
 - Final absolute X error: mean 4.313 mm, P95 10.106 mm, max 14.382 mm.
 - Final absolute Y error: mean 6.386 mm, P95 11.358 mm, max 16.825 mm.
 
@@ -59,11 +62,10 @@ descent geometry, release timing and post-release object motion. The current
 successful, but that should not be interpreted as sub-centimeter placement
 guaranteed on a real 30 mm cube.
 
-This XY-only evaluation deliberately makes no claim that the final cube
-footprint is fully contained by the marker. Exact footprint containment also
-depends on the cube's final yaw and requires transforming its four footprint
-corners and testing them against the marker polygon. That orientation-aware
-geometry was not part of the requested position-error audit.
+The “inside goal region” result is intentionally a simple operational XY rule:
+the center-to-center distance must be no larger than the 5 mm half-size margin.
+It does not separately require X and Y to be below a threshold. Cube yaw is
+ignored, so this is not presented as an exact polygon-containment proof.
 
 The larger immediate problem is ArUco coverage: reducing the marker from 60 mm
 to 40 mm reduced reliable full-marker decoding, and 17% of sampled targets did

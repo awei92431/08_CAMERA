@@ -9,6 +9,8 @@
     "cube_size_mm": 30.0,
     "errors": "XY only; Z excluded",
     "placement_xy_error_definition": "Euclidean center-to-center sqrt(dx^2 + dy^2)",
+    "inside_goal_region_xy_definition": "Euclidean center distance <= (marker_size - cube_size) / 2; yaw ignored",
+    "inside_goal_region_xy_threshold_mm": 5.0,
     "checkpoint": "/home/lenovo/mujoco_learning/08_camera/checkpoints/best_full_flow_v22.zip"
   },
   "rates": {
@@ -28,6 +30,12 @@
       "count": 83,
       "denominator": 83,
       "rate": 1.0
+    },
+    "object_inside_goal_region_xy_given_control": {
+      "count": 13,
+      "denominator": 83,
+      "rate": 0.1566265060240964,
+      "criterion": "center-to-center XY distance <= 5 mm"
     }
   },
   "xy_error_mm": {

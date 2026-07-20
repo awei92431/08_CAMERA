@@ -566,7 +566,10 @@ scripts/eval_full_visual_closed_loop.py \
   --hide-pinch-site
 ```
 
-界面显示 Color/Depth、HSV检测框、Color optical XYZ、mask 像素数和有效深度点数。live 模式默认将观察移动额外延长 2 s，并在 camera_observe 停 1.5 s。
+界面只保留必要的检测反馈：ArUco 使用紫色框和
+“GOAL DETECTED”，方块使用绿色框和“OBJECT DETECTED”；未识别时不画框、
+不显示失败文字。Color/Depth 仍在同一个 D435i 窗口中。live 模式默认将
+观察移动额外延长 2 s，并在 camera_observe 停 1.5 s。
 
 ## 14. Leader 常见追问与建议回答
 
