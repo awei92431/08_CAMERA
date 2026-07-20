@@ -154,6 +154,7 @@ def capture_aruco_episode_goal(env, renderer, color_id, base_id,
                                frame_callback=None, show_camera=False,
                                estimate_id="aruco-goal-000001",
                                status_callback=None,
+                               aruco_ui_callback=None,
                                truth_goal_world_evaluator_only=None):
     """Wait for actual arm stability, then detect only in CAPTURE_GOAL."""
     session = GoalCaptureSession(config)
@@ -205,11 +206,12 @@ def capture_aruco_episode_goal(env, renderer, color_id, base_id,
             table_normal_base=config.table_normal_base,
         )
         frozen_base = session.submit_detection(detection, env.data.time)
-        if show_camera:
-            panel = cv2.cvtColor(last_rgb, cv2.COLOR_RGB2BGR)
+        if show_camera and aruco_ui_callback is not None:
+            corners = None
             if detection.diagnostics is not None:
-                corners = np.rint(detection.diagnostics["corners"]).astype(int)
-                cv2.polylines(panel, [corners], True, (40, 220, 40), 2)
+                corners = np.rint(
+                    detection.diagnostics["corners"]
+                ).astype(int).copy()
             lines = [
                 "CAPTURING GOAL AT CAMERA_OBSERVE",
                 f"state: {session.state.value}",
@@ -237,18 +239,15 @@ def capture_aruco_episode_goal(env, renderer, color_id, base_id,
                     f"{1000*np.linalg.norm(detection.position-truth_base):.3f} mm")
             if frozen_base is not None:
                 lines.append("GOAL FROZEN")
-            for index, line in enumerate(lines):
-                cv2.putText(panel, line, (12, 25 + 22*index),
-                            cv2.FONT_HERSHEY_SIMPLEX, .52,
-                            (40, 220, 40) if detection.valid else (40, 40, 240),
-                            1, cv2.LINE_AA)
-            cv2.imshow("ArUco goal capture (camera_observe only)", panel)
-            cv2.waitKey(1)
+            aruco_ui_callback({
+                "text": "",
+                "aruco_lines": lines,
+                "aruco_corners": corners,
+                "aruco_valid": bool(detection.valid),
+            })
         if frame_callback is not None:
             frame_callback()
 
-    if show_camera:
-        cv2.destroyWindow("ArUco goal capture (camera_observe only)")
     if not session.goal_is_frozen:
         if status_callback is not None:
             status_callback("ARUCO GOAL FAILED CLOSED")
@@ -370,9 +369,23 @@ def evaluate_mode(mode, seeds, model, save_steps=False, video_path=None,
     observe_hold_steps = max(0, int(round(
         observe_hold_seconds / env.model.opt.timestep
     )))
-    goal_ui_state = {"text": (
-        "DETECTION IGNORED: NOT AT CAMERA_OBSERVE"
-        if goal_source == "aruco" else "")}
+    goal_ui_state = {
+        "text": (
+            "DETECTION IGNORED: NOT AT CAMERA_OBSERVE"
+            if goal_source == "aruco" else ""
+        ),
+        "aruco_lines": [],
+        "aruco_corners": None,
+        "aruco_valid": None,
+    }
+
+    def update_goal_status(text):
+        goal_ui_state.update({
+            "text": text,
+            "aruco_lines": [],
+            "aruco_corners": None,
+            "aruco_valid": None,
+        })
 
     def camera_panel():
         rgb, depth = render_pair(renderer, env, ids[0], ids[1])
@@ -399,9 +412,30 @@ def evaluate_mode(mode, seeds, model, save_steps=False, video_path=None,
         cv2.putText(depth_bgr, "eye_in_hand_depth", (12, 26),
                     cv2.FONT_HERSHEY_SIMPLEX, .65, (255, 255, 255), 2,
                     cv2.LINE_AA)
-        if goal_ui_state["text"]:
-            cv2.putText(rgb_bgr, goal_ui_state["text"], (12, 50),
-                        cv2.FONT_HERSHEY_SIMPLEX, .46, (0, 180, 255), 1,
+        aruco_corners = goal_ui_state["aruco_corners"]
+        if aruco_corners is not None:
+            aruco_color = (
+                (40, 220, 40)
+                if goal_ui_state["aruco_valid"] else (40, 40, 240)
+            )
+            cv2.polylines(rgb_bgr, [aruco_corners], True, aruco_color, 2)
+        aruco_lines = goal_ui_state["aruco_lines"]
+        if not aruco_lines and goal_ui_state["text"]:
+            aruco_lines = [goal_ui_state["text"]]
+        aruco_text_color = (
+            (40, 220, 40)
+            if goal_ui_state["aruco_valid"] else
+            (40, 40, 240)
+            if goal_ui_state["aruco_valid"] is False else
+            (0, 180, 255)
+        )
+        for index, line in enumerate(aruco_lines):
+            origin = (12, 50 + 21 * index)
+            cv2.putText(rgb_bgr, line, origin,
+                        cv2.FONT_HERSHEY_SIMPLEX, .46, (10, 10, 10), 3,
+                        cv2.LINE_AA)
+            cv2.putText(rgb_bgr, line, origin,
+                        cv2.FONT_HERSHEY_SIMPLEX, .46, aruco_text_color, 1,
                         cv2.LINE_AA)
         if detection.bbox_xywh is not None:
             x, y, w, h = detection.bbox_xywh
@@ -468,6 +502,10 @@ def evaluate_mode(mode, seeds, model, save_steps=False, video_path=None,
     try:
         for number, seed in enumerate(seeds):
             _, _ = wrapped.reset(seed=seed)
+            update_goal_status(
+                "DETECTION IGNORED: NOT AT CAMERA_OBSERVE"
+                if goal_source == "aruco" else ""
+            )
             live_clock.update(wall=time.monotonic(), sim=float(env.data.time))
             home_q = env.data.qpos[env.arm_qpos_ids].copy()
             initial_object_preobserve = env.data.site_xpos[env.object_site_id].copy()
@@ -483,7 +521,8 @@ def evaluate_mode(mode, seeds, model, save_steps=False, video_path=None,
                     aruco_config, frame_callback=capture,
                     show_camera=show_camera,
                     estimate_id=f"seed-{seed:03d}-goal-000001",
-                    status_callback=lambda text: goal_ui_state.update(text=text),
+                    status_callback=update_goal_status,
+                    aruco_ui_callback=goal_ui_state.update,
                     truth_goal_world_evaluator_only=initial_goal,
                 )
                 if goal_estimate is None:
