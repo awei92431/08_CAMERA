@@ -107,7 +107,6 @@ def main():
                 np.asarray(source["final_object_xyz_evaluator_only"], dtype=float)[:2]
                 - np.asarray(source["initial_goal_xyz"], dtype=float)[:2]
             )
-            footprint_margin_m = 0.5 * (0.040 - 0.030)
             row = {
                 "seed": seed,
                 "goal_detected": True,
@@ -126,8 +125,6 @@ def main():
                     "final_goal_xy_error_m"],
                 "final_true_goal_abs_x_error_m": float(abs(final_delta_xy[0])),
                 "final_true_goal_abs_y_error_m": float(abs(final_delta_xy[1])),
-                "cube_fully_inside_40mm_goal_xy": bool(
-                    np.max(np.abs(final_delta_xy)) <= footprint_margin_m),
                 "episode_steps": source["episode_steps"],
                 "initial_object_xyz": source["initial_object_xyz"],
                 "true_goal_xyz_evaluator_only": source["initial_goal_xyz"],
@@ -153,7 +150,6 @@ def main():
                 "final_estimated_goal_xy_error_m": None,
                 "final_true_goal_abs_x_error_m": None,
                 "final_true_goal_abs_y_error_m": None,
-                "cube_fully_inside_40mm_goal_xy": False,
                 "episode_steps": 0,
             }
         rows.append(row)
@@ -172,6 +168,9 @@ def main():
             "aruco_marker_size_mm": 40.0,
             "cube_size_mm": 30.0,
             "errors": "XY only; Z excluded",
+            "placement_xy_error_definition": (
+                "Euclidean center-to-center sqrt(dx^2 + dy^2)"
+            ),
             "checkpoint": str(CHECKPOINT),
         },
         "rates": {
@@ -192,14 +191,6 @@ def main():
                 "denominator": len(executed),
                 "rate": None if not executed else float(
                     len(successful) / len(executed)),
-            },
-            "cube_fully_inside_40mm_goal_given_control": {
-                "count": int(sum(
-                    row["cube_fully_inside_40mm_goal_xy"] for row in executed)),
-                "denominator": len(executed),
-                "rate": None if not executed else float(np.mean([
-                    row["cube_fully_inside_40mm_goal_xy"] for row in executed])),
-                "criterion": "abs(dx) <= 5 mm and abs(dy) <= 5 mm",
             },
         },
         "xy_error_mm": {

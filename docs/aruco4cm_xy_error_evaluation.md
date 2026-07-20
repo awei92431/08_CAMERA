@@ -6,6 +6,8 @@
 - ArUco: DICT_4X4_50 ID 0, rendered and solved as 40 mm physical edge.
 - Cube: 30 mm edge.
 - Errors in this report use X/Y only; Z is excluded.
+- Every reported XY error is the Euclidean center-to-center distance
+  `sqrt(dx^2 + dy^2)`; no per-axis binary placement rule is used.
 - Object source: existing RGB-D cube localizer.
 - Goal source: stable-window, multi-frame frozen ArUco estimate.
 - Final placement error: MuJoCo final cube center XY versus MuJoCo true goal
@@ -32,13 +34,8 @@ removes planar mirror solutions without using the true goal coordinate.
 - Fail closed at ArUco capture: 17.
 - Object-localization failures after valid goal: 0.
 - Task failures after both visual estimates were available: 0.
-- True placement error <= 15 mm: 78/83 = 93.98%; five episodes exceeded
-  15 mm.
 - Final absolute X error: mean 4.313 mm, P95 10.106 mm, max 14.382 mm.
 - Final absolute Y error: mean 6.386 mm, P95 11.358 mm, max 16.825 mm.
-- Full 30 mm cube footprint inside the 40 mm goal square requires
-  `abs(dx) <= 5 mm` and `abs(dy) <= 5 mm`; only 18/83 = 21.69% met this
-  stricter physical criterion.
 
 Failed ArUco seeds:
 
@@ -62,9 +59,11 @@ descent geometry, release timing and post-release object motion. The current
 successful, but that should not be interpreted as sub-centimeter placement
 guaranteed on a real 30 mm cube.
 
-For a 30 mm cube, a 15 mm center error reaches the edge of the nominal target
-footprint. P95 is essentially 15 mm and max is 18.7 mm, so the present Place
-accuracy is marginal if the real requirement is full footprint overlap.
+This XY-only evaluation deliberately makes no claim that the final cube
+footprint is fully contained by the marker. Exact footprint containment also
+depends on the cube's final yaw and requires transforming its four footprint
+corners and testing them against the marker polygon. That orientation-aware
+geometry was not part of the requested position-error audit.
 
 The larger immediate problem is ArUco coverage: reducing the marker from 60 mm
 to 40 mm reduced reliable full-marker decoding, and 17% of sampled targets did

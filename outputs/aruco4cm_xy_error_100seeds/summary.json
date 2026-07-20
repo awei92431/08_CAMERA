@@ -8,6 +8,7 @@
     "aruco_marker_size_mm": 40.0,
     "cube_size_mm": 30.0,
     "errors": "XY only; Z excluded",
+    "placement_xy_error_definition": "Euclidean center-to-center sqrt(dx^2 + dy^2)",
     "checkpoint": "/home/lenovo/mujoco_learning/08_camera/checkpoints/best_full_flow_v22.zip"
   },
   "rates": {
@@ -27,12 +28,6 @@
       "count": 83,
       "denominator": 83,
       "rate": 1.0
-    },
-    "cube_fully_inside_40mm_goal_given_control": {
-      "count": 18,
-      "denominator": 83,
-      "rate": 0.21686746987951808,
-      "criterion": "abs(dx) <= 5 mm and abs(dy) <= 5 mm"
     }
   },
   "xy_error_mm": {
