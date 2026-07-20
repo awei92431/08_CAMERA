@@ -60,6 +60,163 @@
 - `outputs/full_visual_closed_loop/`
 - `outputs/phase2_task_supervisor/`
 
+### 3.7 关键调试参数快速定位
+
+这一节用于被问到参数时快速跳到代码。下面的行号对应当前版本；后续代码
+增删可能使行号移动，因此同时给出可以用 rg 搜索的稳定名称。
+
+#### 先记住参数优先级
+
+1. 正式环境是 **My4C2AllStageSinglePPOV22Cube3cm-v0**。它用
+   [CUBE3CM_KWARGS](../fourc2/__init__.py#L44) 覆盖 allstage.py 构造函数
+   的通用默认值。因此 3 cm 任务优先查看 fourc2/__init__.py:44，不能只看
+   allstage.py:119。
+2. 相机、机械装配、质量、关节 actuator 和 keyframe 属于物理模型参数，
+   修改位置在 XML，不在视觉代码。
+3. HSV/Depth 和 ArUco 检测参数以 configs 目录中的 JSON 为权威来源。
+4. eval_full_visual_closed_loop.py 的 ArUco 命令行参数可以临时覆盖 JSON。
+5. checkpoint 对应原训练分布。修改 home、观测、动作尺度、阶段阈值或控制
+   结构后，不能默认原 PPO 仍保持原性能，必须重新回归验证。
+
+#### A. 演示入口与界面
+
+| 想调什么 | 当前值/入口 | 代码位置与搜索名 | 影响 |
+|---|---|---|---|
+| 正式环境 ID | My4C2AllStageSinglePPOV22Cube3cm-v0 | [eval 脚本:48](../scripts/eval_full_visual_closed_loop.py#L48)，搜 ENV_ID | 决定加载哪套任务注册参数 |
+| PPO checkpoint | best_full_flow_v22.zip | [eval 脚本:49](../scripts/eval_full_visual_closed_loop.py#L49)，搜 CHECKPOINT | 更换后确认观测维度和训练环境一致 |
+| Color/Depth 尺寸 | 640×360 | [eval 脚本:54](../scripts/eval_full_visual_closed_loop.py#L54)，搜 WIDTH, HEIGHT | 同时影响内参、速度和可视化 |
+| 第三人称窗口 | 1280×900 | [eval 脚本:806](../scripts/eval_full_visual_closed_loop.py#L806)，参数 --viewer-width/--viewer-height | 只影响 Viewer 初始窗口 |
+| 观察移动额外时长 | live 默认 2.0 s | [eval 脚本:360](../scripts/eval_full_visual_closed_loop.py#L360)，参数 --observe-move-extra-seconds | home 与观察位之间的演示速度 |
+| 观察位停顿 | live 默认 1.5 s | [eval 脚本:364](../scripts/eval_full_visual_closed_loop.py#L364)，参数 --observe-hold-seconds | 拍摄前停顿，不改变姿态 |
+| 相机图像窗口 | --show-camera | [eval 脚本:804](../scripts/eval_full_visual_closed_loop.py#L804) | 显示 Color/Depth 诊断 |
+| 隐藏 TCP 小球 | --hide-pinch-site | [eval 脚本:810](../scripts/eval_full_visual_closed_loop.py#L810) | 只隐藏 site 外观，不删除 FK/IK 使用的 pinch |
+| 独立位姿查看视角 | distance 1.05、azimuth 135°、elevation -25° | [查看脚本:71](../scripts/view_eye_in_hand_camera_pose.py#L71) | 只影响第三人称查看视角 |
+
+演示节奏优先通过命令行调，不必修改源码：
+
+~~~bash
+--observe-move-extra-seconds 3.0 --observe-hold-seconds 2.0
+~~~
+
+#### B. 机械臂、相机和夹爪 XML
+
+| 想调什么 | 当前值 | 代码位置与搜索名 | 注意 |
+|---|---|---|---|
+| PPO 初始姿态 | home 六轴 [-1.5708,-1.5708,1.5708,-1.5708,-1.5708,0] rad | [scene:54](../scene_cube3cm.xml#L54)，搜 key name="home" | 会改变策略初始分布 |
+| 相机观察姿态 | [-3.50356411,-1.39121562,0.03083238,-0.38197572,-1.56229418,-0.34007296] rad | [scene:60](../scene_cube3cm.xml#L60)，搜 camera_observe | 只改 qpos/ctrl 前六项，不要覆盖随机物体 freejoint |
+| 转接件相对腕部 | pos="0 0.092435 0"，quat="0 0 1 1" | [robot XML:175](../ur5e_4c2.xml#L175)，搜 d435i_adapter | 机械装配总变换，不等于光学外参 |
+| 转接件质量 | 0.100 kg | [robot XML:182](../ur5e_4c2.xml#L182)，搜 d435i_adapter_visual | 当前 visual geom 不参与碰撞 |
+| D435i 质量 | 0.075 kg | [robot XML:191](../ur5e_4c2.xml#L191)，搜 d435i_camera_visual | mesh 位移来自 CAD 导出坐标 |
+| 光学安装 frame | pos="0.017500001 0.098872644 0.054924176"，quat="0 0 1 0" | [robot XML:210](../ur5e_4c2.xml#L210)，搜 d435i_mount_frame | 调相机整体位姿应从这里核对 CAD |
+| Depth 相机 | pos="0 0 0"，fovy=58° | [robot XML:218](../ur5e_4c2.xml#L218)，搜 eye_in_hand_depth | 共同 frame 的基准原点 |
+| Color 相机 | pos="-0.015 0 0"，fovy=42.5° | [robot XML:219](../ur5e_4c2.xml#L219)，搜 eye_in_hand_color | 15 mm 符号已按 optical 坐标验证 |
+| UR5e 前三轴 actuator | gain 2000、速度 bias 400、force ±150 | [robot XML:8](../ur5e_4c2.xml#L8)，搜 gainprm="2000" | 最终控制基线，不为视觉问题随意调 |
+| UR5e 腕部三轴 actuator | gain 500、速度 bias 100、force ±28 | [robot XML:15](../ur5e_4c2.xml#L15)，搜 gainprm="500" | 同上 |
+| 夹爪 actuator | ctrl 0..0.9、kp=15、force ±3 | [robot XML:330](../ur5e_4c2.xml#L330)，搜 fingers_actuator | 0.9 是 closure 命令，不是毫米开度 |
+
+#### C. RGB-D 与 ArUco 参数
+
+| 参数组 | 当前关键值 | 位置 |
+|---|---|---|
+| 方块尺寸/颜色 | 0.03 m；RGBA [0.9,0.15,0.1,1] | [HSV 配置:2](../configs/hsv_cube_localization.json#L2) |
+| 红色 HSV | [0,120,80]..[12,255,255] 和 [170,120,80]..[179,255,255] | [HSV 配置:7](../configs/hsv_cube_localization.json#L7) |
+| 形态学 | open 3、close 5、erode 3，各 1 次 | [HSV 配置:12](../configs/hsv_cube_localization.json#L12) |
+| 轮廓过滤 | area 40..50000 px、rectangularity≥0.45、aspect 0.45..2.2 | [HSV 配置:16](../configs/hsv_cube_localization.json#L16) |
+| Depth 过滤 | Z 0.02..1.5 m、至少 8 点、MAD 3.5、quantile 5%..95% | [HSV 配置:24](../configs/hsv_cube_localization.json#L24) |
+| ArUco 字典/ID/尺寸 | DICT_4X4_50、ID 0、marker 0.04 m、cube 0.03 m | [ArUco 配置:2](../configs/aruco_goal_localization.json#L2) |
+| ArUco 多帧稳定 | 8/30 帧、position std≤0.003 m、重投影≤3 px | [ArUco 配置:6](../configs/aruco_goal_localization.json#L6) |
+| ArUco 合法范围 | depth 0.1..1.5 m、Base workspace low/high | [ArUco 配置:10](../configs/aruco_goal_localization.json#L10) |
+| 到位后才识别 | q error≤0.06 rad、qvel≤0.03 rad/s、稳定 10 步、settle 0.5 s | [ArUco 配置:16](../configs/aruco_goal_localization.json#L16) |
+
+HSV 失败先看 hsv_mask、轮廓面积和 depth point 数；ArUco 误差先确认渲染
+实体尺寸与 marker_size_m 一致，再讨论 PnP。不要先放宽阈值。
+
+#### D. PPO→TCP→DLS IK
+
+| 参数 | 当前值 | 位置与搜索名 | 作用 |
+|---|---|---|---|
+| policy frame skip | 10 | [allstage:122](../fourc2/envs/allstage.py#L122)，搜 frame_skip | 一个 PPO 动作对应的 MuJoCo 子步数 |
+| TCP 动作尺度 | action_scale=0.05 m | [allstage:124](../fourc2/envs/allstage.py#L124) | action[0:3] 到 TCP 增量的总尺度 |
+| 最大 TCP lead | 0.03 m | [allstage:125](../fourc2/envs/allstage.py#L125)，限制逻辑在 [allstage:1272](../fourc2/envs/allstage.py#L1272) | 限制目标领先实际 TCP |
+| IK 方向权重 | 0.35 | [allstage:126](../fourc2/envs/allstage.py#L126)，搜 ik_axis_weight | 保持夹爪 approach axis |
+| IK 姿态模式 | off | [allstage:128](../fourc2/envs/allstage.py#L128)，搜 ik_posture_mode | 最终基线，不加 home 关节修正 |
+| IK 阻尼 | 1e-4 | [allstage:2419](../fourc2/envs/allstage.py#L2419)，搜 damping | DLS 稳定性 |
+| IK 最大迭代 | 15 | [allstage:2443](../fourc2/envs/allstage.py#L2443)，搜 range(15) | 每个 policy step 的迭代上限 |
+| IK 收敛 | position<1 mm，axis error<0.03 | [allstage:2454](../fourc2/envs/allstage.py#L2454) | 诊断 converged 的条件 |
+| 单次 IK 关节增量 | ±0.04 rad | [allstage:2519](../fourc2/envs/allstage.py#L2519) | 防止求解跳变 |
+| TCP workspace | low [-0.20,-0.60,0.20]，high [0.80,0.60,0.85] m | [allstage:339](../fourc2/envs/allstage.py#L339) | 安全裁剪 |
+| 桌面安全高度 | table 0.30 m；pinch min = table+0.027+0.002 | [allstage:249](../fourc2/envs/allstage.py#L249) | 防止最低夹爪 link 撞桌 |
+
+#### E. 3 cm 任务、Place servo 与 FSM
+
+下表是正式 Cube3cm 环境的实际覆盖值，集中位于
+[fourc2/__init__.py:44](../fourc2/__init__.py#L44)：
+
+| 参数 | 当前值 | 影响 |
+|---|---|---|
+| object_half_size | 0.015 m | 方块中心高度和几何中心补偿 |
+| pregrasp_height | 通用默认 0.07 m | 方块上方预抓取点；Cube3cm 未覆盖 |
+| grasp_height_offset | 0.018 m | 夹取 TCP 相对方块中心高度 |
+| lift_height | 0.05 m | Lift 成功/目标高度 |
+| grasp_descend_xy_threshold | 0.018 m | XY 足够近后才允许下降 |
+| grasp_xy_close_threshold | 0.012 m | 允许闭合的 XY 条件 |
+| grasp_z_close_threshold | 0.022 m | 允许闭合的 Z 条件 |
+| stable_grasp_xy_threshold | 0.006 m | 多步稳定抓取 XY 条件 |
+| latch_grasp_xy_threshold | 0.004 m | strict/latch 质量阈值 |
+| place_handoff_xy_threshold | 0.024 m | 进入 Place handoff |
+| place_descent_xy_threshold | 0.028 m | 允许向目标下降 |
+| place_xy_servo_gain | 0.55 | ObjectEstimate→Goal 的 XY 修正增益 |
+| place_xy_servo_max_delta | 0.012 m/step | servo 单步最大 XY 修正 |
+| release_open_xy_threshold | 0.024 m | 允许释放的 XY 条件 |
+| release_success_lift | 0.016 m | 释放/落桌高度条件 |
+| release_min_open_steps | 8 | 最少保持打开步数 |
+
+相关执行位置：
+
+- Grasp/Lift/Place 动作整形：[allstage:1148](../fourc2/envs/allstage.py#L1148)；
+- Place XY servo：[allstage:1169](../fourc2/envs/allstage.py#L1169) 和
+  [allstage:1212](../fourc2/envs/allstage.py#L1212)；
+- TaskSupervisor 参数组装：[allstage:647](../fourc2/envs/allstage.py#L647)；
+- supervisor 代理阈值：input age 1.0 s、stopped velocity 0.02、effort 0.10、
+  fully closed 0.97，位于 [task_supervisor:92](../fourc2/task_supervisor.py#L92)；
+- object/goal 数据源、FSM 和 latch 架构开关位于
+  [allstage:167](../fourc2/envs/allstage.py#L167)。这些不是普通性能调参，
+  A/B 测试中禁止混用。
+
+#### F. 随机位置与覆盖范围
+
+- 方块初始位置：X 0.35..0.65 m、Y -0.20..0.20 m，
+  [allstage:2922](../fourc2/envs/allstage.py#L2922)；
+- Full/Place 目标相对方块半径 0.05..0.13 m、角度 -π..π，
+  [allstage:396](../fourc2/envs/allstage.py#L396) 和
+  [allstage:2932](../fourc2/envs/allstage.py#L2932)；
+- 桌面边界：X 0.20..1.10 m、Y -0.35..0.35 m，
+  [allstage:337](../fourc2/envs/allstage.py#L337)。
+
+#### G. 最快搜索命令
+
+~~~bash
+# 姿态、相机和夹爪
+rg -n 'camera_observe|d435i_mount_frame|eye_in_hand_|fingers_actuator' \
+  scene_cube3cm.xml ur5e_4c2.xml
+
+# PPO、TCP、IK、Place servo
+rg -n 'action_scale|max_tcp_lead|ik_posture|damping|place_xy_servo' \
+  fourc2/envs/allstage.py fourc2/__init__.py
+
+# 阶段、抓取、释放与 latch
+rg -n 'grasp_.*threshold|release_|stable_required|simulated_latch' \
+  fourc2/envs/allstage.py fourc2/__init__.py fourc2/task_supervisor.py
+
+# 视觉配置
+rg -n 'marker_size|HSV|contour|mad|quantile|required_valid_frames' \
+  configs fourc2 scripts
+~~~
+
+一次只改一类参数，并保存 seed、配置 diff 和回归结果。相机机械位姿变化后至少
+重跑视野覆盖和定位误差；控制/FSM 参数变化后至少重跑固定 seed 的完整闭环
+对照。不要用放宽成功阈值掩盖视觉、IK 或抓取保持的根因。
+
 ## 4. 完整运行数据流
 
 ```text
